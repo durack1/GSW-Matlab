@@ -70,7 +70,7 @@ That is, the output is the Absolute Salinity of seawater, with the
 fraction saturation_fraction of dissolved air, that is in equilibrium 
 with ice at Conservative Temperature CT and pressure p.  If the input 
 values are such that there is no positive value of Absolute Salinity for
-which seawater is frozen, the output, brineSA_CT, is put equal to -99.</pre>
+which seawater is frozen, the output, brineSA_CT, is put equal to NaN.</pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/brineSA_CT.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -100,16 +100,16 @@ p =  [     10;      50;     125;     250;     600;    1000;]
 saturation_fraction = 1</pre>
 <pre>brineSA_CT = gsw_brineSA_CT(CT,p,saturation_fraction)</pre>
 <pre>brineSA_CT =</pre>
-<pre>   2.281810267791574
-   2.418134292637866
-  11.971996354707962
-  32.867931280697242
-  34.015087798565567
-  32.856434895177244</pre>
+<pre>   2.280500648179144
+   2.416867651098550
+  11.973503162175106
+  32.868973869711390
+  34.017513292374431
+  32.859871943514150</pre>
   <h2>AUTHOR:<a name="6"></a></h2>
   <pre>Trevor McDougall and Paul Barker   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
   <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (15th April, 2013)</pre>
+<pre>3.04 (3rd December, 2013)</pre>
   <h2>REFERENCES:<a name="8"></a></h2>
   <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

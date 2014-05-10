@@ -63,7 +63,8 @@ p.footer {
   <!--introduction--><pre><font size="5"><b>in-situ temperature from potential temperature with p_ref = 0 dbar</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
- <h2>USAGE:<a name="1"></a></h2><pre>t = gsw_t_from_CT(SA,CT,p)</pre>
+ <h2>USAGE:<a name="1"></a></h2>
+ <pre>t = gsw_t_from_pt0(SA,pt0,p)</pre>
  <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates in-situ temperature from potential temperature with a 
 reference pressure of 0 dbar of seawater.</pre>
@@ -104,7 +105,7 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker       [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (22nd May, 2013)</pre>
+<pre>3.04 (10th December, 2013)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

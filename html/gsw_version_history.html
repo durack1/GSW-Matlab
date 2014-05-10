@@ -8,6 +8,26 @@
 <body>
 
 <h1>Gibbs Sea Water (GSW) version history</h1>
+<h2>Version 3.04 <font size="3">(20th December, 2013)</font></h2>
+<p>Added</p> 
+<ul>
+<li>seawater properties at the freezing temperature</li>
+<li>thermodynamic properties of ice Ih</li>
+<li>thermodynamic interaction between ice Ih and seawater</li>
+<li>thermodynamic interaction between sea ice and seawater</li>
+<li>dissolved gasses</li>
+<li>gsw_CT_from_enthalpy and gsw_CT_from_enthalpy_exact</li>
+<li>gsw_CT_first_derivatives_wrt_t_exact</li>
+<li>gsw_enthalpy_first_derivatives_wrt_t_exact</li>
+<li>gsw_t_deriv_chem_potential_water_t_exact</li>
+</ul>
+<p>Renamed gsw_streric_height to gsw_geo_strf_steric_height</p>
+<p>Renamed gsw_CT_freezing to gsw_CT_freezing_poly</p>
+<p>Renamed gsw_t_freezing to gsw_t_freezing_poly</p>
+<p>Renamed gsw_brineSA_CT to gsw_brineSA_CT_poly</p>
+<p>Renamed gsw_brineSA_t to gsw_brineSA_t_poly</p>
+<p>This is the final version where functions based on the 48-term expression for density that end in "_CT" are supported</p>
+
 <h2>Version 3.03 <font size="3">(8th June, 2013)</font></h2>
 <p>Added</p> 
 <ul>

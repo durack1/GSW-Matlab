@@ -2,7 +2,7 @@
   PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>gsw_steric_height</title>
+<title>gsw_geo_strf_steric_height</title>
 <style type="text/css">
 
 body {
@@ -72,7 +72,7 @@ p.footer {
 <li><a href="#7">VERSION NUMBER:</a></li>
 <li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
-<pre>steric_height = gsw_steric_height(SA,CT,p,p_ref)</pre>
+<pre>steric_height = gsw_geo_strf_steric_height(SA,CT,p,p_ref)</pre>
 <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates steric height anomaly as the pressure integral of specific 
 volume anomaly from the pressure p of the "bottle" to the reference 
@@ -143,7 +143,7 @@ p_ref needs to be a single value, it can have dimensions 1x1 or Mx1 or
 CT = [28.8099; 28.4392; 22.7862; 10.2262;  6.8272;  4.3236;]
 p =  [     10;      50;     125;     250;     600;    1000;]
 p_ref = 1000</pre>
-<pre>steric_height = gsw_steric_height(SA,CT,p,p_ref)</pre>
+<pre>steric_height = gsw_geo_strf_steric_height(SA,CT,p,p_ref)</pre>
 <pre>steric_height =</pre>
 <pre>   1.765180536020077
    1.524364510386766
@@ -154,7 +154,7 @@ p_ref = 1000</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker             [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (2nd May, 2013)</pre>
+<pre>3.04 (10th December, 2013)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
