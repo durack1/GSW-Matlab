@@ -92,30 +92,39 @@ h_CT   =  The first derivative of specific enthalpy with respect to
           CT at constant SA and p.                          [ J/(kg K) ]
 h_P    =  The first partial derivative of specific enthalpy with
           respect to pressure (in Pa) at fixed SA and CT.  Note that
-          h_P is specific volume (1/rho).</pre>
+          h_P is specific volume (1/rho).                     [ m^3/kg ]</pre>
           <h2>EXAMPLE:<a name="5"></a></h2>
-          <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
-t =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
+<pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
+CT =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>[h_SA, h_CT, h_P] = gsw_enthalpy_first_derivatives(SA,CT,p)</pre>
 <pre>h_SA =</pre>
-<pre>-0.070221017857321
--0.351155742717708
--0.887081852469166
--1.829811186103484
--4.424369449732652
--7.407229217110896</pre>
-<pre>h_CT =</pre><pre>1.0e+003 *</pre><pre> 3.991899729625529
- 3.992025696743769
- 3.992210168035032
- 3.992283178760239
- 3.992681641668387
- 3.993005774345293</pre><pre>h_P =</pre><pre>1.0e-003 *</pre><pre> 0.978626618725186
- 0.978222134953103
- 0.976154774939840
- 0.972961213383549
- 0.971026778012244
- 0.968989993773259</pre><h2>AUTHOR:<a name="6"></a></h2><pre>Trevor McDougall.  [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2><pre>2.0 (17th August, 2010)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
+<pre>  -0.070224183838619
+  -0.351159869043798
+  -0.887036550157504
+  -1.829626251448858
+  -4.423522691827955
+  -7.405211691293971</pre>
+<pre>h_CT =</pre>
+<pre>1.0e+003 *</pre>
+<pre>   3.991899712269790
+   3.992025674159605
+   3.992210402650973
+   3.992283991748418
+   3.992685275917238
+   3.993014370250710</pre>
+ <pre>h_P =</pre>
+ <pre>1.0e-003 *</pre>
+ <pre>   0.978618899078126
+   0.978220146212033
+   0.976161392023134
+   0.972966912670081
+   0.971035189529946
+   0.969000059835599</pre><h2>AUTHOR:<a name="6"></a></h2>
+ <pre>Trevor McDougall.                      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
+ <h2>VERSION NUMBER:<a name="7"></a></h2>
+ <pre>3.01 (17th May, 2011)</pre>
+ <h2>REFERENCES:<a name="8"></a></h2><pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>

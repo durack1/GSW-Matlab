@@ -66,32 +66,38 @@ p.footer {
   <h1>gsw_infunnel</h1>
  <!--introduction-->
  <pre><font size="5"><b>"oceanographic funnel" 
-check for the 25-term equation</b></font></pre><!--/introduction-->
+check for the 48-term equation</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li>
 <li><a href="#2">INPUT:</a></li>
 <li><a href="#3">OUTPUT:</a></li>
 <li><a href="#4">AUTHOR:</a></li>
-<li><a href="#5">VERSION NUMBER:</a></li></ul></div>
+<li><a href="#5">VERSION NUMBER:</a></li>
+<li><a href="#6">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
 <pre>in_funnel = gsw_infunnel(SA,CT,p)</pre>
 <h2>INPUT:<a name="2"></a></h2>
 <pre>SA  =  Absolute Salinity                                        [ g/kg ]
 CT  =  Conservative Temperature                                [ deg C ]
 p   =  sea pressure                                             [ dbar ]
-        (ie. absolute pressure - 10.1325 dbar)</pre>
+       ( i.e. absolute pressure - 10.1325 dbar )</pre>
 <pre>SA &amp; CT need to have the same dimensions.
 p may have dimensions 1x1 or Mx1 or 1xN or MxN, where SA &amp; CT are MxN.</pre>
 <h2>OUTPUT:<a name="3"></a></h2>
 <pre>in_funnel  =  0, if SA, CT and p are outside the "funnel"
            =  1, if SA, CT and p are inside the "funnel"
 Note. The term "funnel" describes the range of SA, CT and p over which
-  the error in the fit of the computationally-efficient 25-term
+  the error in the fit of the computationally-efficient 48-term
   expression for density in terms of SA, CT and p was calculated
-  (McDougall et al., 2010).</pre>
+  (McDougall et al., 2011).</pre>
 <h2>AUTHOR:<a name="4"></a></h2>
-<pre>Trevor McDougall and Paul Barker    [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre>
+<pre>Trevor McDougall and Paul Barker       [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="5"></a></h2>
-<pre>2.0 (23rd July, 2010)</pre>
+<pre>3.01 (23rd May, 2011)</pre>
+<h2>REFERENCES:<a name="6"></a></h2>
+<pre>McDougall T.J., P.M. Barker, R. Feistel and D.R. Jackett, 2011:  A 
+ computationally efficient 48-term expression for the density of 
+ seawater in terms of Conservative Temperature, and related properties
+ of seawater.  To be submitted to Ocean Science Discussions. </pre>
 <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
 </div></body></html>

@@ -69,9 +69,10 @@ p.footer {
 <li><a href="#2">DESCRIPTION:</a></li>
 <li><a href="#3">INPUT:</a></li>
 <li><a href="#4">OUTPUT:</a></li>
-<li><a href="#5">AUTHOR:</a></li>
-<li><a href="#6">VERSION NUMBER:</a></li>
-<li><a href="#7">REFERENCES:</a></li></ul></div>
+<li><a href="#5">EXAMPLE:</a></li>
+<li><a href="#6">AUTHOR:</a></li>
+<li><a href="#7">VERSION NUMBER:</a></li>
+<li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
 <pre>[geostrophic_velocity, mid_lat, mid_long] =
                             gsw_geostrophic_velocity(geo_strf,long,lat,p)</pre>
@@ -91,21 +92,21 @@ velocity.</a></font></pre></td>
 </table>
 
 <h2>INPUT:<a name="3"></a></h2>
-<pre>geo_strf  =  geostrophic streamfunction. This geostrophic streamfunction
-             can be any of, for example,
-             (1) geo_strf_dyn_height (in an isobaric surface)
-             (2) geo_strf_Montgomery (in a specific volume anomaly surface)
-             (3) geo_strf_Cunninhgam (in an approximately neutral surface
-                 e.g. a potential denisty surface).
-             (4) geo_strf_McD_Klocker (in an approximately neutral surface
-                 e.g. a potential denisty surface, a Neutral Density
-                 surface or an omega surface (Klocker et al., 2009)).</pre>
-<pre>long   =  longitude in decimal degrees                    [ 0 ... +360 ]
+<pre>geo_strf = geostrophic streamfunction. This geostrophic streamfunction
+           can be any of, for example,
+           (1) geo_strf_dyn_height (in an isobaric surface)
+           (2) geo_strf_Montgomery (in a specific volume anomaly surface)
+           (3) geo_strf_Cunninhgam (in an approximately neutral surface
+               e.g. a potential denisty surface).
+           (4) geo_strf_McD_Klocker (in an approximately neutral surface
+               e.g. a potential denisty surface, a Neutral Density
+               surface or an omega surface (Klocker et al., 2009)).</pre>
+<pre>long     = longitude in decimal degrees                   [ 0 ... +360 ]
                                                     or [ -180 ... +180 ]
-lat    =  latitude in decimal degrees north              [ -90 ... +90 ]</pre>
+lat      = latitude in decimal degrees north             [ -90 ... +90 ]</pre>
 <pre>OPTIONAL:  
 p      =  sea pressure ( default is 0 )                         [ dbar ]
-         (i.e. absolute pressure - 10.1325 dbar)
+         ( i.e. absolute pressure - 10.1325 dbar )
  Note. This optional input is used to obtain an accurate distance,    
    "dist", taking into account that the radius from the centre of the    
    Earth depends on the depth below the sea surface.</pre>
@@ -125,11 +126,25 @@ mid_lat               =  mid point latitude,             [ -90 ... +90 ]
                          (in decimal degrees north)
 mid_long              =  mid point longitude
                          (the range corresponds to that entered)</pre>
-<h2>AUTHOR:<a name="5"></a></h2>
-<pre>Paul Barker, Trevor McDougall and Phil Morgan  [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre>
-<h2>VERSION NUMBER:<a name="6"></a></h2>
-<pre>2.0 (14th September, 2010)</pre>
-<h2>REFERENCES:<a name="7"></a></h2>
+<h2>EXAMPLE:<a name="5"></a></h2>                        
+<pre>geo_strf(:,1) = [ -0.600766; -2.959872; -6.705156; -9.991887; -14.285795; -17.893004;]
+geo_strf(:,2) = [ -0.558086; -2.746335; -6.163343; -8.846621; -11.307648; -12.775731;]
+long = [189 189];
+lat = [-20 -22];
+p =  [     10;      50;     125;     250;     600;    1000;] </pre>
+<pre>geostrophic_velocity = gsw_geostrophic_velocity(geo_strf,long,lat,p)</pre>
+<pre>geostrophic_velocity  =</pre>
+<pre>  -0.003671955871408
+  -0.018371680712397
+  -0.046615489829472
+  -0.098536165938139
+  -0.256247175421439
+  -0.440330269693261   </pre>           
+<h2>AUTHOR:<a name="6"></a></h2>
+<pre>Paul Barker, Trevor McDougall and Phil Morgan    [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
+<h2>VERSION NUMBER:<a name="7"></a></h2>
+<pre>3.01 (14th May, 2011)</pre>
+<h2>REFERENCES:<a name="8"></a></h2>
 <pre>Cunningham, S. A., 2000: Circulation and volume flux of the North
  Atlantic using syoptic hydrographic data in a Bernoulli inverse.
  J. Marine Res., 58, 1-35.</pre>
@@ -142,11 +157,10 @@ mid_long              =  mid point longitude
  for the world&#8217;s oceans. Journal of Physical Oceanography, 27, 237-263.</pre>
  <pre>Klocker, A., T. J. McDougall and D. R. Jackett, 2009: A new method for
  forming approximately neutral surfaces.  Ocean Sci., 5, 155-172.</pre>
- <pre>McDougall T. J., D. R. Jackett, P. M. Barker, C. Roberts-Thomson, R.
- Feistel and R. W. Hallberg, 2010:  A computationally efficient 25-term
- expression for the density of seawater in terms of Conservative
- Temperature, and related properties of seawater.  To be submitted
- to Ocean Science Discussions.</pre>
+ <pre>McDougall T.J., P.M. Barker, R. Feistel and D.R. Jackett, 2011:  A 
+ computationally efficient 48-term expression for the density of 
+ seawater in terms of Conservative Temperature, and related properties
+ of seawater.  To be submitted to Ocean Science Discussions. </pre>
  <pre>McDougall, T. J. and A. Klocker, 2010: An approximate geostrophic
  streamfunction for use in density surfaces.  Ocean Modelling, 32,
  105-117.

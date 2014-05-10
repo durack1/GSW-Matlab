@@ -75,12 +75,22 @@ data collected prior to 31/12/1967.</pre>
 ITS-90 temperature from IPTS-48 temperature.</a></font></pre></td>
   </tr>
 </table>
-<h2>INPUT:<a name="3"></a></h2><pre>t48   =  in-situ temperature  (IPTS-48)                        [ deg C ]</pre><h2>OUTPUT:<a name="4"></a></h2><pre>t90   =  in-situ temperature  (ITS-90)                         [ deg C ]</pre><h2>EXAMPLE:<a name="5"></a></h2><pre>t48 = [ 29 28 23 10 7 4]</pre><pre>t90 = gsw_t90_from_t48(t48)</pre><pre>t90 =</pre><pre>  28.9840
-  27.9844
-  22.9867
-   9.9936
-   6.9955
-   3.9974</pre><h2>AUTHOR:<a name="6"></a></h2><pre>Paul Barker &amp; Trevor McDougall     [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2><pre>2.0 (23rd July, 2010)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>International Temperature Scales of 1948, 1968 and 1990, an ICES
+<h2>INPUT:<a name="3"></a></h2>
+<pre>t48   =  in-situ temperature  (IPTS-48)                        [ deg C ]</pre>
+<h2>OUTPUT:<a name="4"></a></h2>
+<pre>t90   =  in-situ temperature  (ITS-90)                         [ deg C ]</pre>
+<h2>EXAMPLE:<a name="5"></a></h2>
+<pre>t48 = [ 29; 28; 23; 10; 7; 4;]</pre>
+<pre>t90 = gsw_t90_from_t48(t48)</pre>
+<pre>t90 =</pre>
+<pre>  28.983984243781492
+  27.984413340798209
+  22.986690794209391
+   9.993641526033752
+   6.995456690394305
+   3.997351035751419</pre><h2>AUTHOR:<a name="6"></a></h2>
+<pre>Paul Barker &amp; Trevor McDougall                      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2>
+   <pre>3.01 (23rd May, 2011)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>International Temperature Scales of 1948, 1968 and 1990, an ICES
  note, available from <a href="http://www.ices.dk/ocean/procedures/its.htm" title="ICES">http://www.ices.dk/ocean/procedures/its.htm</a></pre>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

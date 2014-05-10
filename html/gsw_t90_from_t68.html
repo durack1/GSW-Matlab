@@ -76,13 +76,23 @@ data collected between 1/1/1968 and 31/12/1989.</pre>
 ITS-90 temperature from IPTS-68 temperature.</a></font></pre></td>
   </tr>
 </table>
-<h2>INPUT:<a name="3"></a></h2><pre>t68   =   in-situ temperature  (IPTS-68)                       [ deg C ]</pre><h2>OUTPUT:<a name="4"></a></h2><pre>t90   =   in-situ temperature  (ITS-90)                        [ deg C ]</pre><h2>EXAMPLE:<a name="5"></a></h2><pre>t68 = [ 29 28 23 10 7 4]</pre><pre>t90 = gsw_t90_from_t68(t68)</pre><pre>t90 =</pre><pre>  28.9930
-  27.9933
-  22.9945
-   9.9976
-   6.9983
-   3.9990</pre><h2>AUTHOR:<a name="6"></a></h2>
-   <pre>Paul Barker and Trevor McDougall             [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2><pre>2.0 (23rd July, 2010)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>International Temperature Scales of 1948, 1968 and 1990, an ICES
+<h2>INPUT:<a name="3"></a></h2>
+<pre>t68   =   in-situ temperature  (IPTS-68)                       [ deg C ]</pre>
+<h2>OUTPUT:<a name="4"></a></h2>
+<pre>t90   =   in-situ temperature  (ITS-90)                        [ deg C ]</pre>
+<h2>EXAMPLE:<a name="5"></a></h2>
+<pre>t68 = [ 29; 28; 23; 10; 7; 4;]</pre>
+<pre>t90 = gsw_t90_from_t68(t68)</pre>
+<pre>t90 =</pre>
+<pre>  28.993041669999190
+  27.993281612413014
+  22.994481324482116
+   9.997600575861791
+   6.998320403103254
+   3.999040230344716</pre>
+   <h2>AUTHOR:<a name="6"></a></h2>
+   <pre>Paul Barker and Trevor McDougall                    [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2>
+   <pre>3.01 (23rd May, 2011)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>International Temperature Scales of 1948, 1968 and 1990, an ICES
  note, available from <a href="http://www.ices.dk/ocean/procedures/its.htm" title="ICES">http://www.ices.dk/ocean/procedures/its.htm</a></pre>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

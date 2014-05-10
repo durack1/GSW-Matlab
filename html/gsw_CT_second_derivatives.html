@@ -100,52 +100,51 @@ pt  =  potential temperature (ITS-90)                          [ deg C ]</pre>
 CT_SA_pt  =  The derivative of Conservative Temperature with
              respect to potential temperature (the regular one with
              pr = 0 dbar) and Absolute Salinity.
-             CT_SA_pt has units of:                        [ (g/kg)^-1 ]
+             CT_SA_pt has units of:                         [ 1/(g/kg) ]
 CT_pt_pt  =  The second derivative of Conservative Temperature with
              respect to potential temperature (the regular one with
              pr = 0 dbar) at constant SA.
-             CT_pt_pt has units of:                             [ K^-1 ]</pre>
+             CT_pt_pt has units of:                              [ 1/K ]</pre>
              <h2>EXAMPLE:<a name="5"></a></h2>
              <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
 pt = [28.7832; 28.4209; 22.7850; 10.2305;  6.8292;  4.3245;]</pre>
-<pre>[CT_SA_SA, CT_SA_pt, CT_pt_pt] = gsw_CT_2nd_derivatives(SA,pt)</pre>
+<pre>[CT_SA_SA, CT_SA_pt, CT_pt_pt] = gsw_CT_second_derivatives(SA,pt)</pre>
 <pre>CT_SA_SA =</pre>
 <pre>1.0e-003 *</pre>
-<pre>-0.060718502073595
--0.062065324397404
--0.084017055351272
--0.148436050118396
--0.171270386500246
--0.189920754897514</pre>
+<pre>  -0.060718502077064
+  -0.062065324400873
+  -0.084017055354742
+  -0.148436050120131
+  -0.171270386500246
+  -0.189920754900116</pre>
 <pre>CT_SA_pt =</pre>
-<pre>-0.001197415000868
--0.001198309530139
--0.001226523296082
--0.001335896286480
--0.001380492698572
--0.001417751669135</pre>
+<pre>  -0.001197415000869
+  -0.001198309530139
+  -0.001226523296082
+  -0.001335896286481
+  -0.001380492698572
+  -0.001417751669135</pre>
 <pre>CT_pt_pt =</pre>
 <pre>1.0e-003 *</pre>
-<pre> 0.123012754427146
- 0.124662008871271
- 0.140829458783443
- 0.140646803448166
- 0.113684095615077
- 0.082286843477998</pre>
+<pre>   0.123012754427146
+   0.124662008871271
+   0.140829458783443
+   0.140646803448166
+   0.113684095615077
+   0.082286843477998</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
- <pre>Trevor McDougall and Paul Barker   [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre>
+ <pre>Trevor McDougall and Paul Barker    [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
- <pre>2.0 (26th August, 2010)</pre>
+ <pre>3.01 (16th May, 2011)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org">the TEOS-10 web site.</a>
   <a href="../pdf/CT_second_derivative.pdf" title="TEOS-10">See appendix A.12 of this TEOS-10 Manual.</a></pre>
-  <pre>McDougall T. J., D. R. Jackett, P. M. Barker, C. Roberts-Thomson, R.
- Feistel and R. W. Hallberg, 2010:  A computationally efficient 25-term
- expression for the density of seawater in terms of Conservative
- Temperature, and related properties of seawater.  To be submitted
- to Ocean Science Discussions.</pre>
+  <pre>McDougall T.J., P.M. Barker, R. Feistel and D.R. Jackett, 2011:  A 
+ computationally efficient 48-term expression for the density of 
+ seawater in terms of Conservative Temperature, and related properties
+ of seawater.  To be submitted to Ocean Science Discussions. </pre>
  <pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

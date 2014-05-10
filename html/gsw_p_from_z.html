@@ -63,42 +63,77 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_p_from_z</h1>
-  <!--introduction--><pre><font size="5"><b>pressure from height (25-term equation)</b></font></pre><!--/introduction-->
+  <!--introduction--><pre><font size="5"><b>pressure from height (48-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
-  <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
+  <div><ul><li><a href="#1">USAGE:</a></li>
+  <li><a href="#2">DESCRIPTION:</a></li>
+  <li><a href="#3">INPUT:</a></li>
+  <li><a href="#4">OUTPUT:</a></li>
+  <li><a href="#5">EXAMPLE:</a></li>
+  <li><a href="#6">AUTHOR:</a></li>
+  <li><a href="#7">VERSION NUMBER:</a></li>
+  <li><a href="#8">REFERENCES:</a></li></ul></div>
   <h2>USAGE:<a name="1"></a></h2>
-  <pre>p = gsw_p_from_z(z,lat)</pre>
+  <pre>p = gsw_p_from_z(z,lat,{geo_strf_dyn_height})</pre>
   <h2>DESCRIPTION:<a name="2"></a></h2>
-  <pre>Calculates sea pressure from height using computationally-efficient
-25-term expression for density, in terms of SA, CT and p
-(McDougall et al., 2010).
-Note. Height (z) is NEGATIVE in the ocean.  Depth is -z.
-  Depth is not used in the GSW computer software library.</pre>
-      <table width="500" border="0">
+  <pre>Calculates sea pressure from height using computationally-efficient 
+48-term expression for density, in terms of SA, CT and p (McDougall et
+al., 2011).  Dynamic height anomaly, geo_strf_dyn_height, if provided,
+must be computed with its p_ref = 0 (the surface).
+
+Note. Height (z) is NEGATIVE in the ocean.  Depth is -z.  
+      Depth is not used in the GSW computer software library. 
+
+Note that the 48-term equation has been fitted in a restricted range of 
+parameter space, and is most accurate inside the "oceanographic funnel" 
+described in McDougall et al. (2011).  The GSW library function 
+"gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
+some of one's data lies outside this "funnel".  
+</pre>
+<table width="500" border="0">
   <tr>
     <td><a href="../pdf/p_from_z.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
     <td><pre><font size="4"><a href="../pdf/p_from_z.pdf">Click for a more detailed description of calculating
 pressure from height.</a></font></pre></td>
   </tr>
 </table>
-  <h2>INPUT:<a name="3"></a></h2><pre>z   =  height                                                      [ m ]
+<h2>INPUT:<a name="3"></a></h2>
+<pre>z   =  height                                                      [ m ]
  Note. At sea level z = 0, and since z (HEIGHT) is defined
    to be positive upwards, it follows that while z is
    positive in the atmosphere, it is NEGATIVE in the ocean.
 lat =  latitude in decimal degrees north                 [ -90 ... +90 ]</pre>
-<pre>lat may have dimensions 1x1 or Mx1 or 1xN or MxN, where z is MxN.</pre>
+<pre>
+OPTIONAL:
+geo_strf_dyn_height = dynamic height anomaly                 [ m^2/s^2 ]
+  Note that the reference pressure, p_ref, of geo_strf_dyn_height must
+   be zero (0) dbar.</pre>
+
+<pre>lat may have dimensions 1x1 or Mx1 or 1xN or MxN, where z is MxN.
+geo_strf_dyn_height, if provided, must have dimensions MxN, which is
+the same as z.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
 <pre> p  =  sea pressure                                             [ dbar ]
-       ( ie. absolute pressure - 10.1325 dbar )</pre>
-       <h2>EXAMPLE:<a name="5"></a></h2><pre>z   =  [     10;      50;     125;     250;     600;    1000;]
-lat = 4;</pre><pre>p = gsw_p_from_z(z,lat)</pre><pre>p
- 1.0e+003 *</pre><pre> -0.010055217939908
- -0.050271175099730
- -0.125654885697343
- -0.251232845042860
- -0.602440507522266
- -1.003076098067266</pre><h2>AUTHOR:<a name="6"></a></h2><pre>Trevor McDougall, Claire Roberts-Thomson and Paul Barker.
-                                                [ <a href="mailto:help_gsw@csiro.au">help_gsw@csiro.au</a> ]</pre><h2>VERSION NUMBER:<a name="7"></a></h2><pre>2.0 (26th August, 2010)</pre><h2>REFERENCES:<a name="8"></a></h2><pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
+       ( i.e. absolute pressure - 10.1325 dbar )</pre>
+<h2>EXAMPLE:<a name="5"></a></h2>
+<pre>z   =  [     10;      50;     125;     250;     600;    1000;]
+lat = 4;</pre>
+<pre>p = gsw_p_from_z(z,lat)</pre>
+<pre>p =
+ 1.0e+003 *</pre>
+ <pre>  -0.010055235976847
+  -0.050271267635044
+  -0.125655128514602
+  -0.251233371685054
+  -0.602442093622451
+  -1.003079508920876</pre>
+  <h2>AUTHOR:<a name="6"></a></h2>
+  <pre>Trevor McDougall, Claire Roberts-Thomson and Paul Barker.
+                                                [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
+ <h2>VERSION NUMBER:<a name="7"></a></h2>
+ <pre>3.01 (26th August, 2010)</pre>
+ <h2>REFERENCES:<a name="8"></a></h2>
+ <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from the <a href="http://www.TEOS-10.org" title="TEOS-10">TEOS-10 web site</a>.</pre>
