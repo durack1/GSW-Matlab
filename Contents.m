@@ -1,10 +1,12 @@
 % GSW Oceanographic Toolbox 
-% Version 3.03 (R2011a) 23-May-2013
+% Version 3.04 (R2012a) 8-May-2014
 %
 % documentation set
 %  gsw_front_page              - front page to the GSW Oceanographic Toolbox
 %  gsw_check_functions         - checks that all the GSW functions work correctly
 %  gsw_demo                    - demonstrates many GSW functions and features
+%  gsw_ver                     - displays the GSW version number
+%  gsw_licence                 - creative commons licence for the GSW Oceanographic Toolbox
 %
 % Practical Salinity (SP), PSS-78  
 %  gsw_SP_from_C               - Practical Salinity from conductivity, C (inc. for SP < 2)
@@ -64,8 +66,8 @@
 %  gsw_alpha                       - thermal expansion coefficient with respect to CT
 %  gsw_beta                        - saline contraction coefficient at constant CT
 %  gsw_rho_alpha_beta              - in-situ density, thermal expansion & saline contraction coefficients
-%  gsw_alpha_on_beta               - alpha divied by beta
-%  gsw_rho_first_derivaties        - first derivaties of rho
+%  gsw_alpha_on_beta               - alpha divided by beta
+%  gsw_rho_first_derivatives       - first derivatives of rho
 %  gsw_specvol                     - specific volume
 %  gsw_specvol_anom                - specific volume anomaly
 %  gsw_sigma0                      - sigma0 with reference pressure of 0 dbar
@@ -84,8 +86,8 @@
 %  gsw_enthalpy                    - enthalpy
 %  gsw_enthalpy_diff               - difference of enthalpy between two pressures
 %  gsw_dynamic_enthalpy            - dynamic enthalpy
-%  gsw_enthalpy_first_derivaties   - first derivaties of enthalpy
-%  gsw_enthalpy_second_derivaties  - second derivaties of enthalpy
+%  gsw_enthalpy_first_derivatives  - first derivatives of enthalpy
+%  gsw_enthalpy_second_derivatives - second derivatives of enthalpy
 %
 % water column properties, based on the 48-term expression for density  
 %  gsw_Nsquared                    - buoyancy (Brunt-Vaisala) frequency squared (N^2)
@@ -105,33 +107,76 @@
 %                                    (i.e. in a locally-referenced potential density surface)
 %
 % geostrophic streamfunctions, based on the 48-term expression for density
-%  gsw_geo_strf_dyn_height          - dynamic height anomaly
-%  gsw_geo_strf_dyn_height_pc       - dynamic height anomaly for piecewise constant profiles
-%  gsw_geo_strf_isopycnal           - approximate isopycnal geostrophic streamfunction
-%  gsw_geof_str_isopycnal_pc        - approximate isopycnal geostrophic streamfunction for
-%                                     piecewise constant profiles
-%  gsw_geo_strf_Montgomery          - Montgomery geostrophic streamfunction
-%  gsw_geo_strf_Cunningham          - Cunningham geostrophic streamfunction
+%  gsw_geo_strf_dyn_height           - dynamic height anomaly
+%  gsw_geo_strf_dyn_height_pc        - dynamic height anomaly for piecewise constant profiles
+%  gsw_geo_strf_isopycnal            - approximate isopycnal geostrophic streamfunction
+%  gsw_geo_strf_isopycnal_pc          - approximate isopycnal geostrophic streamfunction for
+%                                      piecewise constant profiles
+%  gsw_geo_strf_Montgomery           - Montgomery geostrophic streamfunction
+%  gsw_geo_strf_Cunningham           - Cunningham geostrophic streamfunction
+%  gsw_geo_strf_steric_height        - dynamic height anomaly divided by 9.7963 m s^-2
 %
 % geostrophic velocity 
-%  gsw_geostrophic_velocity         - geostrophic velocity
+%  gsw_geostrophic_velocity          - geostrophic velocity
 %
 % derivatives of entropy, CT and pt 
-%  gsw_CT_first_derivatives         - first derivatives of Conservative Temperature
-%  gsw_CT_second_derivatives        - second derivatives of Conservative Temperature
-%  gsw_entropy_first_derivatives    - first derivatives of entropy
-%  gsw_entropy_second_derivatives   - second derivatives of entropy
-%  gsw_pt_first_derivatives         - first derivatives of potential temperature
-%  gsw_pt_second_derivatives        - second derivatives of potential temperature
+%  gsw_CT_first_derivatives          - first derivatives of Conservative Temperature
+%  gsw_CT_second_derivatives         - second derivatives of Conservative Temperature
+%  gsw_entropy_first_derivatives     - first derivatives of entropy
+%  gsw_entropy_second_derivatives    - second derivatives of entropy
+%  gsw_pt_first_derivatives          - first derivatives of potential temperature
+%  gsw_pt_second_derivatives         - second derivatives of potential temperature
 %
-% freezing temperatures
-%  gsw_CT_freezing         - Conservative Temperature freezing temperature of seawater
-%  gsw_t_freezing          - in-situ freezing temperature of seawater
-%  gsw_brineSA_CT          - Absolute Salinity of seawater at the freezing point (for given CT)
-%  gsw_brineSA_t           - Absolute Salinity of seawater at the freezing point (for given t)
-% 
-% isobaric melting enthalpy and isobaric evaporation enthalpy
-%  gsw_latentheat_melting  - latent heat of melting of ice into seawater (isobaric melting enthalpy)
+% seawater properties at the freezing temperature
+%  gsw_CT_freezing_poly              - Conservative Temperature freezing temperature of seawater (polynomial) 
+%  gsw_t_freezing                    - in-situ freezing temperature of seawater
+%  gsw_t_freezing_poly               - in-situ freezing temperature of seawater (polynomial)
+%  gsw_brineSA_CT                    - Absolute Salinity of seawater at the freezing point (for given CT)
+%  gsw_brineSA_CT_poly               - Absolute Salinity of seawater at the freezing point (for given CT) (polynomial)
+%  gsw_brineSA_t                     - Absolute Salinity of seawater at the freezing point (for given t)
+%  gsw_brineSA_t_poly                - Absolute Salinity of seawater at the freezing point (for given t) (polynomial)
+%  gsw_pressure_freezing_CT          - pressure of seawater at the freezing temperature (for given CT)
+%  gsw_CT_freezing_first_derivatives - first derivatives of Conservative Temperature freezing temperature of seawater
+%  gsw_t_freezing_first_derivatives  - first derivatives of in-situ freezing temperature of seawater
+%  gsw_latentheat_melting            - latent heat of melting of ice into seawater (isobaric melting enthalpy)
+%
+% thermodynamic interaction between ice Ih and seawater
+%  gsw_melting_ice_SA_CT_ratio             - SA to CT ratio when ice melts in seawater
+%  gsw_melting_ice_equilibrium_SA_CT_ratio - SA to CT ratio when ice melts into seawater near equilibrium
+%  gsw_melting_ice_into_seawater           - SA and CT when ice melts in seawater
+%  gsw_ice_fraction_to_freeze_seawater     - ice mass fraction to freeze seawater
+%  gsw_frazil_ratios                       - ratios of SA, CT and P changes during frazil ice formation
+%
+% thermodynamic interaction between sea ice and seawater
+%  gsw_melting_seaice_SA_CT_ratio             - SA to CT ratio when sea ice melts in seawater
+%  gsw_melting_seaice_equilibrium_SA_CT_ratio - SA to CT ratio when sea ice melts into seawater equilibrium
+%  gsw_melting_seaice_into_seawater           - SA and CT when sea ice melts in seawater
+%  gsw_seaice_fraction_to_freeze_seawater     - sea ice mass fraction to freeze seawater
+%
+% thermodynamic properties of ice Ih
+%  gsw_rho_ice                             - in-situ density of ice
+%  gsw_alpha_wrt_t_ice                     - thermal expansion coefficient of ice with respect to in-situ temperature
+%  gsw_specvol_ice                         - specific volume of ice
+%  gsw_pressure_coefficient_ice            - pressure coefficient of ice
+%  gsw_sound_speed_ice                     - sound speed of ice (compression waves)
+%  gsw_kappa_ice                           - isentropic compressibility of ice
+%  gsw_kappa_const_t_ice                   - isothermal compressibility of ice
+%  gsw_internal_energy_ice                 - internal energy of ice
+%  gsw_enthalpy_ice                        - enthalpy of ice
+%  gsw_entropy_ice                         - entropy of ice
+%  gsw_cp_ice                              - isobaric heat capacity of ice
+%  gsw_chem_potential_water_ice            - chemical potential of water in ice
+%  gsw_Helmholtz_energy_ice                - Helmholtz energy of ice
+%  gsw_adiabatic_lapse_rate_ice            - adiabatic lapse rate of ice
+%  gsw_pt0_from_t_ice                      - potential temperature of ice with reference pressure of 0 dbar
+%  gsw_pt_from_t_ice                       - potential temperature of ice
+%  gsw_t_from_pt0_ice                      - in-situ temperature from potential temperature of ice with p_ref of 0 dbar
+%  gsw_pot_enthalpy_from_pt_ice            - potential enthalpy from potential temperature of ice
+%  gsw_pt_from_pot_enthalpy_ice            - potential temperature from potential enthalpy of ice
+%  gsw_pot_enthalpy_from_pt_ice_poly       - potential enthalpy from potential temperature of ice (polynomial) 
+%  gsw_pt_from_pot_enthalpy_ice_poly       - potential temperature from potential enthalpy of ice (polynomial)
+%
+% isobaric evaporation enthalpy
 %  gsw_latentheat_evap_CT  - latent heat of evaporation of water from seawater (isobaric
 %                            evaporation enthalpy) with CT as input temperature
 %  gsw_latentheat_evap_t   - latent heat of evaporation of water from seawater (isobaric
@@ -142,13 +187,10 @@
 %  gsw_grav                - gravitational acceleration
 %  gsw_distance            - spherical earth distance between points in the ocean
 %
-% steric height 
-%  gsw_steric_height       - dynamic height anomaly divided by 9.7963 m s^-2
-%
 % TEOS-10 constants
 %  gsw_T0                  - Celcius zero point; 273.15 K
 %  gsw_P0                  - one standard atmosphere; 101 325 Pa
-%  gsw_SS0                 - Standard Ocean Reference Salinity; 35.165 04 g/kg
+%  gsw_SSO                 - Standard Ocean Reference Salinity; 35.165 04 g/kg
 %  gsw_uPS                 - unit conversion factor for salinities; (35.165 04/35) g/kg
 %  gsw_cp0                 - the "specific heat" for use with CT; 3991.867 957 119 63 (J/kg)/K
 %  gsw_C3515               - conductivity of SSW at SP=35, t_68=15, p=0; 42.9140 mS/cm
@@ -156,13 +198,29 @@
 %  gsw_valence_factor      - valence factor of sea salt; 1.2452898
 %  gsw_atomic_weight       - mole-weighted atomic weight of sea salt; 31.4038218... g/mol
 %  
+% dissolved gasses
+%  gsw_Arsol               - argon solubility from SA and CT
+%  gsw_Arsol_SP_pt         - argon solubility from SP and pt
+%  gsw_Hesol               - helium solubility from SA and CT
+%  gsw_Hesol_SP_pt         - helium solubility from SP and pt
+%  gsw_Krsol               - krypton solubility from SA and CT
+%  gsw_Krsol_SP_pt         - krypton solubility from SP and pt
+%  gsw_N2Osol              - nitrous oxide solubility from SA and CT
+%  gsw_N2Osol_SP_pt        - nitrous oxide solubility from SP and pt
+%  gsw_N2sol               - nitrogen solubility from SA and CT
+%  gsw_N2sol_SP_pt         - nitrogen solubility from SP and pt
+%  gsw_Nesol               - neon solubility from SA and CT
+%  gsw_Nesol_SP_pt         - neon solubility from SP and pt
+%  gsw_O2sol               - oxygen solubility from SA and CT
+%  gsw_O2sol_SP_pt         - oxygen solubility from SP and pt
+%
 % density and enthalpy in terms of CT, based on the exact Gibbs function
 %  gsw_rho_CT_exact                         - in-situ density and potential density
 %  gsw_alpha_CT_exact                       - thermal expansion coefficient with respect to CT
 %  gsw_beta_CT_exact                        - saline contraction coefficientat constant CT
 %  gsw_rho_alpha_beta_CT_exact              - in-situ density, thermal expansion & saline contraction coefficient
-%  gsw_alpha_on_beta_CT_exact               - alpha divied by beta
-%  gsw_rho_first_derivaties_CT_exact        - first derivaties of rho 
+%  gsw_alpha_on_beta_CT_exact               - alpha divided by beta
+%  gsw_rho_first_derivatives_CT_exact       - first derivatives of rho 
 %  gsw_specvol_CT_exact                     - specific volume
 %  gsw_specvol_anom_CT_exact                - specific volume anomaly
 %  gsw_sigma0_CT_exact                      - sigma0 with reference pressure of 0 dbar
@@ -181,8 +239,8 @@
 %  gsw_enthalpy_CT_exact                    - enthalpy
 %  gsw_enthalpy_diff_CT_exact               - difference of enthalpy between two pressures
 %  gsw_dynamic_enthalpy_CT_exact            - dynamic enthalpy
-%  gsw_enthalpy_first_derivaties_CT_exact   - first derivaties of enthalpy
-%  gsw_enthalpy_second_derivaties_CT_exact  - second derivaties of enthalpy
+%  gsw_enthalpy_first_derivatives_CT_exact  - first derivatives of enthalpy
+%  gsw_enthalpy_second_derivatives_CT_exact - second derivatives of enthalpy
 %
 % Labroratory functions, for use with a densimeter measuremants
 %  gsw_SA_from_rho_t_exact              - Absolute Salinity from density
@@ -239,14 +297,16 @@
 %  gsw_interp_ref_cast       - linearly interpolates the reference cast
 %  gsw_interp_SA_CT          - linearly interpolates (SA,CT,p) to the desired p
 %  gsw_gibbs_pt0_pt0         - gibbs(0,2,0,SA,t,0)
+%  gsw_gibbs_ice_part_t      - part of gibbs_ice(1,0,t,p)
+%  gsw_gibbs_ice_pt0         - part of gibbs_ice(1,0,pt0,0)
 %  gsw_specvol_SSO_0_p       - specvol_CT(35.16504,0,p)
 %  gsw_enthalpy_SSO_0_p      - enthalpy_CT(35.16504,0,p)
 %  gsw_Hill_ratio_at_SP2     - Hill ratio at a Practical Salinity of 2
 % 
 %  The GSW data set.
-%  gsw_data_v3_0        - contains
+%  gsw_data_v3_0        - This fine contains:
 %                          (1) the global data set of Absolute Salinity Anomaly Ratio,
-%                          (2) the global data set of Absolute Salinity Anomaly atlas,                                    
+%                          (2) the global data set of Absolute Salinity Anomaly Ref.,                                    
 %                          (3) a reference cast (for the isopycnal streamfunction), 
 %                          (4) two reference casts that are used by gsw_demo 
 %                          (5) three vertical profiles of (SP, t, p) at known long & lat, plus
