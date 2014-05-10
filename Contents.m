@@ -48,7 +48,7 @@
 %  gsw_p_from_z                      - pressure from height
 %  gsw_z_from_depth                  - height from depth
 %  gsw_depth_from_z                  - depth from height
-%  gsw_Abs_Pressure_from_p           - Absolute Pressure,P, from pressure, p
+%  gsw_Abs_Pressure_from_p           - Absolute Pressure, P, from pressure, p
 %  gsw_p_from_Abs_Pressure           - pressure, p, from Absolute Pressure, P
 %  gsw_entropy_from_CT               - entropy from Conservative Temperature
 %  gsw_CT_from_entropy               - Conservative Temperature from entropy 
@@ -110,7 +110,7 @@
 %  gsw_geo_strf_dyn_height           - dynamic height anomaly
 %  gsw_geo_strf_dyn_height_pc        - dynamic height anomaly for piecewise constant profiles
 %  gsw_geo_strf_isopycnal            - approximate isopycnal geostrophic streamfunction
-%  gsw_geo_strf_isopycnal_pc          - approximate isopycnal geostrophic streamfunction for
+%  gsw_geo_strf_isopycnal_pc         - approximate isopycnal geostrophic streamfunction for
 %                                      piecewise constant profiles
 %  gsw_geo_strf_Montgomery           - Montgomery geostrophic streamfunction
 %  gsw_geo_strf_Cunningham           - Cunningham geostrophic streamfunction
@@ -217,7 +217,7 @@
 % density and enthalpy in terms of CT, based on the exact Gibbs function
 %  gsw_rho_CT_exact                         - in-situ density and potential density
 %  gsw_alpha_CT_exact                       - thermal expansion coefficient with respect to CT
-%  gsw_beta_CT_exact                        - saline contraction coefficientat constant CT
+%  gsw_beta_CT_exact                        - saline contraction coefficient at constant CT
 %  gsw_rho_alpha_beta_CT_exact              - in-situ density, thermal expansion & saline contraction coefficient
 %  gsw_alpha_on_beta_CT_exact               - alpha divided by beta
 %  gsw_rho_first_derivatives_CT_exact       - first derivatives of rho 
@@ -242,7 +242,7 @@
 %  gsw_enthalpy_first_derivatives_CT_exact  - first derivatives of enthalpy
 %  gsw_enthalpy_second_derivatives_CT_exact - second derivatives of enthalpy
 %
-% Labroratory functions, for use with a densimeter measuremants
+% Laboratory functions, for use with densimeter measurements
 %  gsw_SA_from_rho_t_exact              - Absolute Salinity from density
 %  gsw_deltaSA_from_rho_t_exact         - Absolute Salinity Anomaly from density
 %  gsw_rho_t_exact                      - in-situ density
@@ -304,7 +304,7 @@
 %  gsw_Hill_ratio_at_SP2     - Hill ratio at a Practical Salinity of 2
 % 
 %  The GSW data set.
-%  gsw_data_v3_0        - This fine contains:
+%  gsw_data_v3_0        - This file contains:
 %                          (1) the global data set of Absolute Salinity Anomaly Ratio,
 %                          (2) the global data set of Absolute Salinity Anomaly Ref.,                                    
 %                          (3) a reference cast (for the isopycnal streamfunction), 
