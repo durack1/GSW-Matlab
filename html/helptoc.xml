@@ -8,6 +8,9 @@
       <tocitem target="../pdf/Getting_Started_preamble.pdf">
         Preamble
       </tocitem>
+	  <tocitem target="../pdf/Getting_Started_Installing_GSW.pdf">
+	    Installing GSW 
+	  </tocitem>
       <tocitem target="../pdf/Getting_Started_Absolute_Salinity.pdf">
         Absolute Salinity
       </tocitem>
@@ -124,11 +127,14 @@
       <tocitem target="gsw_pot_enthalpy_from_pt.html" image="HelpIcon.FUNCTION">
         gsw_pot_enthalpy_from_pt<!-- potential enthalpy from potential temperature -->
       </tocitem>
+	  <tocitem target="gsw_pt_from_t.html" image="HelpIcon.FUNCTION">
+        gsw_pt_from_t<!-- potential temperature -->
+      </tocitem>
       <tocitem target="gsw_pt0_from_t.html" image="HelpIcon.FUNCTION">
         gsw_pt0_from_t<!-- potential temperature with a reference pressure of zero dbar -->
       </tocitem>
-      <tocitem target="gsw_pt_from_t.html" image="HelpIcon.FUNCTION">
-        gsw_pt_from_t<!-- potential temperature -->
+	  <tocitem target="gsw_t_from_pt0.html" image="HelpIcon.FUNCTION">
+        gsw_t_from_pt0<!-- in-situ temperature from potential temperature with a reference pressure of zero dbar -->
       </tocitem>
       <tocitem target="gsw_t90_from_t48.html" image="HelpIcon.FUNCTION">
         gsw_t90_from_t48<!-- ITS-90 temperature from IPTS-48 temperature -->
@@ -142,11 +148,11 @@
       <tocitem target="gsw_p_from_z.html" image="HelpIcon.FUNCTION">
         gsw_p_from_z<!-- pressure from height -->
       </tocitem>
-      <tocitem target="gsw_depth_from_z.html" image="HelpIcon.FUNCTION">
-        gsw_depth_from_z<!-- depth from height -->
-      </tocitem>
       <tocitem target="gsw_z_from_depth.html" image="HelpIcon.FUNCTION">
         gsw_z_from_depth<!-- height from depth -->
+      </tocitem>	  
+      <tocitem target="gsw_depth_from_z.html" image="HelpIcon.FUNCTION">
+        gsw_depth_from_z<!-- depth from height -->
       </tocitem>
       <tocitem target="gsw_Abs_Pressure_from_p.html" image="HelpIcon.FUNCTION">
         gsw_Abs_Pressure_from_p<!-- Absolute Pressure,P, from pressure, p -->
@@ -166,6 +172,18 @@
       <tocitem target="gsw_pt_from_entropy.html" image="HelpIcon.FUNCTION">
         gsw_pt_from_entropy<!-- potential temperature from entropy -->
       </tocitem>
+	  <tocitem target="gsw_entropy_from_t.html" image="HelpIcon.FUNCTION">
+        gsw_entropy_from_t<!-- entropy from in-situ temperature -->
+      </tocitem>
+      <tocitem target="gsw_t_from_entropy.html" image="HelpIcon.FUNCTION">
+        gsw_t_from_entropy<!-- in-situ temperature from entropy -->
+      </tocitem>
+      <tocitem target="gsw_adiabatic_lapse_rate_from_CT.html" image="HelpIcon.FUNCTION">
+        gsw_adiabatic_lapse_rate_from_CT<!-- adiabatic lapse rate from Conservative Temperature -->
+      </tocitem>
+      <tocitem target="gsw_adiabatic_lapse_rate_from_t.html" image="HelpIcon.FUNCTION">
+        gsw_adiabatic_lapse_rate_from_t<!-- adiabatic lapse rate from in-situ temperature-->
+      </tocitem>
       <tocitem target="gsw_molality_from_SA.html" image="HelpIcon.FUNCTION">
         gsw_molality_from_SA<!-- molality of seawater -->
       </tocitem>
@@ -176,61 +194,82 @@
     <tocitem target="gsw_contents.html#6">
       density and enthalpy, based on the 48-term expression for density
       <tocitem target="gsw_rho.html" image="HelpIcon.FUNCTION">
-        gsw_rho_CT<!-- in-situ density from CT, and potential density -->
+        gsw_rho<!-- in-situ density from CT, and potential density -->
       </tocitem>
       <tocitem target="gsw_alpha.html" image="HelpIcon.FUNCTION">
-        gsw_alpha_CT<!-- thermal expansion coefficient with respect to CT -->
+        gsw_alpha<!-- thermal expansion coefficient with respect to CT -->
       </tocitem>
       <tocitem target="gsw_beta.html" image="HelpIcon.FUNCTION">
-        gsw_beta_CT<!-- saline contraction coefficient at constant CT -->
+        gsw_beta<!-- saline contraction coefficient at constant CT -->
       </tocitem>
       <tocitem target="gsw_rho_alpha_beta.html" image="HelpIcon.FUNCTION">
-        gsw_rho_alpha_beta_CT<!-- in-situ density, thermal expansion &amp; saline contraction coefficients -->
+        gsw_rho_alpha_beta<!-- in-situ density, thermal expansion &amp; saline contraction coefficients -->
+      </tocitem>
+	  <tocitem target="gsw_alpha_on_beta.html" image="HelpIcon.FUNCTION">
+        gsw_alpha_on_beta<!-- alpha divided by beta -->
+      </tocitem>
+      <tocitem target="gsw_rho_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_rho_first_derivatives<!-- first derivatives of density -->
       </tocitem>
       <tocitem target="gsw_specvol.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_CT<!-- specific volume -->
+        gsw_specvol<!-- specific volume -->
       </tocitem>
       <tocitem target="gsw_specvol_anom.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_anom_CT<!-- specific volume anomaly -->
+        gsw_specvol_anom<!-- specific volume anomaly -->
       </tocitem>
       <tocitem target="gsw_sigma0.html" image="HelpIcon.FUNCTION">
-        gsw_sigma0_CT<!-- sigma0 from CT with reference pressure of 0 dbar -->
+        gsw_sigma0<!-- sigma0 from CT with reference pressure of 0 dbar -->
       </tocitem>
       <tocitem target="gsw_sigma1.html" image="HelpIcon.FUNCTION">
-        gsw_sigma1_CT<!-- sigma1 from CT with reference pressure of 1000 dbar -->
+        gsw_sigma1<!-- sigma1 from CT with reference pressure of 1000 dbar -->
       </tocitem>
       <tocitem target="gsw_sigma2.html" image="HelpIcon.FUNCTION">
-        gsw_sigma2_CT<!-- sigma2 from CT with reference pressure of 2000 dbar -->
+        gsw_sigma2<!-- sigma2 from CT with reference pressure of 2000 dbar -->
       </tocitem>
       <tocitem target="gsw_sigma3.html" image="HelpIcon.FUNCTION">
-        gsw_sigma3_CT<!-- sigma3 from CT with reference pressure of 3000 dbar -->
+        gsw_sigma3<!-- sigma3 from CT with reference pressure of 3000 dbar -->
       </tocitem>
       <tocitem target="gsw_sigma4.html" image="HelpIcon.FUNCTION">
-        gsw_sigma4_CT<!-- sigma4 from CT with reference pressure of 4000 dbar -->
+        gsw_sigma4<!-- sigma4 from CT with reference pressure of 4000 dbar -->
       </tocitem>
       <tocitem target="gsw_sound_speed.html" image="HelpIcon.FUNCTION">
-        gsw_sound_speed_CT<!-- sound speed (approximate, with r.m.s. error of 0.067 m/s) -->
+        gsw_sound_speed<!-- sound speed (approximate, with r.m.s. error of 0.067 m/s) -->
       </tocitem>
-      <tocitem target="gsw_internal_energy.html" image="HelpIcon.FUNCTION">
-        gsw_internal_energy_CT<!-- internal energy -->
+	  <tocitem target="gsw_kappa.html" image="HelpIcon.FUNCTION">
+        gsw_kappa<!-- isentropic compressibility -->
       </tocitem>
-      <tocitem target="gsw_enthalpy.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_CT<!-- enthalpy -->
+      <tocitem target="gsw_cabbeling.html" image="HelpIcon.FUNCTION">
+        gsw_cabbeling<!-- cabbeling coefficient -->
       </tocitem>
-      <tocitem target="gsw_enthalpy_diff.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_diff_CT<!-- difference of enthalpy between two pressures -->
-      </tocitem>
-      <tocitem target="gsw_dynamic_enthalpy.html" image="HelpIcon.FUNCTION">
-        gsw_dynamic_enthalpy_CT<!-- dynamic enthalpy -->
+      <tocitem target="gsw_thermobaric.html" image="HelpIcon.FUNCTION">
+        gsw_thermobaric<!-- thermobaric coefficient -->
       </tocitem>
       <tocitem target="gsw_SA_from_rho.html" image="HelpIcon.FUNCTION">
-        gsw_SA_from_rho_CT<!-- Absolute Salinity from density & CT -->
+        gsw_SA_from_rho<!-- Absolute Salinity from density -->
       </tocitem>
       <tocitem target="gsw_CT_from_rho.html" image="HelpIcon.FUNCTION">
         gsw_CT_from_rho<!-- Conservative Temperature from density -->
       </tocitem>
-      <tocitem target="gsw_C_maxdensity.html" image="HelpIcon.FUNCTION">
+      <tocitem target="gsw_CT_maxdensity.html" image="HelpIcon.FUNCTION">
         gsw_CT_maxdensity<!-- Conservative Temperature of maximum density of seawater -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy<!-- internal energy -->
+      </tocitem>
+      <tocitem target="gsw_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy<!-- enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_enthalpy_diff.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_diff<!-- difference of enthalpy between two pressures -->
+      </tocitem>
+      <tocitem target="gsw_dynamic_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_dynamic_enthalpy<!-- dynamic enthalpy -->
+      </tocitem>
+	  <tocitem target="gsw_enthalpy_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_first_derivatives<!-- first derivatives of enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_enthalpy_second_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_second_derivatives<!-- second derivatives of enthalpy -->
       </tocitem>
     </tocitem>
     <tocitem target="gsw_contents.html#7">
@@ -246,13 +285,7 @@
       </tocitem>
     </tocitem>
     <tocitem target="gsw_contents.html#8">
-      neutral and non-linear properties, based on the 48-term expression for density
-      <tocitem target="gsw_cabbeling.html" image="HelpIcon.FUNCTION">
-        gsw_cabbeling<!-- cabbeling coefficient -->
-      </tocitem>
-      <tocitem target="gsw_thermobaric.html" image="HelpIcon.FUNCTION">
-        gsw_thermobaric<!-- thermobaric coefficient -->
-      </tocitem>
+      neutral properties, based on the 48-term expression for density
       <tocitem target="gsw_isopycnal_slope_ratio.html" image="HelpIcon.FUNCTION">
         gsw_isopycnal_slope_ratio<!-- ratio of the slopes of isopycnals on the SA-CT diagram  for p &amp; p_ref -->
       </tocitem>
@@ -291,18 +324,12 @@
       </tocitem>
     </tocitem>
     <tocitem target="gsw_contents.html#11">
-      derivatives of enthalpy, entropy, CT and pt
+      derivatives of entropy, CT and pt
       <tocitem target="gsw_CT_first_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_CT_first_derivatives<!-- first derivatives of Conservative Temperature -->
       </tocitem>
       <tocitem target="gsw_CT_second_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_CT_second_derivatives<!-- second derivatives of Conservative Temperature -->
-      </tocitem>
-      <tocitem target="gsw_enthalpy_first_derivatives.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_first_derivatives<!-- first derivatives of enthalpy -->
-      </tocitem>
-      <tocitem target="gsw_enthalpy_second_derivatives.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_second_derivatives<!-- second derivatives of enthalpy -->
       </tocitem>
       <tocitem target="gsw_entropy_first_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_entropy_first_derivatives<!-- first derivatives of entropy -->
@@ -345,7 +372,7 @@
       </tocitem>
     </tocitem>
     <tocitem target="gsw_contents.html#14">
-      Planet Earth properties
+      planet Earth properties
       <tocitem target="gsw_f.html" image="HelpIcon.FUNCTION">
         gsw_f<!-- Coriolis parameter -->
       </tocitem>
@@ -355,15 +382,13 @@
       <tocitem target="gsw_distance.html" image="HelpIcon.FUNCTION">
         gsw_distance<!-- spherical earth distance between points in the ocean -->
       </tocitem>
-    </tocitem>
-    
+    </tocitem>    
     <tocitem target="gsw_contents.html#15">
       steric height
       <tocitem target="gsw_steric_height.html" image="HelpIcon.FUNCTION">
         gsw_steric_height<!-- dynamic height anomaly divided by 9.7963  -->
       </tocitem>
     </tocitem>
-    
     <tocitem target="gsw_contents.html#16">
       TEOS-10 constants
       <tocitem target="gsw_T0.html" image="HelpIcon.FUNCTION">
@@ -397,7 +422,7 @@
     <tocitem target="gsw_contents.html#17">
       density and enthalpy in terms of CT, based on the exact Gibbs function
       <tocitem target="gsw_rho_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_rho_CT_exact<!-- in-situ density from CT, and potential density from CT -->
+        gsw_rho_CT_exact<!-- in-situ density and potential density -->
       </tocitem>
       <tocitem target="gsw_alpha_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_alpha_CT_exact<!-- thermal expansion coefficient with respect to CT -->
@@ -407,6 +432,12 @@
       </tocitem>
       <tocitem target="gsw_rho_alpha_beta_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_rho_alpha_beta_CT_exact<!-- in-situ density, thermal expansion &amp; saline contraction coefficient from CT -->
+      </tocitem>
+	  <tocitem target="gsw_alpha_on_beta_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_alpha_on_beta_CT_exact<!-- alpha divided by beta -->
+      </tocitem>
+      <tocitem target="gsw_rho_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_first_derivatives_CT_exact<!-- first derivatives of density -->
       </tocitem>
       <tocitem target="gsw_specvol_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_specvol_CT_exact<!-- specific volume from CT -->
@@ -432,6 +463,24 @@
       <tocitem target="gsw_sound_speed_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_sound_speed_CT_exact<!-- sound speed -->
       </tocitem>
+	  <tocitem target="gsw_kappa_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_kappa_CT_exact<!-- isentropic compressibility -->
+      </tocitem>
+      <tocitem target="gsw_cabbeling_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_cabbeling_CT_exact<!-- cabbeling coefficient -->
+      </tocitem>
+      <tocitem target="gsw_thermobaric_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_thermobaric_CT_exact<!-- thermobaric coefficient -->
+      </tocitem>
+	  <tocitem target="gsw_SA_from_rho_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_SA_from_rho_CT_exact<!-- Absolute Salinity from Density & CT -->
+      </tocitem>
+      <tocitem target="gsw_CT_from_rho_exact.html" image="HelpIcon.FUNCTION">
+        gsw_CT_from_rho_exact<!-- Conservative Temperature from density -->
+      </tocitem>
+      <tocitem target="gsw_CT_maxdensity_exact.html" image="HelpIcon.FUNCTION">
+        gsw_CT_maxdensity_exact<!-- Conservative Temperature of maximum density of seawater -->
+      </tocitem>
       <tocitem target="gsw_internal_energy_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_internal_energy_CT_exact<!-- internal energy -->
       </tocitem>
@@ -444,17 +493,26 @@
       <tocitem target="gsw_dynamic_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_dynamic_enthalpy_CT_exact<!-- dynamic enthalpy from CT -->
       </tocitem>
-      <tocitem target="gsw_SA_from_rho_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_SA_from_rho_CT_exact<!-- Absolute Salinity from Density & CT -->
+	  <tocitem target="gsw_enthalpy_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_first_derivatives_CT_exact<!-- first derivatives of enthalpy -->
       </tocitem>
-      <tocitem target="gsw_CT_from_rho_exact.html" image="HelpIcon.FUNCTION">
-        gsw_CT_from_rho_exact<!-- Conservative Temperature from density -->
-      </tocitem>
-      <tocitem target="gsw_CT_maxdensity_exact.html" image="HelpIcon.FUNCTION">
-        gsw_CT_maxdensity_exact<!-- Conservative Temperature of maximum density of seawater -->
+      <tocitem target="gsw_enthalpy_second_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_second_derivatives_CT_exact<!-- second derivatives of enthalpy -->
       </tocitem>
     </tocitem>
-    <tocitem target="gsw_contents.html#18">
+	<tocitem target="gsw_contents.html#18">
+      laboratory functions, for use with densimeter measurements
+      <tocitem target="gsw_SA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_SA_from_rho_t_exact<!-- Absolute Salinity from density -->
+      </tocitem>
+      <tocitem target="gsw_deltaSA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_deltaSA_from_rho_t_exact<!-- Absolute Salinity Anomaly from density -->
+      </tocitem>
+      <tocitem target="gsw_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_t_exact<!-- in-situ density -->
+      </tocitem>
+    </tocitem>
+    <tocitem target="gsw_contents.html#19">
       basic thermodynamic properties in terms of in-situ t, based on the exact Gibbs function
       <tocitem target="gsw_rho_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_rho_t_exact<!-- in-situ density -->
@@ -498,16 +556,7 @@
       <tocitem target="gsw_kappa_const_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_kappa_const_t_exact<!-- isothermal compressibility -->
       </tocitem>
-      <tocitem target="gsw_internal_energy.html" image="HelpIcon.FUNCTION">
-        gsw_internal_energy_t_exact<!-- internal energy -->
-      </tocitem>
-      <tocitem target="gsw_enthalpy_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_t_exact<!-- enthalpy -->
-      </tocitem>
-      <tocitem target="gsw_dynamic_enthalpy_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_dynamic_enthalpy_t_exact<!-- dynamic enthalpy -->
-      </tocitem>
-      <tocitem target="gsw_SA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
+	  <tocitem target="gsw_SA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_SA_from_rho_t_exact<!-- Absolute Salinity from density -->
       </tocitem>
       <tocitem target="gsw_t_from_rho_exact.html" image="HelpIcon.FUNCTION">
@@ -516,8 +565,14 @@
       <tocitem target="gsw_t_maxdensity_exact.html" image="HelpIcon.FUNCTION">
         gsw_t_maxdensity_exact<!-- in-situ temperature of maximum density of seawater -->
       </tocitem>
-      <tocitem target="gsw_entropy_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_entropy_t_exact<!-- entropy -->
+      <tocitem target="gsw_internal_energy_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_t_exact<!-- internal energy -->
+      </tocitem>
+      <tocitem target="gsw_enthalpy_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_enthalpy_t_exact<!-- enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_dynamic_enthalpy_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_dynamic_enthalpy_t_exact<!-- dynamic enthalpy -->
       </tocitem>
       <tocitem target="gsw_cp_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_cp_t_exact<!-- isobaric heat capacity -->
@@ -536,9 +591,6 @@
       </tocitem>
       <tocitem target="gsw_Helmholtz_energy_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_Helmholtz_energy_t_exact<!-- Helmholtz energy -->
-      </tocitem>
-      <tocitem target="gsw_adiabatic_lapse_rate_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_adiabatic_lapse_rate_t_exact<!-- adiabatic lapse rate -->
       </tocitem>
       <tocitem target="gsw_osmotic_coefficient_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_osmotic_coefficient_t_exact<!-- osmotic coefficient of seawater -->

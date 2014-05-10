@@ -60,30 +60,30 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_deltaSA_from_SP</h1>
-  <!--introduction--><pre><font size="5"><b>Absolute Salinity anomaly from Practical Salinity</b></font></pre><!--/introduction-->
+  <!--introduction--><pre><font size="5"><b>Absolute Salinity Anomaly from Practical Salinity</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
-  <h2>USAGE:<a name="1"></a></h2>
-  <pre>delta_SA = gsw_deltaSA_from_SP(SP,p,long,lat)</pre>
-  <h2>DESCRIPTION:<a name="2"></a></h2>
-  <pre>Calculates the Absolute Salinity anomaly from Practical Salinity.</pre>  
-    <table width="500" border="0">
+<h2>USAGE:<a name="1"></a></h2>
+<pre>delta_SA = gsw_deltaSA_from_SP(SP,p,long,lat)</pre>
+<h2>DESCRIPTION:<a name="2"></a></h2>
+<pre>Calculates the Absolute Salinity Anomaly from Practical Salinity.</pre>  
+<table width="500" border="0">
   <tr>
     <td><a href="../pdf/deltaSA_from_SP.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
     <td><pre><font size="4"><a href="../pdf/deltaSA_from_SP.pdf">Click for a more detailed description of the
-Absolute Salinity anomaly.</a></font></pre></td>
+Absolute Salinity Anomaly.</a></font></pre></td>
   </tr>
 </table>
-
-  <h2>INPUT:<a name="3"></a></h2>
-  <pre>p     =  sea pressure                                           [ dbar ]
+<h2>INPUT:<a name="3"></a></h2>
+<pre>SP   =  Practical Salinity  (PSS-78)                        [ unitless ]
+p     =  sea pressure                                           [ dbar ]
          ( i.e. absolute pressure - 10.1325 dbar )
 long  =  longitude in decimal degrees                     [ 0 ... +360 ]
                                                     or [ -180 ... +180 ]
 lat   =  latitude in decimal degrees north               [ -90 ... +90 ]</pre>
-<pre>SA, p, long &amp; lat need to have the same dimensions.</pre>
+<pre>SP, p, long &amp; lat need to have the same dimensions.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
-<pre>deltaSA  =  Absolute Salinity anomaly                          [ g/kg ]</pre>
+<pre>deltaSA  =  Absolute Salinity Anomaly                          [ g/kg ]</pre>
 <h2>EXAMPLE:<a name="5"></a></h2>
 <pre>SP =   [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
 p =    [     10;      50;     125;     250;     600;    1000;]
@@ -100,7 +100,7 @@ long = [    188;     188;     188;     188;     188;     188;]</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall and Paul Barker        [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
- <pre>3.02 (17th November, 2012)</pre>
+<pre>3.03 (30th April, 2013)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -110,6 +110,6 @@ long = [    188;     188;     188;     188;     188;     188;]</pre>
 <pre>McDougall, T.J., D.R. Jackett, F.J. Millero, R. Pawlowicz and
  P.M. Barker, 2012: A global algorithm for estimating Absolute Salinity.
  <i>Ocean Science</i>, <b>8</b>, 1123-1134.  
-  <a href=" http://www.ocean-sci.net/8/1123/2012/os-8-1123-2012.pdf">http://www.ocean-sci.net/8/1123/2012/os-8-1123-2012.pdf</a></pre>
+  <a href="http://www.ocean-sci.net/8/1123/2012/os-8-1123-2012.pdf">http://www.ocean-sci.net/8/1123/2012/os-8-1123-2012.pdf</a></pre>
 <pre>The software is available from <a href="http://www.TEOS-10.org">http://www.TEOS-10.org</a></pre></font>
 </div></body></html>

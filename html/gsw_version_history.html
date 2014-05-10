@@ -8,8 +8,23 @@
 <body>
 
 <h1>Gibbs Sea Water (GSW) version history</h1>
-<h2>Version 3.02 <font size="3">(3.02 (20th November, 2012))</font></h2>
-<p>Improved computation efficency</p>
+<h2>Version 3.03 <font size="3">(8th June, 2013)</font></h2>
+<p>Added</p> 
+<ul>
+<li>isentropic compressibility (kappa) for the 48-term equation of state.</li>
+<li>gsw_rho_first derivatves and gsw_rho_first derivatves_CT_exact.</li>
+<li>gsw_alpha_on_beta and gsw_alpha_on_beta_CT_exact.</li>
+<li>gsw_t_from_pt0</li>
+<li>gsw_t_from_entropy</li>
+<li>gsw_adiabatic_lapse_rate_from_CT.</li>
+<li>gsw_deltaSA_from_rho_t_exact.</li>
+</ul>
+<p>Remaned gsw_entropy_t_exact to gsw_entropy_from_t, and added ths inverse function (gsw_t_from_entropy)</p>
+<p>Renamed gsw_adiabatic_lapse_rate_t_exact to gsw_adiabatic_lapse_rate_from_t</p>
+
+
+<h2>Version 3.02 <font size="3">(20th November, 2012)</font></h2>
+<p>Improved computation efficiency.</p>
 <p>Minor bug fixes.</p>
 
 <h2>Version 3.01 <font size="3">(14th November 2011)</font></h2>
@@ -20,7 +35,7 @@
 <p>Consists of approximately 166 functions.</p>
 <p>Major improvements</p>
 <ul>
-<li> 48 term density equation introduced (intended for use by observational, theoretical oceanographers
+<li> 48-term density equation introduced (intended for use by observational, theoretical oceanographers
  and ocean modellers). The use of a single density equation will ensure a unified field. </li>
 <li> the Absolute Salinity Anomaly takes into account evaporation and dilution. </li>
 <li> freezing temperatures</li>

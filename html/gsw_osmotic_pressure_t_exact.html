@@ -65,7 +65,7 @@ p.footer {
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
   <h2>USAGE:<a name="1"></a></h2>
-  <pre>osmotic_pressure_t_exact  =  gsw_osmotic_pressure_t_exact(SA,t,p)</pre>
+  <pre>osmotic_pressure_t_exact  =  gsw_osmotic_pressure_t_exact(SA,t,pw)</pre>
   <h2>DESCRIPTION:<a name="2"></a></h2>
   <pre>Calculates the osmotic pressure of seawater.</pre>
   <table width="500" border="0">
@@ -78,17 +78,17 @@ the osmotic pressure of seawater.</a></font></pre></td>
   <h2>INPUT:<a name="3"></a></h2>
 <pre>SA =  Absolute Salinity                                         [ g/kg ]
 t  =  in-situ temperature (ITS-90)                             [ deg C ]
-p  =  sea pressure                                              [ dbar ]
+pw =  sea pressure of the pure water side                       [ dbar ]
       ( i.e. absolute pressure - 10.1325 dbar )</pre>
 <pre>SA &amp; t need to have the same dimensions.
-p may have dimensions 1x1 or Mx1 or 1xN or MxN, where SA &amp; t are MxN.</pre>
+pw may have dimensions 1x1 or Mx1 or 1xN or MxN, where SA &amp; t are MxN.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
 <pre>osmotic_pressure_t_exact  =  osmotic pressure of seawater       [ dbar ]</pre>
 <h2>EXAMPLE:<a name="5"></a></h2>
-<pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
-t =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
-p =  [     10;      50;     125;     250;     600;    1000;]</pre>
-<pre>osmotic_pressure_t_exact = gsw_osmotic_pressure_t_exact(SA,t,p)</pre>
+<pre>SA =  [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
+t  =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
+pw =  [     10;      50;     125;     250;     600;    1000;]</pre>
+<pre>osmotic_pressure_t_exact = gsw_osmotic_pressure_t_exact(SA,t,pw)</pre>
 <pre>osmotic_pressure_t_exact =</pre>
 <pre> 1.0e+002 *</pre>
 <pre>   2.587914991205040
@@ -101,7 +101,7 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall and Paul Barker          [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
- <pre>3.02 (17th November, 2012)</pre>
+<pre>3.03 (2nd May, 2013)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

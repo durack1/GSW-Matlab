@@ -79,7 +79,7 @@ anomaly is the geostrophic streamfunction in an isobaric surface.  The
 reference values used for the specific volume anomaly are 
 SSO = 35.16504 g/kg and CT = 0 deg C.  This function calculates 
 specific volume anomaly using the computationally efficient 48-term 
-expression for specific volume of McDougall et al. (2013). 
+expression for specific volume of IOC et al. (2010). 
 
 This function evaluates the pressure integral of specific volume using 
 SA and CT "interpolated" with respect to pressure using a scheme based 
@@ -91,7 +91,7 @@ splines.
 
 Note that the 48-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in McDougall et al. (2013).  For dynamical oceanography we may 
+described in IOC et al. (2010).  For dynamical oceanography we may 
 take the 48-term rational function expression for density as essentially 
 reflecting the full accuracy of TEOS-10.  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
@@ -147,17 +147,13 @@ p_ref = 500</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Paul Barker, Jeff Dunn and Trevor McDougall   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.02 (17th November, 2012)</pre>
+<pre>3.03 (2nd May, 2013)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.teos-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/geo_strf_dyn_height.pdf">See Eqn. (3.7.3) and section 3.27 of this TEOS-10 Manual</a>.</pre>
-<pre>McDougall T.J., P.M. Barker, R. Feistel and D.R. Jackett, 2013:  A 
- computationally efficient 48-term expression for the density of 
- seawater in terms of Conservative Temperature, and related properties
- of seawater.  To be submitted to J. Atm. Ocean. Technol., xx, yyy-zzz.</pre>
 <pre>Reiniger, R. F. and C. K. Ross, 1968: A method of interpolation with
  application to oceanographic data. Deep-Sea Res. 15, 185-193.</pre>
 <pre>The software is available from <a href="http://www.teos-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font></div></body></html>

@@ -3,10 +3,7 @@
   PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <!--
-This HTML is auto-generated from an M-file.
-To make changes, update the M-file and republish this document.
-      --><title>gsw_enthalpy_second_derivatives</title><meta name="generator" content="MATLAB 7.10"><meta name="date" content="2010-09-28"><meta name="m-file" content="gsw_enthalpy_second_derivatives"><style type="text/css">
+   <title>gsw_enthalpy_second_derivatives</title><style type="text/css">
 
 body {
   background-color: white;
@@ -63,7 +60,7 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_enthalpy_second_derivatives</h1>
-  <!--introduction--><pre><font size="5"><b>second derivatives of enthalpy</b></font></pre><!--/introduction-->
+  <!--introduction--><pre><font size="5"><b>second derivatives of enthalpy (48-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
   <h2>USAGE:<a name="1"></a></h2>
@@ -77,6 +74,11 @@ enthalpy (h),
      constant p.
  (3) h_CT_CT, second order derivative with respect to CT at constant
      SA &amp; p.</pre>
+     <pre>Note that the 48-term equation has been fitted in a restricted range of 
+parameter space, and is most accurate inside the "oceanographic funnel" 
+described in IOC et al. (2010).  The GSW library function 
+"gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
+some of one's data lies outside this "funnel". </pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/enthalpy_second_derivatives.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -101,38 +103,38 @@ h_CT_CT  =  The second derivative of specific enthalpy with respect to
             CT at constant SA and p.                      [ J/(kg K^2) ]</pre>
             <h2>EXAMPLE:<a name="5"></a></h2>
 <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
-CT =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
+CT = [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>[h_SA_SA, h_SA_CT, h_CT_CT] = gsw_enthalpy_second_derivatives(SA,CT,p)</pre>
 <pre>h_SA_SA =</pre>
-<pre>   0.000082767011575
-   0.000414469343141
-   0.001089580017293
-   0.002472193425999
-   0.006103171596320
-   0.010377465312462
+<pre>   0.000082854668904
+   0.000415219830074
+   0.001096662117561
+   0.002482791160221
+   0.006098208814365
+   0.010328120879422
   
  h_SA_CT =
  
-   0.000130320164426
-   0.000655016236924
-   0.001879127443985
-   0.005468695168037
-   0.014315709000526
-   0.025192691262061
+   0.000130067761006
+   0.000653899689951
+   0.001877565409814
+   0.005480180789185
+   0.014325846677821
+   0.025188055587933
   
  h_CT_CT =
 
-   0.000714365642428
-   0.003584965089168
-   0.009733337653703
-   0.024044402143825
-   0.061449390733344
-   0.107333638394904</pre>
+   0.000713718009138
+   0.003585321337597
+   0.009720652087712
+   0.024078144633669
+   0.061554419517054
+   0.107437444967222</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
   <pre>Trevor McDougall and Paul Barker.          [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
   <h2>VERSION NUMBER:<a name="7"></a></h2>
-  <pre>3.02 (17th November, 2012)</pre>
+<pre>3.03 (30th April, 2013)</pre>
   <h2>REFERENCES:<a name="8"></a></h2>
   <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -140,10 +142,6 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/enthalpy_second_derivatives.pdf" title="TEOS-10">See Notes on the first and second order isobaric derivatives of
   specific enthalpy.</a></pre>
-  <pre>McDougall T.J., P.M. Barker, R. Feistel and D.R. Jackett, 2013:  A 
- computationally efficient 48-term expression for the density of 
- seawater in terms of Conservative Temperature, and related properties
- of seawater.  To be submitted to J. Atm. Ocean. Technol., xx, yyy-zzz.</pre>
   <pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre>
   </font>
   </div></body></html>
