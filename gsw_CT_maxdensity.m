@@ -18,7 +18,7 @@ function CT_maxdensity = gsw_CT_maxdensity(SA,p)
 %  Note that the 48-term equation has been fitted in a restricted range of 
 %  parameter space, and is most accurate inside the "oceanographic funnel" 
 %  described in IOC et al. (2010).  The GSW library function 
-%  "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
+%  "gsw_infunnel(SA,CT,p)" is available to be used if one wants to test if 
 %  some of one's data lies outside this "funnel".  
 %
 % INPUT:
@@ -45,9 +45,9 @@ function CT_maxdensity = gsw_CT_maxdensity(SA,p)
 %   UNESCO (English), 196 pp.  Available from http://www.TEOS-10.org
 %    See section 3.42 of this TEOS-10 Manual.  
 %
-%  McDougall T.J. and S.J. Wotherspoon, 2012: A simple modification of 
-%   Newton’s method to achieve convergence of order "1 + sqrt(2)".
-%   Submitted to Applied Mathematics and Computation. 
+%  McDougall T.J. and S.J. Wotherspoon, 2014: A simple modification of 
+%   Newton's method to achieve convergence of order "1 + sqrt(2)".
+%   Applied Mathematics Letters, 29, pp 20-25. doi: 10.1016/j.aml.2013.10.008 
 %
 %  The software is available from http://www.TEOS-10.org
 %
@@ -94,11 +94,11 @@ end
 % n0 = 0; 
 % n1 = 1;
 
-dCT = 0.001;                      % the Conservative Temperature increment.
+dCT = 0.001;               % the Conservative Temperature increment.
 
-CT = 3.978 - 0.22072*SA;                         % the initial guess of CT.
+CT = 3.978 - 0.22072*SA;   % the initial guess of CT.
 
-dalpha_dCT = 1.1e-5;                 % the initial guess for d(alpha)_dCT.
+dalpha_dCT = 1.1e-5;       % the initial guess for d(alpha)_dCT.
 
 for Number_of_iterations = 1:3
     CT_old = CT;
@@ -111,8 +111,8 @@ for Number_of_iterations = 1:3
 end
 
 % After three iterations of this modified Newton-Raphson (McDougall and 
-% Wotherspoon, 2012) iteration, the error in CT_maxdensity is typically no
-% larger than 1x10^-15 degress C.  
+% Wotherspoon, 2014) iteration, the error in CT_maxdensity is typically no
+% larger than 1x10^-15 degrees C.  
 
 CT_maxdensity = CT;
 
