@@ -81,13 +81,13 @@ chemical potentials of water in seawater and in ice.</pre>
 <pre>An alternative GSW function, gsw_CT_freezing_poly, it is based on a 
 computationally-efficient polynomial, and is accurate to within -5e-4 K 
 and 6e-4 K, when compared with this function.</pre>
- <table width="500" border="0">
+<!-- <table width="500" border="0">
   <tr>
     <td><a href="../pdf/CT_freezing.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
     <td><pre><font size="4"><a href="../pdf/CT_freezing.pdf">Click for a more detailed description of calculating
 Conservative Temperature freezing.</a></font></pre></td>
   </tr>
-</table>
+</table> -->
 <h2>INPUT:<a name="3"></a></h2>
 <pre>SA  =  Absolute Salinity                                        [ g/kg ]
 p   =  sea pressure                                             [ dbar ]
@@ -98,7 +98,7 @@ OPTIONAL:
 saturation_fraction  =  the saturation fraction of dissolved air  
                         in seawater
 (i.e., saturation_fraction must be between 0 and 1, and the 
-default is 1, completely saturated) 
+default is 0, air free) 
 
 p & saturation_fraction (if provided) may have dimensions 1x1 or Mx1
 or 1xN or MxN, where SA is MxN.</pre>
@@ -121,7 +121,7 @@ saturation_fraction = 1;</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Paul Barker, Trevor McDougall and Rainer Feistal   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (3rd December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.

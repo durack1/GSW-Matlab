@@ -63,7 +63,7 @@ p.footer {
   <!--introduction-->
   <pre><font size="5"><b>potential density anomaly with reference pressure
 of 4000 dbar, this being this particular potential
-density minus 1000 kg/m^3</b></font></pre><!--/introduction-->
+density minus 1000 kg/m^3 (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li>
 <li><a href="#2">DESCRIPTION:</a></li>
@@ -79,12 +79,14 @@ density minus 1000 kg/m^3</b></font></pre><!--/introduction-->
 <pre>Calculates potential density anomaly with reference pressure of 4000 
 dbar, this being this particular potential density minus 1000 kg/m^3.
 This function has inputs of Absolute Salinity and Conservative
-Temperature.</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+Temperature.  This function uses the computationally-efficient 
+75-term expression for specific volume in terms of SA, CT
+and p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".</pre>
+some of one's data lies outside this "funnel". </pre>
 <table width="500" border="0">
   <tr>
     <td><a href="../pdf/sigma4.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -105,20 +107,27 @@ CT  =  Conservative Temperature                                [ deg C ]</pre>
 CT = [28.8099; 28.4392; 22.7862; 10.2262;  6.8272;  4.3236;]</pre>
 <pre>sigma4 = gsw_sigma4(SA,CT)</pre>
 <pre>sigma4 =</pre>
-<pre>  37.898467323406976
-  38.165248408804473
-  40.281040822779914
-  43.896325412694978
-  44.631666313648111
-  45.171645286204921</pre>
+<pre>  37.900374609834898
+  38.166979617032439
+  40.280876075282549
+  43.896091033421953
+  44.631677245327637
+  45.171817312020039</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall &amp; Paul Barker      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/sigma4.pdf" title="TEOS-10">See Eqn. (A.30.1) of this TEOS-10 Manual.</a></pre>
-  <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font></div></body></html>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+<pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+ <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font></div></body></html>

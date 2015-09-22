@@ -62,7 +62,7 @@ p.footer {
   </style></head><body><div class="content"><h1>gsw_CT_from_enthalpy</h1>
 <!--introduction-->
 <pre><font size="5"><b>Conservative Temperature from specific enthalpy 
-of seawater (48-term equation)</b></font></pre><!--/introduction-->
+of seawater (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
@@ -70,14 +70,15 @@ of seawater (48-term equation)</b></font></pre><!--/introduction-->
 <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates the Conservative Temperature of seawater, given the Absolute 
 Salinity, specific enthalpy, h, and pressure p.  The specific enthalpy 
-input is the one calculated from the computationally-efficient 48-term
-expression for specific volume in terms of SA, CT and p (IOC et al., 
-2010).</pre> 
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+input is the one calculated from the computationally-efficient 75-term
+expression for specific volume in terms of SA, CT and p (Roquet et al.,
+2015).</pre> 
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in  McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".</pre>
+some of one's data lies outside this "funnel". </pre>
+
 <!--<table width="500" border="0">
   <tr>
     <td><a href="../pdf/CT_from_enthalpy.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -100,21 +101,23 @@ h = [1.15103e5; 1.14014e5; 0.92180e5; 0.43255e5; 0.33087e5; 0.26970e5;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>CT = gsw_CT_from_enthalpy(SA,h,p)</pre>
 <pre>CT =</pre>
-<pre>  28.809854581273623
-  28.439026546597614
-  22.786196710474524
-  10.226107234336915
-   6.827159845431849
-   4.323428317523992</pre>
+<pre>  28.809854569021972<br>  28.439026483379287<br>  22.786196534098817<br>  10.226106994920777<br>   6.827159682675204<br>   4.323428660306681</pre>
   <h2>AUTHOR:<a name="6"></a></h2>
   <pre>Trevor McDougall and Paul Barker.        [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
   <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (3rd December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
   <h2>REFERENCES:<a name="8"></a></h2>
   <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.</pre>
  <!-- <a href="../pdf/CT_from_enthalpy.pdf" title="TEOS-10">See appendix A.11 of this TEOS-10 Manual.</a></pre>-->
- <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

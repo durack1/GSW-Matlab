@@ -72,7 +72,7 @@ into seawater</b></font></pre>
 <li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
 <pre>[SA_final, CT_final] = ...
- gsw_melting_seaice_into_seawater(SA,CT,p,saturation_fraction,w_seaice,SA_seaice,t_seaice)</pre>
+ gsw_melting_seaice_into_seawater(SA,CT,p,w_seaice,SA_seaice,t_seaice)</pre>
 <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates the Absolute Salinity and Conservative Temperature that 
 results when a given mass of sea ice (or ice) melts and is mixed into a 
@@ -103,9 +103,7 @@ SA and CT when seaice is melted into seawater</a></font></pre></td>
 <pre>SA   =  Absolute Salinity of seawater                           [ g/kg ]
 CT   =  Conservative Temperature of seawater (ITS-90)          [ deg C ]
 p    =  sea pressure                                            [ dbar ]
-          ( i.e. absolute pressure - 10.1325 dbar )
-saturation_fraction = the saturation fraction of dissolved air in 
-             seawater. saturation_fraction must be between 0 and 1.   
+          ( i.e. absolute pressure - 10.1325 dbar )   
 w_seaice  =  mass fraction of sea ice, that is the mass of sea ice 
              divided by the sum of the masses of sea ice and seawater. 
              That is, the mass of sea ice divided by the mass of the 
@@ -128,12 +126,11 @@ SA_seaice and t_seaice are MxN.</pre>
 <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
 CT = [ 4.7856;  2.4329;  1.8103;  1.2600;  0.6886;  0.4403;]
 p =  [     10;      50;     125;     250;     600;    1000;]
-saturation_fraction = [1; 0.8; 0.6; 0.5; 0.4; 0;]
 w_seaice = [0.0560; 0.02513; 0.02159; 0.01210; 0.00943; 0.00751;]
 SA_seaice = [     5;      4.8;     3.5;     2.5;     1;    0.4;]
 t_seaice = [-4.7856; -4.4329; -3.8103; -4.2600; -3.8863; -3.4036;] </pre>
 <pre>[SA_final, CT_final] = ...
- gsw_melting_seaice_into_seawater(SA,CT,p,saturation_fraction,w_seaice,SA_seaice,t_seaice)</pre>
+ gsw_melting_seaice_into_seawater(SA,CT,p,w_seaice,SA_seaice,t_seaice)</pre>
 <pre>SA_final =</pre>
 <pre>  33.047939199999995
   34.135300604999998
@@ -142,21 +139,24 @@ t_seaice = [-4.7856; -4.4329; -3.8103; -4.2600; -3.8863; -3.4036;] </pre>
   34.418463862000003
   34.474563675999995</pre>
 <pre>CT_final =</pre>
-<pre>  -0.018758982779967
-   0.345123135112251
-   0.020438912479357
-   0.242677700842234
-  -0.111076307997557
+<pre>  -0.018822367305381
+   0.345095540241769
+   0.020418581143151
+   0.242672380976922
+  -0.111078380121959
   -0.197363471215418</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall &amp; Paul Barker       [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (3rd December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a></pre>
 <!--  <a href="../pdf/melting_seaice_into_seawater.pdf">See section 2.8 of this TEOS-10 Manual.</a></pre>-->
+<pre>McDougall, T.J., P.M. Barker, R. Feistel and B.K. Galton-Fenzi, 2014: 
+ Melting of Ice and Sea Ice into Seawater and Frazil Ice Formation. 
+ Journal of Physical Oceanography, 44, 1751-1775.</pre>
 <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
 </div></body></html>

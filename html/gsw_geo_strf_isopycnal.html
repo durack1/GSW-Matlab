@@ -61,7 +61,8 @@ p.footer {
 
   </style></head><body><div class="content">
 <h1>gsw_geo_strf_isopycnal</h1>
-<!--introduction--><pre><font size="5"><b>approximate isopycnal geostrophic streamfunction</b></font></pre><!--/introduction-->
+<!--introduction--><pre><font size="5"><b>approximate isopycnal geostrophic streamfunction 
+(75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li>
 <li><a href="#2">DESCRIPTION:</a></li>
@@ -85,8 +86,8 @@ surface (Klocker et al., 2009)).  Reference values of Absolute Salinity,
 Conservative Temperature and pressure are found by interpolation of a 
 one-dimensional look-up table, with the interpolating variable being 
 Neutral_Density (gamma_n).  This function calculates specific volume 
-anomaly using the computationally efficient 48-term expression for 
-specific volume anomaly in terms of SA, CT and p (McDougall et al., 2011).</pre> 
+anomaly using the computationally efficient 75-term expression for 
+specific volume (Roquet et al., 2015).</pre> 
 <pre>The first three input arguments are a series of vertical profiles.  The 
 fourth argument, p_ref, is the reference pressure to which the stream
 function is referenced.  When p_ref is zero, gsw_geo_strf_isopycnal 
@@ -154,12 +155,12 @@ p_Neutral_Density = [ 650;  810;]</pre>
 <pre>geo_strf_isopycnal = ...
     gsw_geo_strf_isopycnal(SA,CT,p,p_ref,Neutral_Density,p_Neutral_Density)</pre>
 <pre>geo_strf_isopycnal =</pre>
-<pre>  11.588574940289062
-   4.278512371505300</pre>
+<pre>  11.592013237834543
+   4.278560840561637</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker                    [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (2nd May, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -175,5 +176,12 @@ p_Neutral_Density = [ 650;  810;]</pre>
  105-117.
   The McDougall-Klocker geostrophic streamfunction is defined in
   Eqn. (62) of this paper.</pre>
- <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

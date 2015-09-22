@@ -73,6 +73,10 @@ p.footer {
   <pre>kappa_CT_exact = gsw_kappa_CT_exact(SA,CT,p)</pre>
   <h2>DESCRIPTION:<a name="2"></a></h2>
   <pre>Calculates the isentropic compressibility of seawater.</pre>
+<pre>Note that this function uses the full Gibbs function.  There is an 
+alternative to calling this function, namely gsw_kappa(SA,CT,p),
+which uses the computationally efficient 75-term expression for specific
+volume in terms of SA, CT and p (Roquet et al., 2015).</pre>
       <table width="500" border="0">
   <tr>
     <td><a href="../pdf/kappa_CT_exact.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -82,13 +86,13 @@ compressibility.</a></font></pre></td>
 </table>
 <h2>INPUT:<a name="3"></a></h2>
 <pre>SA  =  Absolute Salinity                                        [ g/kg ]
-CT  =  Conservative Temperature (ITS-90)                         [ deg C ]
+CT  =  Conservative Temperature (ITS-90)                       [ deg C ]
 p   =  sea pressure                                             [ dbar ]
         ( ie. absolute pressure - 10.1325 dbar )</pre>
 <pre>SA &amp; CT need to have the same dimensions.
 p may have dimensions 1x1 or Mx1 or 1xN or MxN, where SA &amp; CT are MxN.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
-<pre>kappa_CT_exact  =  Isentropic compressibility                           [ 1/Pa ]
+<pre>kappa_CT_exact  =  Isentropic compressibility                   [ 1/Pa ]
  Note. The output units are 1/Pa not 1/dbar.</pre>
  <h2>EXAMPLE:<a name="5"></a></h2>
  <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
@@ -106,7 +110,7 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall and Paul Barker   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
- <pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -114,5 +118,8 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/kappa_CT_exact.pdf" title="TEOS-10">See Eqns. (2.16.1) and the row for kappa in Table P.1 of appendix P
   of this TEOS-10 Manual.</a></pre>
-  <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
   </div></body></html>

@@ -60,7 +60,7 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_Turner_Rsubrho</h1>
-  <!--introduction--><pre><font size="5"><b>Turner angle &amp; Rsubrho (48-term equation)</b></font></pre><!--/introduction-->
+  <!--introduction--><pre><font size="5"><b>Turner angle &amp; Rsubrho (75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li>
   <li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li>
@@ -75,13 +75,13 @@ contributions of the vertical gradients of Conservative Temperature and
 Absolute Salinity to the vertical stability (the square of the
 Brunt-Vaisala Frequency squared, N^2).  Tu and Rsubrho are evaluated at
 the mid pressure between the individual data points in the vertical.
-This function uses computationally-efficient 48-term expression for
-density in terms of SA, CT and p (IOC et al., 2010).</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+This function uses computationally-efficient 75-term expression for
+specific volume in terms of SA, CT and p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel". </pre>
+some of one's data lies outside this "funnel".</pre>
     <table width="500" border="0">
   <tr>
     <td><a href="../pdf/Turner_Rsubrho.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -110,18 +110,18 @@ CT = [28.8099; 28.4392; 22.7862; 10.2262;  6.8272;  4.3236;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>[Tu, Rsubrho, p_mid] = gsw_Turner_Rsubrho(SA,CT,p)</pre>
 <pre>Tu =</pre>
-<pre>  -2.064830032393999
-  41.758285540907067
-  47.607293931126598
-  53.714708172363480
-  45.527415163693554</pre>
+<pre>  -2.063858905281147
+  41.758435216784427
+  47.606966981687535
+  53.710351151706369
+  45.527063858211527</pre>
   <pre>Rsubrho =</pre>
   <pre> 1.0e+002 *</pre>
-  <pre>  -0.009304018848608
-  -0.176556664605209
-   0.219600192807469
-   0.065238283043563
-   1.086319945640579</pre>
+  <pre>  -0.009304335069039
+  -0.176564834348709
+   0.219627771740757
+   0.065271424662002
+   1.087044054679743</pre>
    <pre>p_mid =</pre>
    <pre> 1.0e+002 *</pre>
    <pre>   0.300000000000000
@@ -132,12 +132,19 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
    <h2>AUTHOR:<a name="6"></a></h2>
    <pre>Trevor McDougall &amp; Paul Barker                      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
    <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
    <h2>REFERENCES:<a name="8"></a></h2>
    <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>
-  <a href="../pdf/Turner_Rsubrho_CT25.pdf" title="TEOS-10">See Eqns. (3.15.1) and (3.16.1) of this TEOS-10 Manual.</a></pre>
- <pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+  <a href="../pdf/Turner_Rsubrho.pdf" title="TEOS-10">See Eqns. (3.15.1) and (3.16.1) of this TEOS-10 Manual.</a></pre>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+<pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

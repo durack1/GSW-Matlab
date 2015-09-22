@@ -63,7 +63,7 @@ p.footer {
 <!--introduction--><pre><font size="5"><b>ratio of gradients of potential temperature
 and Conservative Temperature in a neutral 
 tangent plane (in a locally-referenced 
-potential density surface) (48-term equation)</b></font></pre><!--/introduction-->
+potential density surface) (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li>
 <li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li>
@@ -76,8 +76,13 @@ potential density surface) (48-term equation)</b></font></pre><!--/introduction-
 temperature versus that of Conservative Temperature, CT, along the
 neutral tangent plane.  The potential temperature is the regular one
 which has a reference sea pressure of 0 dbar.  Part of the calculation
-uses the computationally-efficient 48-term expression for density in
-terms of SA, CT and p (IOC et al., 2010).</pre>
+uses the computationally-efficient 75-term expression for specific 
+volume in terms of SA, CT and p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
+parameter space, and is most accurate inside the "oceanographic funnel" 
+described in McDougall et al. (2003).  The GSW library function 
+"gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
+some of one's data lies outside this "funnel". </pre>
      <table width="500" border="0">
   <tr>
     <td><a href="../pdf/ntp_pt_vs_CT_ratio.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -104,21 +109,28 @@ CT = [28.8099; 28.4392; 22.7862; 10.2262;  6.8272;  4.3236;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>ntp_pt_vs_CT_ratio = gsw_ntp_pt_vs_CT_ratio(SA,CT,p)</pre>
 <pre>ntp_pt_vs_CT_ratio =</pre>
-<pre>   1.016134172546121
-   1.016088031259560
-   1.011783739650572
-   1.004312619705692
-   1.003010020870695
-   1.002332840620775</pre>
+<pre>   1.016134758732110
+   1.016088712417197
+   1.011784401675508
+   1.004314345783137
+   1.003011679980744
+   1.002334099137641</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall and Paul Barker      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/ntp_pt_vs_CT_ratio.pdf" title="TEOS-10">See Eqn. (A.14.5) of this TEOS-10 Manual.</a></pre>
- <pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

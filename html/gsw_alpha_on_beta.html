@@ -62,7 +62,7 @@ p.footer {
 <body><div class="content"><h1>gsw_alpha_on_beta</h1>
   <!--introduction-->
 <pre><font size="5"><b>thermal expansion divided by the saline 
-contraction coefficient (48-term equation)</b></font></pre><!--/introduction-->
+contraction coefficient (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li>
 <li><a href="#2">DESCRIPTION:</a></li>
@@ -78,13 +78,13 @@ contraction coefficient (48-term equation)</b></font></pre><!--/introduction-->
 <pre>Calculates alpha divided by beta, where alpha is the thermal expansion
 coefficient and beta is the saline contraction coefficient of seawater 
 from Absolute Salinity and Conservative Temperature.  This function uses
-the computationally-efficient 48-term expression for density in terms of 
-SA, CT and p (IOC et al., 2010).</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+the computationally-efficient 75-term expression for specific volume in
+terms of SA, CT and p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in  McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".</pre>
+some of one's data lies outside this "funnel". </pre>
     <table width="500" border="0">
   <tr>
     <td><a href="../pdf/alpha_on_beta.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -109,21 +109,28 @@ CT = [28.8099; 28.4392; 22.7862; 10.2262;  6.8272;  4.3236;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>alpha_on_beta = gsw_alpha_on_beta(SA,CT,p)</pre>
 <pre>alpha_on_beta =</pre>
-<pre>   0.452454540612631
-   0.449585262707113
-   0.387121114716631
-   0.230686622275719
-   0.193629961364881
-   0.170827066345350</pre>
+<pre>   0.452468543022009
+   0.449601695030057
+   0.387140203094424
+   0.230778871228268
+   0.193747796234162
+   0.170946048860385</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Paul Barker and Trevor McDougall          [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>
-  <a href="../pdf/alpha_on_beta.pdf" title="TEOS-10"></a></pre>
+  </pre>
+  <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
 <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

@@ -61,8 +61,7 @@ p.footer {
 
   </style></head><body><div class="content"><h1>gsw_sound_speed</h1>
   <!--introduction-->
-  <pre><font size="5"><b>sound speed (48-term equation)
-(approximate with a r.m.s. of 0.067 m/s)</b></font></pre><!--/introduction-->
+  <pre><font size="5"><b>sound speed (75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li>
   <li><a href="#2">DESCRIPTION:</a></li>
@@ -76,11 +75,11 @@ p.footer {
   <pre>sound_speed = gsw_sound_speed(SA,CT,p)</pre>
   <h2>DESCRIPTION:<a name="2"></a></h2>
   <pre>Calculates the speed of sound in seawater using the computationally
-efficient 48-term expression for density in terms of SA, CT and p 
-(McDougall et al., 2013).</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+efficient 75-term expression for specific volume in terms of SA, CT and 
+p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
 some of one's data lies outside this "funnel". </pre>
 <table width="500" border="0">
@@ -105,21 +104,28 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>sound_speed = gsw_sound_speed(SA,CT,p)</pre>
 <pre>sound_speed =</pre>
 <pre>1.0e+003 *</pre>
-<pre>   1.542420534932182
-   1.542561816671942
-   1.530847504375638
-   1.494624012692069
-   1.487691791461714
-   1.484329368325987</pre>
+<pre>   1.542426412426373
+   1.542558891663385
+   1.530801535436184
+   1.494551099295314
+   1.487622786765276
+   1.484271672296205</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Paul Barker and Trevor McDougall.                     [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/sound_speed.pdf" title="TEOS-10">See Eqn. (2.17.1) of this TEOS-10 Manual.</a></pre>
+<pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+<pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
  <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
   </div></body></html>

@@ -63,7 +63,7 @@ p.footer {
   <h1>gsw_geo_strf_dyn_height_pc</h1>
 <!--introduction-->
 <pre><font size="5"><b>dynamic height anomaly for piecewise 
-constant profiles</b></font></pre><!--/introduction-->
+constant profiles (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
@@ -84,15 +84,13 @@ values used for the specific volume anomaly are SA = SSO = 35.16504 g/kg
 and CT = 0 deg C.  The output values of geo_strf_dyn_height_pc are 
 given at the mid-point pressures, p_mid, of each layer in which SA and 
 CT are vertically piecewice constant(pc).  This function calculates 
-specific volume anomaly using the computationally-efficient 48-term 
-expression for specific volume of IOC et al. (2010). 
-
-Note that the 48-term equation has been fitted in a restricted range of 
+specific volume anomaly using the computationally-efficient 75-term 
+expression for specific volume (Roquet et al., 2015)</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".  
-</pre>
+some of one's data lies outside this "funnel". </pre> 
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/geo_strf_dyn_height_pc.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -121,12 +119,12 @@ delta_p = [     10;      40;      75;     125;     350;     400;]</pre>
 <pre>[geo_strf_dyn_height_pc, p_mid] = ...
                             gsw_geo_strf_dyn_height_pc(SA,CT,delta_p)</pre>
 <pre>geo_strf_dyn_height_pc =</pre>
-<pre>  -0.300323385462846
-  -1.755023270288433
-  -4.423073310767904
-  -6.815705622756923
-  -9.451462627823275
- -12.718482463704731</pre>
+<pre>  -0.300346215853487
+  -1.755165998114308
+  -4.423531083131365
+  -6.816659136254657
+  -9.453175257818430
+ -12.721009624991439</pre>
 <pre>p_mid =</pre>
 <pre>1.0e+002 *</pre>
 <pre>   0.050000000000000
@@ -138,7 +136,7 @@ delta_p = [     10;      40;      75;     125;     350;     400;]</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall &amp; Claire Roberts-Thomson.         [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (2nd May, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -149,5 +147,12 @@ delta_p = [     10;      40;      75;     125;     350;     400;]</pre>
  streamfunction for use in density surfaces. Ocean Modelling, 32,
  105-117.
   See section 8 of this paper.</pre>
- <pre>The software is available from<a href="http://www.teos-10.org" title="TEOS-10"> http://www.TEOS-10.or</a>g</pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from<a href="http://www.teos-10.org" title="TEOS-10"> http://www.TEOS-10.or</a>g</pre></font>
  </div></body></html>

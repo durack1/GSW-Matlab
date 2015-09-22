@@ -60,7 +60,7 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_enthalpy_diff</h1>
-  <!--introduction--><pre><font size="5"><b>difference of enthalpy between two pressures (48-term equation)</b></font></pre><!--/introduction-->
+  <!--introduction--><pre><font size="5"><b>difference of enthalpy between two pressures (75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li>
 <li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li>
@@ -71,15 +71,15 @@ p.footer {
 <pre>Calculates the difference of the specific enthalpy of seawater between
 two different pressures, p_deep (the deeper pressure) and p_shallow
 (the shallower pressure), at the same values of SA and CT.  This
-function uses the computationally-efficient 48-term expression for
-density in terms of SA, CT and p (IOC et al., 2010).  The output
-(enthalpy_diff) is the specific enthalpy evaluated at (SA, CT, p_deep)
-minus the specific enthalpy at (SA, CT, p_shallow).</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+function uses the computationally-efficient 75-term expression for
+specific volume in terms of SA, CT and p (Roquet et al., 2015).  The
+output (enthalpy_diff) is the specific enthalpy evaluated at 
+(SA, CT, p_deep) minus the specific enthalpy at (SA, CT, p_shallow).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in  McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".  </pre>
+some of one's data lies outside this "funnel". </pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/enthalpy_diff_.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -107,20 +107,27 @@ p_deep    =  [    110;     150;     225;     350;     700;    1100;]</pre>
 <pre>enthalpy_diff = gsw_enthalpy_diff(SA,CT,p_shallow,p_deep)</pre>
 <pre>enthalpy_diff = </pre>
 <pre>1.0e+002 *</pre>
-<pre>   9.784175745249133
-   9.780190029261341
-   9.759582348180077
-   9.727549624783435
-   9.708223563805783
-   9.687874865406878</pre>
+<pre>   9.784180644568052
+   9.780195056105020
+   9.759587700515114
+   9.727552719534447
+   9.708223170174454
+   9.687871289079633</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
-<pre>Trevor McDougall &amp; Claire Roberts-Thomson.          [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
+<pre>Trevor McDougall and Paul Barker               [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2><pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>
   <a href="../pdf/enthalpy_diff.pdf" title="TEOS-10">See Eqns. (3.32.2) and (A.30.6) of this TEOS-10 Manual.</a></pre>
- <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

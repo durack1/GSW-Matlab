@@ -71,8 +71,7 @@ seawater</b></font></pre>
 <li><a href="#7">VERSION NUMBER:</a></li>
 <li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
-<pre>melting_ice_SA_CT_ratio = ...
-             gsw_melting_ice_SA_CT_ratio(SA,CT,p,saturation_fraction,t_Ih)</pre>
+<pre>melting_ice_SA_CT_ratio = gsw_melting_ice_SA_CT_ratio(SA,CT,p,t_Ih)</pre>
 <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates the ratio of SA to CT changes when ice melts into seawater.
 It is assumed that a small mass of ice melts into an infinite mass of
@@ -93,12 +92,10 @@ SA to CT changes when ice melts into seawater.</a></font></pre></td>
 CT   =  Conservative Temperature of seawater (ITS-90)          [ deg C ]
 p    =  sea pressure                                            [ dbar ]
           ( i.e. absolute pressure - 10.1325 dbar )
-saturation_fraction = the saturation fraction of dissolved air in 
-                 seawater. saturation_fraction must be between 0 and 1.
 t_Ih =  in-situ temperature of the ice at pressure p (ITS-90)  [ deg C ]</pre>
 <pre>SA, CT and t_Ih must have the same dimensions.
-p and saturation_fraction may have dimensions 1x1 or Mx1 or 1xN or MxN, 
-where SA, CT and t_Ih are MxN.</pre>
+p may have dimensions 1x1 or Mx1 or 1xN or MxN, where SA, CT and t_Ih 
+are MxN.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
 <pre>melting_ice_SA_CT_ratio = the ratio of SA to CT changes when ice melts
                           into a large mass of seawater 
@@ -107,10 +104,8 @@ where SA, CT and t_Ih are MxN.</pre>
 <pre>SA = [34.7118; 34.8915; 35.0256; 34.8472; 34.7366; 34.7324;]
 CT = [ 3.7856;  3.4329;  2.8103;  1.2600;  0.6886;  0.4403;]
 p =  [     10;      50;     125;     250;     600;    1000;]
-saturation_fraction = [1; 0.8; 0.6; 0.5; 0.4; 0;]
 t_Ih = [-10.7856; -13.4329; -12.8103; -12.2600; -10.8863; -8.4036;] </pre>
-<pre>melting_ice_SA_CT_ratio = ...
-          gsw_melting_ice_SA_CT_ratio(SA,CT,p,saturation_fraction,t_Ih)</pre>
+<pre>melting_ice_SA_CT_ratio = gsw_melting_ice_SA_CT_ratio(SA,CT,p,t_Ih)</pre>
 <pre>melting_ice_SA_CT_ratio =</pre>
 <pre>   0.373840909022490
    0.371878514972099
@@ -121,12 +116,15 @@ t_Ih = [-10.7856; -13.4329; -12.8103; -12.2600; -10.8863; -8.4036;] </pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall &amp; Paul Barker       [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (3rd December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a></pre>
 <!--  <a href="../pdf/rho_ice.pdf">See section 2.8 of this TEOS-10 Manual.</a></pre>-->
+<pre>McDougall, T.J., P.M. Barker, R. Feistel and B.K. Galton-Fenzi, 2014: 
+ Melting of Ice and Sea Ice into Seawater and Frazil Ice Formation. 
+ Journal of Physical Oceanography, 44, 1751-1775.</pre>
 <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
 </div></body></html>

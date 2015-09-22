@@ -60,8 +60,9 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_CT_from_rho</h1>
-<!--introduction--><pre><font size="5"><b>Conservative Temperature from density
-(48-term equation)</b></font></pre><!--/introduction-->
+<!--introduction-->
+<pre><font size="5"><b>Conservative Temperature from density
+(75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
  <h2>USAGE:<a name="1"></a></h2>
@@ -69,11 +70,11 @@ p.footer {
  <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates the Conservative Temperature of a seawater sample, for given
 values of its density, Absolute Salinity and sea pressure (in dbar) using 
-the computationally-efficient 48-term expression for density in terms 
-of SA, CT and p (IOC et al., 2010).</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+the computationally-efficient 75-term expression for specific volume in 
+terms of SA, CT and p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in  McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
 some of one's data lies outside this "funnel". </pre>
  <table width="500" border="0">
@@ -107,12 +108,7 @@ SA =  [  34.7118;   34.8915;   35.0256;   34.8472;   34.7366;   34.7324;]
 p =   [       10;        50;       125;       250;       600;      1000;]</pre>
 <pre>[CT, CT_multiple] = gsw_CT_from_rho(rho,SA,p)</pre>
 <pre>CT =</pre>
-<pre>  28.785919240184850
-  28.434000931649784
-  22.810740149969192
-  10.262124247240154
-   6.887196810485858
-   4.401886081747603</pre>
+<pre>  28.784377302226968<br>  28.432402127485858<br>  22.808745445250068<br>  10.260169334807866<br>   6.887336649146716<br>   4.404594162282834</pre>
 <pre>CT_multiple =</pre>
 <pre>   NaN
    NaN
@@ -123,12 +119,19 @@ p =   [       10;        50;       125;       250;       600;      1000;]</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall &amp; Paul Barker                      [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/CT_from_rho.pdf" title="TEOS-10">See sections 3.1 and 3.3 of this TEOS-10 Manual.</a></pre>
- <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

@@ -60,7 +60,9 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_Nsquared</h1>
-  <!--introduction--><pre><font size="5"><b>buoyancy (Brunt-Vaisala) frequency squared (N<sup>2</sup>) (48-term equation)</b></font></pre><!--/introduction-->
+  <!--introduction-->
+  <pre><font size="5"><b>buoyancy (Brunt-Vaisala) frequency squared (N<sup>2</sup>) 
+(75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li>
   <li><a href="#2">DESCRIPTION:</a></li>
@@ -79,14 +81,15 @@ frequency squared) at the mid pressure from the equation,</pre>
    N<sup>2</sup>  =  g<sup>2</sup> x rho_local x  ---------------------------------
                                           dP</pre>
 <pre>Note. This routine uses rho from "gsw_rho", which is the computationally 
-  efficient 48-term expression for density in terms of SA, CT and p.
+  efficient 75-term expression for specific volume in terms of SA, CT and 
+  p (Roquet et al., 2015).
 Note also that the pressure increment, dP, in the above formula is in
   Pa, so that it is 10<sup>4</sup> times the pressure increment dp in dbar.</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".</pre>
+some of one's data lies outside this "funnel". </pre>
 <table width="500" border="0">
   <tr>
     <td><a href="../pdf/Nsquared.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -117,11 +120,11 @@ lat = 4;</pre>
 <pre>[N2, p_mid] = gsw_Nsquared(SA,CT,p,lat)</pre>
 <pre>N2 =</pre>
 <pre>1.0e-003 *</pre>
-<pre>   0.060846990523477
-   0.235607737824943
-   0.215533939997650
-   0.012924024206854
-   0.008425873682231</pre>
+<pre>   0.060843209693499
+   0.235723066151305
+   0.216599928330380
+   0.012941204313372
+   0.008434782795209</pre>
 <pre>p_mid =</pre>
 <pre>1.0e+002 *</pre>
 <pre>   0.300000000000000
@@ -132,7 +135,7 @@ lat = 4;</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker.              [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)/pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>Griffies, S. M., 2004: Fundamentals of Ocean Climate Models. Princeton,
  NJ: Princeton University Press, 518 pp + xxxiv.</pre>
@@ -141,5 +144,12 @@ lat = 4;</pre>
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,  
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>
   <a href="../pdf/Nsquared.pdf" title="TEOS-10">See section 3.10 and Eqn. (3.10.2) of this TEOS-10 Manual.</a></pre>
-   <pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+<pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
   </div></body></html>

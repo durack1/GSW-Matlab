@@ -80,8 +80,8 @@ enthalpy (h),
      <pre>Note that this function uses the full Gibbs function.  There is an 
 alternative to calling this function, namely 
 gsw_enthalpy_second_derivatives(SA,CT,p),which uses the computationally 
-efficient 48-term expression for density in terms of SA, CT and p
-(IOC et al., 2010).</pre>
+efficient 75-term expression for specific volume in terms of SA, CT and p
+(Roquet et al., 2015).</pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/enthalpy_second_derivatives_CT_exact.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -110,12 +110,12 @@ CT =  [28.7856; 28.4329; 22.8103; 10.2600;  6.8863;  4.4036;]
 p =  [     10;      50;     125;     250;     600;    1000;]</pre>
 <pre>[h_SA_SA, h_SA_CT, h_CT_CT] = gsw_enthalpy_second_derivatives_CT_exact(SA,CT,p)</pre>
 <pre>h_SA_SA =</pre>
-<pre>   0.000082767011575
+<pre>   0.000082767011576
    0.000414469343141
    0.001089580017293
-   0.002472193425999
+   0.002472193425998
    0.006103171596320
-   0.010377465312462
+   0.010377465312463
   
  h_SA_CT =
  
@@ -137,7 +137,7 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
   <pre>Trevor McDougall and Paul Barker.          [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
   <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
   <h2>REFERENCES:<a name="8"></a></h2>
   <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -145,7 +145,9 @@ p =  [     10;      50;     125;     250;     600;    1000;]</pre>
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/enthalpy_second_derivatives_CT_exact.pdf" title="TEOS-10">See Notes on the first and second order isobaric derivatives of
   specific enthalpy.</a></pre>
- 
+   <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
   <pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre>
   </font>
   </div></body></html>

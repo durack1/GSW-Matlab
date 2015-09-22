@@ -63,7 +63,7 @@ p.footer {
  <h1>gsw_geo_strf_isopycnal_pc</h1>
  <!--introduction-->
  <pre><font size="5"><b>approximate isopycnal geostrophic streamfunction 
-for piecewise constant profiles</b></font></pre><!--/introduction-->
+for piecewise constant profiles (75-term equation)</b></font></pre><!--/introduction-->
  <font size="4"><h2>Contents</h2>
  <div><ul><li><a href="#1">USAGE:</a></li>
  <li><a href="#2">DESCRIPTION:</a></li>
@@ -89,7 +89,7 @@ Absolute Salinity, Conservative Temperature and pressure are found by
 interpolation of a one-dimensional look-up table, with the interpolating
 variable being Neutral Density (gamma_n) or sigma_2.  This function 
 calculates specific volume anomaly using the computationally efficient 
-48-term expression for specific volume of IOC et al. (2010).</pre>
+76-term expression for specific volume (Roquet et al., 2015).</pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/geo_strf_isopycnal_pc.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -132,8 +132,8 @@ layer_indx  = [   3;    5;]</pre>
 <pre>[geo_strf_isopycnal_pc, p_mid] = ...
             gsw_geo_strf_isopycnal_pc(SA,CT,delta_p,gamma_n,layer_indx)</pre>
 <pre>geo_strf_isopycnal_pc =</pre>
-<pre>   -5.270210120033314
-  -10.377557395801716</pre>
+<pre>  -5.270417210618314
+ -10.380530051934258</pre>
  <pre>p_mid =</pre>
  <pre>  1.0e+002 *</pre>
  <pre>   0.875000000000000
@@ -141,7 +141,7 @@ layer_indx  = [   3;    5;]</pre>
  <h2>AUTHOR:<a name="6"></a></h2>
  <pre>Trevor McDougall and Paul Barker                    [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (2nd May, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -152,6 +152,10 @@ layer_indx  = [   3;    5;]</pre>
  for the world&#8217;s oceans. Journal of Physical Oceanography, 27, 237-263.</pre>
  <pre>Klocker, A., T. J. McDougall and D. R. Jackett, 2009: A new method
  for forming approximately neutral surfaces.  Ocean Sci., 5, 155-172.</pre>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
  <pre>McDougall, T. J. and A. Klocker, 2010: An approximate geostrophic
  streamfunction for use in density surfaces.  Ocean Modelling, 32,
  105-117.
@@ -159,6 +163,9 @@ layer_indx  = [   3;    5;]</pre>
  Eqn. (62) of this paper.
   See section 8 of this paper for a discussion of this piecewise-
  constant version of the McDougall-Klocker geostrophic streamfunction.</pre>
- <pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre>
  </font>
  </div></body></html>

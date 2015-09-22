@@ -60,7 +60,8 @@ p.footer {
 }
 
   </style></head><body><div class="content"><h1>gsw_p_from_z</h1>
-  <!--introduction--><pre><font size="5"><b>pressure from height (48-term equation)</b></font></pre><!--/introduction-->
+  <!--introduction-->
+  <pre><font size="5"><b>pressure from height (75-term equation)</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
   <div><ul><li><a href="#1">USAGE:</a></li>
   <li><a href="#2">DESCRIPTION:</a></li>
@@ -74,16 +75,16 @@ p.footer {
   <pre>p = gsw_p_from_z(z,lat,{geo_strf_dyn_height},{sea_surface_geopotental})</pre>
   <h2>DESCRIPTION:<a name="2"></a></h2>
   <pre>Calculates sea pressure from height using computationally-efficient 
-48-term expression for density, in terms of SA, CT and p (IOC et
-al., 2010).  Dynamic height anomaly, geo_strf_dyn_height, if provided,
-must be computed with its p_ref = 0 (the surface). Also if provided,
-sea_surface_geopotental is the geopotential at zero sea pressure. This 
-function solves Eqn.(3.32.3) of IOC et al. (2010) iteratively for p.</pre>
+75-term expression for specific volume (Roquet et al., 2015).  Dynamic
+height anomaly, geo_strf_dyn_height, if provided, must be computed with
+its p_ref = 0 (the surface). Also if provided, sea_surface_geopotental 
+is the geopotential at zero sea pressure. This function solves 
+Eqn.(3.32.3) of IOC et al. (2010) iteratively for p.</pre>
 <pre>Note. Height (z) is NEGATIVE in the ocean.  Depth is -z.  
       Depth is not used in the GSW computer software library. </pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in  McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
 some of one's data lies outside this "funnel". </pre>
 <table width="500" border="0">
@@ -112,29 +113,36 @@ dimensions MxN, which are the same as z.</pre>
 <pre> p  =  sea pressure                                             [ dbar ]
        ( i.e. absolute pressure - 10.1325 dbar )</pre>
 <h2>EXAMPLE:<a name="5"></a></h2>
-<pre>z   =  [     10;      50;     125;     250;     600;    1000;]
+<pre>z   =  [    -10;     -50;    -125;    -250;    -600;   -1000;]
 lat = 4;</pre>
 <pre>p = gsw_p_from_z(z,lat)</pre>
 <pre>p =
  1.0e+003 *</pre>
- <pre>  -0.010055235976847
-  -0.050271267635044
-  -0.125655128514602
-  -0.251233371685054
-  -0.602442093622451
-  -1.003079508920876</pre>
+ <pre>   0.010055726724518
+   0.050283543374874
+   0.125731858435610
+   0.251540299593468
+   0.604210012340727
+   1.007990337692001</pre>
   <h2>AUTHOR:<a name="6"></a></h2>
   <pre>Trevor McDougall, Claire Roberts-Thomson and Paul Barker.
                                                 [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
  <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
  <h2>REFERENCES:<a name="8"></a></h2>
  <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from the <a href="http://www.TEOS-10.org" title="TEOS-10">TEOS-10 web site</a>.</pre>
+ <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+ <pre>Moritz, 2000: Goedetic reference system 1980. J. Geodesy, 74, 128-133.</pre>
+ <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
  <pre>Saunders, P. M., 1981: Practical conversion of pressure to depth.
  Journal of Physical Oceanography, 11, 573-574.</pre>
- <pre>Moritz (2000) Goedetic reference system 1980. J. Geodesy, 74, 128-133.</pre>
  <pre>This software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

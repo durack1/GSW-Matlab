@@ -61,7 +61,7 @@ p.footer {
 
   </style></head><body><div class="content">
 <h1>gsw_geo_strf_Montgomery</h1>
-<!--introduction--><pre><font size="5"><b>Montgomery geostrophic streamfunction</b></font></pre><!--/introduction-->
+<!--introduction--><pre><font size="5"><b>Montgomery geostrophic streamfunction (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
@@ -75,18 +75,18 @@ Montgomery geostrophic streamfunction is the geostrophic streamfunction
 for flow in a specifc volume anomaly surface.  The reference values used
 for the specific volume anomaly are SA = SSO = 35.16504 g/kg and  
 CT = 0 deg C.  This function calculates specific volume anomaly using 
-the computationally efficient 48-term expression for specific volume of 
-IOC et al. (2010).</pre>
+the computationally efficient 75-term expression for specific volume of 
+Roquet et al. (2015).</pre>
 <pre>Note that p_ref, is the reference pressure to which the streamfunction
 is referenced.  When p_ref is zero, "gsw_geo_strf_Montgomery" returns 
 the Montgomery geostrophic streamfunction with respect to the sea 
 surface, otherwise, the function returns the geostrophic streamfunction
 with respect to the (deep) reference pressure p_ref.</pre>
-<pre>Note that the 48-term equation has been fitted in a restricted range of 
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in IOC et al. (2010).  The GSW library function 
+described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
-some of one's data lies outside this "funnel".</pre>
+some of one's data lies outside this "funnel". </pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/geo_strf_Montgomery.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -115,22 +115,29 @@ p =  [     10;      50;     125;     250;     600;    1000;]
 p_ref = 1000</pre>
 <pre>geo_strf_Montgomery = gsw_geo_strf_Montgomery(SA,CT,p,p_ref)</pre>
 <pre>geo_strf_Montgomery =</pre>
-<pre>  17.893243779869881
-  17.825928613522251
-  16.257107309363946
-  11.454730466924079
-   9.865490435360261
-   7.636648804884268</pre>
+<pre>  17.640256452666886
+  17.558902630975101
+  15.982867873799957
+  11.122690182820898
+   9.653656190303344
+   7.638338957772513</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker                     [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.03 (2nd May, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.teos-10.org" title="TEOS-10">the TEOS-10 web site</a>.
   <a href="../pdf/geo_strf_Montgomery.pdf">See section 3.28 of this TEOS-10 Manual</a>.</pre>
+<pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
 <pre>Montgomery, R. B., 1937: A suggested method for representing gradient
  flow in isentropic surfaces.  Bull. Amer. Meteor. Soc. 18, 210-212.</pre>
 <pre>The software is available from <a href="http://www.teos-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>

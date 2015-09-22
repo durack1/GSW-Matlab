@@ -65,7 +65,7 @@ p.footer {
   <pre><font size="5"><b>Ratio of the gradient of Conservative 
 Temperature in a potential density
 surface to that in the neutral tangent 
-plane (48-term equation)</b></font></pre><!--/introduction-->
+plane (75-term equation)</b></font></pre><!--/introduction-->
 <font size="4"><h2>Contents</h2>
 <div><ul><li><a href="#1">USAGE:</a></li>
 <li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li>
@@ -83,8 +83,13 @@ and (3.17.4) of IOC et al. (2010)).  This ratio has been called the
 evaluated at the mid pressure between the individual data points in the
 vertical.  The reference sea pressure of the potential density surface
 must have a constant value.  This function uses from the computationally
-efficient 48-term expression for density in terms of SA, CT and p
-(IOC et al., 2010).</pre>
+efficient 75-term expression for specific volume in terms of SA, CT and 
+p (Roquet et al., 2015).</pre>
+<pre>Note that the 75-term equation has been fitted in a restricted range of 
+parameter space, and is most accurate inside the "oceanographic funnel" 
+described in McDougall et al. (2003).  The GSW library function 
+"gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
+some of one's data lies outside this "funnel". </pre>
   <table width="500" border="0">
   <tr>
     <td><a href="../pdf/isopycnal_vs_ntp_CT_ratio.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
@@ -118,11 +123,11 @@ p =  [     10;      50;     125;     250;     600;    1000;]
 p_ref = 0</pre>
 <pre>[G_CT, p_mid] = gsw_isopycnal_vs_ntp_CT_ratio(SA,CT,p,p_ref)</pre>
 <pre>G_CT =</pre>
-<pre>   1.000630863388660
-   1.004179196949259
-   1.016635934710221
-   1.080042249305421
-   1.174924051056580</pre>
+<pre>   1.000634227305790
+   1.004190158179811
+   1.016644525893081
+   1.080061556326200
+   1.174980868774369</pre>
  <pre>p_mid =</pre>
  <pre>1.0e+002 *</pre>
  <pre>   0.300000000000000
@@ -133,13 +138,21 @@ p_ref = 0</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall, Paul Barker &amp; David Jackett   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.04 (10th December, 2013)</pre>
+<pre>3.05 (16th February, 2015)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
  Intergovernmental Oceanographic Commission, Manuals and Guides No. 56,
  UNESCO (English), 196 pp.  Available from <a href="http://www.TEOS-10.org" title="TEOS-10">the TEOS-10 web site.</a>
-  <a href="../pdf/isopycnal_vs_ntp_CT_ratio.pdf" title="TEOS-10">See Eqns. (3.17.3) and (3.17.4) of this TEOS-10 Manual.</a></pre><pre>McDougall, T. J., 1987: Neutral surfaces. Journal of Physical
+  <a href="../pdf/isopycnal_vs_ntp_CT_ratio.pdf" title="TEOS-10">See Eqns. (3.17.3) and (3.17.4) of this TEOS-10 Manual.</a></pre>
+<pre>McDougall, T. J., 1987: Neutral surfaces. Journal of Physical
  Oceanography, 17, 1950-1964.  See Eqn. (29) of this paper.</pre>
- <pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
+<pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
+ Accurate and computationally efficient algorithms for potential 
+ temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ pp. 730-741.</pre>
+<pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specifc volume of seawater
+ using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre> The software is available from <a href="http://www.TEOS-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font>
  </div></body></html>

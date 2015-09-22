@@ -23,8 +23,8 @@
       <tocitem target="../pdf/Getting_Started_Data_Storage.pdf">
         Which types of salinity and temperature should be archived
       </tocitem>
-      <tocitem target="../pdf/Getting_Started_48_Term_EOS.pdf">
-        The 48-term expression for density
+      <tocitem target="../pdf/Getting_Started_75_Term_EOS.pdf">
+        The 75-term expression for specific volume
       </tocitem>
       <tocitem target="../pdf/Getting_Started_Changes_to_Ocean_Practice.pdf">
         Changes to oceanographic practice under TEOS-10
@@ -56,7 +56,7 @@
     <tocitem target="gsw_contents.html#2">
       Practical Salinity (SP), PSS-78
       <tocitem target="gsw_SP_from_C.html" image="HelpIcon.FUNCTION">
-        gsw_SP_from_C<!-- Practical Salinity from conductivity, C (inc. for SP &lt; 2) -->
+        gsw_SP_from_C <!-- Practical Salinity from conductivity, C (inc. for SP &lt; 2) -->
       </tocitem>
       <tocitem target="gsw_C_from_SP.html" image="HelpIcon.FUNCTION">
         gsw_C_from_SP<!-- conductivity, C, from Practical Salinity (inc. for SP &lt; 2) -->
@@ -196,30 +196,57 @@
     </tocitem>
 	
     <tocitem target="gsw_contents.html#6">
-      density and enthalpy, based on the 48-term expression for density
-      <tocitem target="gsw_rho.html" image="HelpIcon.FUNCTION">
-        gsw_rho<!-- in-situ density from CT, and potential density -->
+      specific volume, density and enthalpy
+      <tocitem target="gsw_specvol.html" image="HelpIcon.FUNCTION">
+        gsw_specvol<!-- specific volume -->
       </tocitem>
-      <tocitem target="gsw_alpha.html" image="HelpIcon.FUNCTION">
+	  <tocitem target="gsw_alpha.html" image="HelpIcon.FUNCTION">
         gsw_alpha<!-- thermal expansion coefficient with respect to CT -->
       </tocitem>
       <tocitem target="gsw_beta.html" image="HelpIcon.FUNCTION">
         gsw_beta<!-- saline contraction coefficient at constant CT -->
       </tocitem>
-      <tocitem target="gsw_rho_alpha_beta.html" image="HelpIcon.FUNCTION">
-        gsw_rho_alpha_beta<!-- in-situ density, thermal expansion &amp; saline contraction coefficients -->
-      </tocitem>
 	  <tocitem target="gsw_alpha_on_beta.html" image="HelpIcon.FUNCTION">
         gsw_alpha_on_beta<!-- alpha divided by beta -->
+      </tocitem>
+      <tocitem target="gsw_specvol_alpha_beta.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_alpha_beta<!-- specific volume, thermal expansion &amp; saline contraction coefficients -->
+      </tocitem>
+      <tocitem target="gsw_specvol_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_first_derivatives<!-- derivatives of specific volume -->
+      </tocitem>
+      <tocitem target="gsw_specvol_second_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_second_derivatives<!-- second derivatives of specific volume -->
+      </tocitem>
+      <tocitem target="gsw_specvol_first_derivatives_wrt_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_first_derivatives_wrt_enthalpy<!-- derivatives of specific volume with respect to enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_specvol_second_derivatives_wrt_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_second_derivatives_wrt_enthalpy<!-- second derivatives of specific volume  with respect to enthalpy-->
+      </tocitem>
+	  <tocitem target="gsw_specvol_anom.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_anom<!-- specific volume anomaly -->
+      </tocitem>      
+	  <tocitem target="gsw_specvol_anom_standard.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_anom_standard<!-- specific volume anomaly -->
+      </tocitem>
+      <tocitem target="gsw_rho.html" image="HelpIcon.FUNCTION">
+        gsw_rho<!-- in-situ density from CT, and potential density -->
+      </tocitem>
+      <tocitem target="gsw_rho_alpha_beta.html" image="HelpIcon.FUNCTION">
+        gsw_rho_alpha_beta<!-- in-situ density, thermal expansion &amp; saline contraction coefficients -->
       </tocitem>
       <tocitem target="gsw_rho_first_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_rho_first_derivatives<!-- first derivatives of density -->
       </tocitem>
-      <tocitem target="gsw_specvol.html" image="HelpIcon.FUNCTION">
-        gsw_specvol<!-- specific volume -->
+      <tocitem target="gsw_rho_second_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_rho_second_derivatives<!-- second derivatives of density -->
       </tocitem>
-      <tocitem target="gsw_specvol_anom.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_anom<!-- specific volume anomaly -->
+      <tocitem target="gsw_rho_first_derivatives_wrt_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_rho_first_derivatives_wrt_enthalpy<!-- derivatives of density with respect to enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_rho_second_derivatives_wrt_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_rho_second_derivatives_wrt_enthalpy<!-- second derivatives of density with respect to enthalpy-->
       </tocitem>
       <tocitem target="gsw_sigma0.html" image="HelpIcon.FUNCTION">
         gsw_sigma0<!-- sigma0 from CT with reference pressure of 0 dbar -->
@@ -236,36 +263,15 @@
       <tocitem target="gsw_sigma4.html" image="HelpIcon.FUNCTION">
         gsw_sigma4<!-- sigma4 from CT with reference pressure of 4000 dbar -->
       </tocitem>
-      <tocitem target="gsw_sound_speed.html" image="HelpIcon.FUNCTION">
-        gsw_sound_speed<!-- sound speed (approximate, with r.m.s. error of 0.067 m/s) -->
-      </tocitem>
-	  <tocitem target="gsw_kappa.html" image="HelpIcon.FUNCTION">
-        gsw_kappa<!-- isentropic compressibility -->
-      </tocitem>
       <tocitem target="gsw_cabbeling.html" image="HelpIcon.FUNCTION">
         gsw_cabbeling<!-- cabbeling coefficient -->
       </tocitem>
       <tocitem target="gsw_thermobaric.html" image="HelpIcon.FUNCTION">
         gsw_thermobaric<!-- thermobaric coefficient -->
       </tocitem>
-      <tocitem target="gsw_SA_from_rho.html" image="HelpIcon.FUNCTION">
-        gsw_SA_from_rho<!-- Absolute Salinity from density -->
-      </tocitem>
-      <tocitem target="gsw_CT_from_rho.html" image="HelpIcon.FUNCTION">
-        gsw_CT_from_rho<!-- Conservative Temperature from density -->
-      </tocitem>
-      <tocitem target="gsw_CT_maxdensity.html" image="HelpIcon.FUNCTION">
-        gsw_CT_maxdensity<!-- Conservative Temperature of maximum density of seawater -->
-      </tocitem>
-      <tocitem target="gsw_internal_energy.html" image="HelpIcon.FUNCTION">
-        gsw_internal_energy<!-- internal energy -->
-      </tocitem>
       <tocitem target="gsw_enthalpy.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy<!-- enthalpy -->
       </tocitem>
-	  <tocitem target="gsw_CT_from_enthalpy.html" image="HelpIcon.FUNCTION">
-        gsw_CT_from_enthalpy<!-- enthalpy -->
-      </tocitem>	  
       <tocitem target="gsw_enthalpy_diff.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy_diff<!-- difference of enthalpy between two pressures -->
       </tocitem>
@@ -278,10 +284,37 @@
       <tocitem target="gsw_enthalpy_second_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy_second_derivatives<!-- second derivatives of enthalpy -->
       </tocitem>
+	  <tocitem target="gsw_sound_speed.html" image="HelpIcon.FUNCTION">
+        gsw_sound_speed<!-- sound speed -->
+      </tocitem>
+	  <tocitem target="gsw_kappa.html" image="HelpIcon.FUNCTION">
+        gsw_kappa<!-- isentropic compressibility -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy<!-- internal energy -->
+      </tocitem>
+      	  <tocitem target="gsw_internal_energy_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_first_derivatives<!-- first derivatives of internal energy -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy_second_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_second_derivatives<!-- second derivatives of internal energy -->
+      </tocitem>
+      <tocitem target="gsw_SA_from_rho.html" image="HelpIcon.FUNCTION">
+        gsw_SA_from_rho<!-- Absolute Salinity from density -->
+      </tocitem>
+	  <tocitem target="gsw_CT_from_enthalpy.html" image="HelpIcon.FUNCTION">
+        gsw_CT_from_enthalpy<!-- enthalpy -->
+      </tocitem>	  
+      <tocitem target="gsw_CT_from_rho.html" image="HelpIcon.FUNCTION">
+        gsw_CT_from_rho<!-- Conservative Temperature from density -->
+      </tocitem>
+      <tocitem target="gsw_CT_maxdensity.html" image="HelpIcon.FUNCTION">
+        gsw_CT_maxdensity<!-- Conservative Temperature of maximum density of seawater -->
+      </tocitem>
     </tocitem>
 	
     <tocitem target="gsw_contents.html#7">
-      water column properties, based on the 48-term expression for density
+      vertical stability
       <tocitem target="gsw_Nsquared.html" image="HelpIcon.FUNCTION">
         gsw_Nsquared<!-- buoyancy (Brunt-Vaisala) frequency squared (N^2) -->
       </tocitem>
@@ -293,21 +326,8 @@
       </tocitem>
     </tocitem>
 	
-    <tocitem target="gsw_contents.html#8">
-      neutral properties, based on the 48-term expression for density
-      <tocitem target="gsw_isopycnal_slope_ratio.html" image="HelpIcon.FUNCTION">
-        gsw_isopycnal_slope_ratio<!-- ratio of the slopes of isopycnals on the SA-CT diagram  for p &amp; p_ref -->
-      </tocitem>
-      <tocitem target="gsw_isopycnal_vs_ntp_CT_ratio.html" image="HelpIcon.FUNCTION">
-        gsw_isopycnal_vs_ntp_CT_ratio<!-- ratio of the gradient of Conservative Temperature in a potential density surface to that in the neutral  tangent plane -->
-      </tocitem>
-      <tocitem target="gsw_ntp_pt_vs_CT_ratio.html" image="HelpIcon.FUNCTION">
-        gsw_ntp_pt_vs_CT_ratio<!-- ratio of gradients of potential temperature &amp; Conservative Temperature in a neutral tangent plane (i.e. in a locally-referenced potential density surface) -->
-      </tocitem>
-    </tocitem>
-	
-    <tocitem target="gsw_contents.html#9">
-      geostrophic streamfunctions, based on the 48-term expression for density
+	<tocitem target="gsw_contents.html#8">
+      geostrophic streamfunctions, acoustic travel time and geostrophic velocity
       <tocitem target="gsw_geo_strf_dyn_height.html" image="HelpIcon.FUNCTION">
         gsw_geo_strf_dyn_height<!-- dynamic height anomaly -->
       </tocitem>
@@ -327,18 +347,30 @@
         gsw_geo_strf_Cunningham<!-- Cunningham geostrophic streamfunction -->
       </tocitem>
 	  <tocitem target="gsw_geo_strf_steric_height.html" image="HelpIcon.FUNCTION">
-        gsw_geo_strf_steric_height<!-- dynamic height anomaly divided by 9.7963  -->
+        gsw_geo_strf_steric_height<!-- dynamic height anomaly divided by 9.7963 -->
       </tocitem>
-    </tocitem>
-	
-    <tocitem target="gsw_contents.html#10">
-      geostrophic velocity
+	  <tocitem target="gsw_travel_time.html" image="HelpIcon.FUNCTION">
+        gsw_travel_time<!-- acoustic travel time -->
+      </tocitem>      
       <tocitem target="gsw_geostrophic_velocity.html" image="HelpIcon.FUNCTION">
         gsw_geostrophic_velocity<!-- geostrophic velocity -->
       </tocitem>
     </tocitem>
+		
+    <tocitem target="gsw_contents.html#9">
+      neutral versus isopycnal slopes and ratios
+      <tocitem target="gsw_isopycnal_slope_ratio.html" image="HelpIcon.FUNCTION">
+        gsw_isopycnal_slope_ratio<!-- ratio of the slopes of isopycnals on the SA-CT diagram  for p &amp; p_ref -->
+      </tocitem>
+      <tocitem target="gsw_isopycnal_vs_ntp_CT_ratio.html" image="HelpIcon.FUNCTION">
+        gsw_isopycnal_vs_ntp_CT_ratio<!-- ratio of the gradient of Conservative Temperature in a potential density surface to that in the neutral  tangent plane -->
+      </tocitem>
+      <tocitem target="gsw_ntp_pt_vs_CT_ratio.html" image="HelpIcon.FUNCTION">
+        gsw_ntp_pt_vs_CT_ratio<!-- ratio of gradients of potential temperature &amp; Conservative Temperature in a neutral tangent plane (i.e. in a locally-referenced potential density surface) -->
+      </tocitem>
+    </tocitem>
 	
-    <tocitem target="gsw_contents.html#11">
+    <tocitem target="gsw_contents.html#10">
       derivatives of entropy, CT and pt
       <tocitem target="gsw_CT_first_derivatives.html" image="HelpIcon.FUNCTION">
         gsw_CT_first_derivatives<!-- first derivatives of Conservative Temperature -->
@@ -366,7 +398,206 @@
       </tocitem>
     </tocitem>
 	
-    <tocitem target="gsw_contents.html#12">
+	<tocitem target="gsw_contents.html#11">
+      seawater and ice properties at the freezing temperature
+      <tocitem target="gsw_CT_freezing.html" image="HelpIcon.FUNCTION">
+        gsw_CT_freezing<!-- Conservative Temperature freezing temperature of seawater -->
+      </tocitem>
+      <tocitem target="gsw_CT_freezing_poly.html" image="HelpIcon.FUNCTION">
+        gsw_CT_freezing_poly<!-- Conservative Temperature freezing temperature of seawater -->
+      </tocitem>
+      <tocitem target="gsw_t_freezing.html" image="HelpIcon.FUNCTION">
+        gsw_t_freezing<!-- in-situ freezing temperature of seawater -->
+      </tocitem>	  
+      <tocitem target="gsw_t_freezing_poly.html" image="HelpIcon.FUNCTION">
+        gsw_t_freezing_poly<!-- in-situ freezing temperature of seawater -->
+      </tocitem>
+      <tocitem target="gsw_pot_enthalpy_ice_freezing.html" image="HelpIcon.FUNCTION">
+        gsw_pot_enthalpy_ice_freezing<!-- pot_enthalpy of seawater at the freezing point -->
+      </tocitem>	  
+      <tocitem target="gsw_pot_enthalpy_ice_freezing_poly.html" image="HelpIcon.FUNCTION">
+        gsw_pot_enthalpy_ice_freezing_poly<!-- pot_enthalpy of seawater at the freezing point -->
+      </tocitem>
+      <tocitem target="gsw_SA_freezing_from_CT.html" image="HelpIcon.FUNCTION">
+        gsw_SA_freezing_from_CT<!-- Absolute Salinity of seawater at the freezing point (for given CT) -->
+      </tocitem>
+      <tocitem target="gsw_SA_freezing_from_CT_poly.html" image="HelpIcon.FUNCTION">
+        gsw_SA_freezing_from_CT_poly<!-- Absolute Salinity of seawater at the freezing point (for given CT) -->
+      </tocitem>
+      <tocitem target="gsw_SA_freezing_from_t.html" image="HelpIcon.FUNCTION">
+        gsw_SA_freezing_from_t<!-- Absolute Salinity of seawater at the freezing point (for given t) -->
+      </tocitem>
+      <tocitem target="gsw_SA_freezing_from_t_poly.html" image="HelpIcon.FUNCTION">
+        gsw_SA_freezing_from_t_poly<!-- Absolute Salinity of seawater at the freezing point (for given t) -->
+      </tocitem>
+	  	  <tocitem target="gsw_pressure_freezing_CT.html" image="HelpIcon.FUNCTION">
+        gsw_pressure_freezing_CT<!-- Conservative Temperature freezing temperature of seawater -->
+      </tocitem>
+	  <tocitem target="gsw_CT_freezing_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_CT_freezing_first_derivatives<!-- Conservative Temperature freezing temperature of seawater -->
+      </tocitem>
+	  <tocitem target="gsw_CT_freezing_first_derivatives_poly.html" image="HelpIcon.FUNCTION">
+        gsw_CT_freezing_first_derivatives_poly<!-- Conservative Temperature freezing temperature of seawater -->
+      </tocitem>
+	  <tocitem target="gsw_t_freezing_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_t_freezing_first_derivatives<!-- in-situ temperature freezing temperature of seawater -->
+      </tocitem>
+	  <tocitem target="gsw_t_freezing_first_derivatives_poly.html" image="HelpIcon.FUNCTION">
+        gsw_t_freezing_first_derivatives_poly<!-- in-situ temperature freezing temperature of seawater -->
+      </tocitem>
+	  <tocitem target="gsw_pot_enthalpy_ice_freezing_first_derivatives.html" image="HelpIcon.FUNCTION">
+        gsw_pot_enthalpy_ice_freezing_first_derivatives<!-- pot_enthalpy of seawater at the freezing point -->
+      </tocitem>
+	  <tocitem target="gsw_pot_enthalpy_ice_freezing_first_derivatives_poly.html" image="HelpIcon.FUNCTION">
+        gsw_pot_enthalpy_ice_freezing_first_derivatives_poly<!-- pot_enthalpy of seawater at the freezing point -->
+      </tocitem>
+	  <tocitem target="gsw_latentheat_melting.html" image="HelpIcon.FUNCTION">
+        gsw_latentheat_melting<!-- latent heat of melting of ice into seawater (isobaric melting enthalpy) -->
+      </tocitem>
+    </tocitem>
+
+	 <tocitem target="gsw_contents.html#12">
+      thermodynamic interaction betweeen ice and seawater
+       <tocitem target="gsw_melting_ice_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
+         gsw_melting_ice_SA_CT_ratio               
+       </tocitem>
+       <tocitem target="gsw_melting_ice_SA_CT_ratio_poly.html" image="HelpIcon.FUNCTION">
+         gsw_melting_ice_SA_CT_ratio_poly               
+       </tocitem>
+       <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
+         gsw_melting_ice_equilibrium_SA_CT_ratio
+       </tocitem>
+       <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio_poly.html" image="HelpIcon.FUNCTION">
+         gsw_melting_ice_equilibrium_SA_CT_ratio_poly
+       </tocitem>
+        <tocitem target="gsw_ice_fraction_to_freeze_seawater.html" image="HelpIcon.FUNCTION">
+         gsw_ice_fraction_to_freeze_seawater     
+       </tocitem>
+      <tocitem target="gsw_melting_ice_into_seawater.html" image="HelpIcon.FUNCTION">
+         gsw_melting_ice_into_seawater             
+       </tocitem>
+       <tocitem target="gsw_frazil_ratios_adiabatic.html" image="HelpIcon.FUNCTION">
+         gsw_frazil_ratios_adiabatic                         
+       </tocitem>
+        <tocitem target="gsw_frazil_ratios_adiabatic_poly.html" image="HelpIcon.FUNCTION">
+         gsw_frazil_ratios_adiabatic_poly                         
+       </tocitem>
+      <tocitem target="gsw_frazil_properties.html" image="HelpIcon.FUNCTION">
+         gsw_frazil_properties                         
+       </tocitem>
+       <tocitem target="gsw_frazil_properties_potential.html" image="HelpIcon.FUNCTION">
+         gsw_frazil_properties_potential                         
+       </tocitem>
+       <tocitem target="gsw_frazil_properties_potential_poly.html" image="HelpIcon.FUNCTION">
+         gsw_frazil_properties_potential_poly                         
+       </tocitem>
+	 </tocitem>
+	 
+	 <tocitem target="gsw_contents.html#13">
+      thermodynamic interaction betweeen sea ice and seawater
+	   <tocitem target="gsw_melting_seaice_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
+         gsw_melting_seaice_SA_CT_ratio            
+       </tocitem>
+	   <tocitem target="gsw_melting_seaice_SA_CT_ratio_poly.html" image="HelpIcon.FUNCTION">
+         gsw_melting_seaice_SA_CT_ratio_poly            
+       </tocitem>
+	   <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
+         gsw_melting_seaice_equilibrium_SA_CT_ratio
+       </tocitem>
+	   <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio_poly.html" image="HelpIcon.FUNCTION">
+         gsw_melting_seaice_equilibrium_SA_CT_ratio_poly
+       </tocitem>
+        <tocitem target="gsw_seaice_fraction_to_freeze_seawater.html" image="HelpIcon.FUNCTION">
+         gsw_seaice_fraction_to_freeze_seawater     
+       </tocitem>
+      <tocitem target="gsw_melting_seaice_into_seawater.html" image="HelpIcon.FUNCTION">
+         gsw_melting_seaice_into_seawater     
+       </tocitem>
+     </tocitem>
+
+	<tocitem target="gsw_contents.html#14">
+      thermodynamic properties of ice Ih
+       <tocitem target="gsw_specvol_ice.html" image="HelpIcon.FUNCTION">
+         gsw_specvol_ice 
+       </tocitem>	  
+ 	   <tocitem target="gsw_alpha_wrt_t_ice.html" image="HelpIcon.FUNCTION">
+	     gsw_alpha_wrt_t_ice
+	   </tocitem>                  
+       <tocitem target="gsw_rho_ice.html" image="HelpIcon.FUNCTION">
+         gsw_rho_ice<!-- in-situ density -->
+       </tocitem>
+       <tocitem target="gsw_pressure_coefficient_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pressure_coefficient_ice
+       </tocitem>
+       <tocitem target="gsw_sound_speed_ice.html" image="HelpIcon.FUNCTION">
+         gsw_sound_speed_ice                
+       </tocitem>       
+       <tocitem target="gsw_kappa_ice.html" image="HelpIcon.FUNCTION">
+         gsw_kappa_ice                         
+       </tocitem>     
+       <tocitem target="gsw_kappa_const_t_ice.html" image="HelpIcon.FUNCTION">
+         gsw_ice_kappa_const_t_exact          
+       </tocitem>
+       <tocitem target="gsw_internal_energy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_internal_energy_ice               
+       </tocitem>
+       <tocitem target="gsw_enthalpy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_enthalpy_ice                    
+       </tocitem>
+       <tocitem target="gsw_entropy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_entropy_ice                     
+       </tocitem>
+       <tocitem target="gsw_cp_ice.html" image="HelpIcon.FUNCTION">
+         gsw_cp_ice  
+       </tocitem>
+       <tocitem target="gsw_chem_potential_water_ice.html" image="HelpIcon.FUNCTION">
+         gsw_chem_potential_water_ice              
+       </tocitem>
+       <tocitem target="gsw_Helmholtz_energy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_Helmholtz_energy_ice     
+       </tocitem>
+       <tocitem target="gsw_adiabatic_lapse_rate_ice.html" image="HelpIcon.FUNCTION">
+         gsw_adiabatic_lapse_rate_ice              
+       </tocitem>
+       <tocitem target="gsw_pt0_from_t_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pt0_from_t_ice                         
+       </tocitem>
+       <tocitem target="gsw_pt_from_t_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pt_from_t_ice                         
+       </tocitem>
+       <tocitem target="gsw_t_from_pt0_ice.html" image="HelpIcon.FUNCTION">
+         gsw_t_from_pt0_ice                       
+       </tocitem>
+       <tocitem target="gsw_t_from_rho_ice.html" image="HelpIcon.FUNCTION">
+         gsw_t_from_rho_ice                       
+       </tocitem>
+	   <tocitem target="gsw_pot_enthalpy_from_pt_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pot_enthalpy_from_pt_ice             
+       </tocitem>
+       <tocitem target="gsw_pt_from_pot_enthalpy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pt_from_pot_enthalpy_ice               
+       </tocitem>
+       <tocitem target="gsw_pot_enthalpy_from_pt_ice_poly.html" image="HelpIcon.FUNCTION">
+         gsw_pot_enthalpy_from_pt_ice_poly        
+       </tocitem>
+       <tocitem target="gsw_pt_from_pot_enthalpy_ice_poly.html" image="HelpIcon.FUNCTION">
+         gsw_pt_from_pot_enthalpy_ice_poly         
+       </tocitem>
+	   <tocitem target="gsw_pot_enthalpy_from_specvol_ice.html" image="HelpIcon.FUNCTION">
+         gsw_pot_enthalpy_from_specvol_ice             
+       </tocitem>
+       <tocitem target="gsw_specvol_from_pot_enthalpy_ice.html" image="HelpIcon.FUNCTION">
+         gsw_specvol_from_pot_enthalpy_ice               
+       </tocitem>
+	   <tocitem target="gsw_pot_enthalpy_from_specvol_ice_poly.html" image="HelpIcon.FUNCTION">
+         gsw_pot_enthalpy_from_specvol_ice_poly             
+       </tocitem>
+       <tocitem target="gsw_specvol_from_pot_enthalpy_ice_poly.html" image="HelpIcon.FUNCTION">
+         gsw_specvol_from_pot_enthalpy_ice_poly               
+       </tocitem>
+	</tocitem>
+	
+	<tocitem target="gsw_contents.html#15">
       isobaric evaporation enthalpy
       <tocitem target="gsw_latentheat_evap_CT.html" image="HelpIcon.FUNCTION">
         gsw_latentheat_evap_CT<!-- latent heat of evaporation of water from seawater (isobaric evaporation enthalpy) with CT as input temperature -->
@@ -376,7 +607,64 @@
       </tocitem>
     </tocitem>
 	
-	<tocitem target="gsw_contents.html#13">
+	<tocitem target="gsw_contents.html#16">
+      spiciness
+      <tocitem target="gsw_spiciness0.html" image="HelpIcon.FUNCTION">
+        gsw_spiciness0<!-- spiciness with reference pressure of 0 dbar -->
+      </tocitem>
+      <tocitem target="gsw_spiciness1.html" image="HelpIcon.FUNCTION">
+        gsw_spiciness1<!-- spiciness with reference pressure of 1000 dbar -->
+      </tocitem>
+      <tocitem target="gsw_spiciness2.html" image="HelpIcon.FUNCTION">
+        gsw_spiciness2<!-- spiciness with reference pressure of 2000 dbar -->
+      </tocitem>
+    </tocitem>    
+
+	<tocitem target="gsw_contents.html#17">
+      planet Earth properties
+      <tocitem target="gsw_f.html" image="HelpIcon.FUNCTION">
+        gsw_f<!-- Coriolis parameter -->
+      </tocitem>
+      <tocitem target="gsw_grav.html" image="HelpIcon.FUNCTION">
+        gsw_grav<!-- gravitational acceleration -->
+      </tocitem>
+      <tocitem target="gsw_distance.html" image="HelpIcon.FUNCTION">
+        gsw_distance<!-- spherical earth distance between points in the ocean -->
+      </tocitem>
+    </tocitem>    
+	
+    <tocitem target="gsw_contents.html#18">
+      TEOS-10 constants
+      <tocitem target="gsw_T0.html" image="HelpIcon.FUNCTION">
+        gsw_T0<!-- Celcius zero point; 273.15 K -->
+      </tocitem>
+      <tocitem target="gsw_P0.html" image="HelpIcon.FUNCTION">
+        gsw_P0<!-- one standard atmosphere; 101 325 Pa -->
+      </tocitem>
+      <tocitem target="gsw_SS0.html" image="HelpIcon.FUNCTION">
+        gsw_SS0<!-- Standard Ocean Reference Salinity; 35.165 04 g/kg -->
+      </tocitem>
+      <tocitem target="gsw_uPS.html" image="HelpIcon.FUNCTION">
+        gsw_uPS<!-- unit conversion factor for salinities; (35.165 04/35) g/kg -->
+      </tocitem>
+      <tocitem target="gsw_cp0.html" image="HelpIcon.FUNCTION">
+        gsw_cp0<!-- the "specific heat" for use with CT; 3991.867 957 119 63 (J/kg)/K -->
+      </tocitem>
+      <tocitem target="gsw_C3515.html" image="HelpIcon.FUNCTION">
+        gsw_C3515<!-- conductivity of SSW at SP=35, t_68=15, p=0; 42.9140 mS/cm -->
+      </tocitem>
+      <tocitem target="gsw_SonCl.html" image="HelpIcon.FUNCTION">
+        gsw_SonCl<!-- ratio of SP to Chlorinity; 1.80655 (g/kg)^-1 -->
+      </tocitem>
+      <tocitem target="gsw_valence_factor.html" image="HelpIcon.FUNCTION">
+        gsw_valence_factor<!-- valence factor of sea salt; 1.2452898 -->
+      </tocitem>
+      <tocitem target="gsw_atomic_weight.html" image="HelpIcon.FUNCTION">
+        gsw_atomic_weight<!-- mole-weighted atomic weight of sea salt; 31.4038218... g/mol -->
+      </tocitem>
+    </tocitem>
+	
+	<tocitem target="gsw_contents.html#19">
       dissolved gasses
 	   <tocitem target="gsw_Arsol.html" image="HelpIcon.FUNCTION">
          gsw_Arsol            
@@ -421,177 +709,59 @@
          gsw_O2sol_SP_pt            
        </tocitem>
     </tocitem>
- 
-	
-	<tocitem target="gsw_contents.html#14">
-      seawater properties at the freezing temperature
-      <tocitem target="gsw_CT_freezing.html" image="HelpIcon.FUNCTION">
-        gsw_CT_freezing<!-- Conservative Temperature freezing temperature of seawater -->
-      </tocitem>
-      <tocitem target="gsw_t_freezing.html" image="HelpIcon.FUNCTION">
-        gsw_t_freezing<!-- in-situ freezing temperature of seawater -->
-      </tocitem>
-      <tocitem target="gsw_CT_freezing_poly.html" image="HelpIcon.FUNCTION">
-        gsw_CT_freezing_poly<!-- Conservative Temperature freezing temperature of seawater -->
-      </tocitem>
-      <tocitem target="gsw_t_freezing_poly.html" image="HelpIcon.FUNCTION">
-        gsw_t_freezing_poly<!-- in-situ freezing temperature of seawater -->
-      </tocitem>
-      <tocitem target="gsw_brineSA_CT.html" image="HelpIcon.FUNCTION">
-        gsw_brineSA_CT<!-- Absolute Salinity of seawater at the freezing point (for given CT) -->
-      </tocitem>
-      <tocitem target="gsw_brineSA_t.html" image="HelpIcon.FUNCTION">
-        gsw_brineSA_t<!-- Absolute Salinity of seawater at the freezing point (for given t) -->
-      </tocitem>
-      <tocitem target="gsw_brineSA_CT_poly.html" image="HelpIcon.FUNCTION">
-        gsw_brineSA_CT_poly<!-- Absolute Salinity of seawater at the freezing point (for given CT) -->
-      </tocitem>
-      <tocitem target="gsw_brineSA_t_poly.html" image="HelpIcon.FUNCTION">
-        gsw_brineSA_t_poly<!-- Absolute Salinity of seawater at the freezing point (for given t) -->
-      </tocitem>
-	  	  <tocitem target="gsw_pressure_freezing_CT.html" image="HelpIcon.FUNCTION">
-        gsw_pressure_freezing_CT<!-- Conservative Temperature freezing temperature of seawater -->
-      </tocitem>
-	  <tocitem target="gsw_CT_freezing_first_derivatives.html" image="HelpIcon.FUNCTION">
-        gsw_CT_freezing_first_derivatives<!-- Conservative Temperature freezing temperature of seawater -->
-      </tocitem>
-	  <tocitem target="gsw_t_freezing_first_derivatives.html" image="HelpIcon.FUNCTION">
-        gsw_t_freezing_first_derivatives<!-- in-situ temperature freezing temperature of seawater -->
-      </tocitem>
-	  <tocitem target="gsw_latentheat_melting.html" image="HelpIcon.FUNCTION">
-        gsw_latentheat_melting<!-- latent heat of melting of ice into seawater (isobaric melting enthalpy) -->
-      </tocitem>
-    </tocitem>
 
-	 <tocitem target="gsw_contents.html#15">
-      thermodynamic interaction betweeen ice Ih and seawater
-       <tocitem target="gsw_melting_ice_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
-         gsw_melting_ice_SA_CT_ratio               
-       </tocitem>
-       <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
-         gsw_melting_ice_equilibrium_SA_CT_ratio
-       </tocitem>
-       <tocitem target="gsw_melting_ice_into_seawater.html" image="HelpIcon.FUNCTION">
-         gsw_melting_ice_into_seawater             
-       </tocitem>
-       <tocitem target="gsw_ice_fraction_to_freeze_seawater.html" image="HelpIcon.FUNCTION">
-         gsw_ice_fraction_to_freeze_seawater     
-       </tocitem>
-       <tocitem target="gsw_frazil_ratios.html" image="HelpIcon.FUNCTION">
-         gsw_frazil_ratios                         
-       </tocitem>
-	 </tocitem>
-	 
-	 <tocitem target="gsw_contents.html#16">
-      thermodynamic interaction betweeen sea ice and seawater
-	   <tocitem target="gsw_melting_seaice_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
-         gsw_melting_seaice_SA_CT_ratio            
-       </tocitem>
-	   <tocitem target="gsw_melting_ice_equilibrium_SA_CT_ratio.html" image="HelpIcon.FUNCTION">
-         gsw_melting_seaice_equilibrium_SA_CT_ratio
-       </tocitem>
-       <tocitem target="gsw_melting_seaice_into_seawater.html" image="HelpIcon.FUNCTION">
-         gsw_melting_seaice_into_seawater     
-       </tocitem>
-       <tocitem target="gsw_seaice_fraction_to_freeze_seawater.html" image="HelpIcon.FUNCTION">
-         gsw_seaice_fraction_to_freeze_seawater     
-       </tocitem>
-     </tocitem>
-
-
-	<tocitem target="gsw_contents.html#17">
-      thermodynamic properties of ice Ih
-      <tocitem target="gsw_rho_ice.html" image="HelpIcon.FUNCTION">
-        gsw_rho_ice<!-- in-situ density -->
+    <tocitem target="gsw_contents.html#20">
+      specific volume, density and enthalpy in terms of CT, based on the exact Gibbs function
+      <tocitem target="gsw_specvol_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_CT_exact<!-- specific volume -->
       </tocitem>
-	   <tocitem target="gsw_alpha_wrt_t_ice.html" image="HelpIcon.FUNCTION">
-	     gsw_alpha_wrt_t_ice
-	   </tocitem>                  
-       <tocitem target="gsw_specvol_ice.html" image="HelpIcon.FUNCTION">
-         gsw_specvol_ice 
-       </tocitem>
-       <tocitem target="gsw_pressure_coefficient_ice.html" image="HelpIcon.FUNCTION">
-         gsw_pressure_coefficient_ice
-       </tocitem>
-       <tocitem target="gsw_sound_speed_ice.html" image="HelpIcon.FUNCTION">
-         gsw_sound_speed_ice                
-       </tocitem>       
-       <tocitem target="gsw_kappa_ice.html" image="HelpIcon.FUNCTION">
-         gsw_kappa_ice                         
-       </tocitem>     
-       <tocitem target="gsw_kappa_const_t_ice.html" image="HelpIcon.FUNCTION">
-         gsw_ice_kappa_const_t_exact          
-       </tocitem>
-       <tocitem target="gsw_internal_energy_ice.html" image="HelpIcon.FUNCTION">
-         gsw_internal_energy_ice               
-       </tocitem>
-       <tocitem target="gsw_enthalpy_ice.html" image="HelpIcon.FUNCTION">
-         gsw_enthalpy_ice                    
-       </tocitem>
-       <tocitem target="gsw_entropy_ice.html" image="HelpIcon.FUNCTION">
-         gsw_entropy_ice                     
-       </tocitem>
-       <tocitem target="gsw_cp_ice.html" image="HelpIcon.FUNCTION">
-         gsw_cp_ice  
-       </tocitem>
-       <tocitem target="gsw_chem_potential_water_ice.html" image="HelpIcon.FUNCTION">
-         gsw_chem_potential_water_ice              
-       </tocitem>
-       <tocitem target="gsw_Helmholtz_energy_ice.html" image="HelpIcon.FUNCTION">
-         gsw_Helmholtz_energy_ice     
-       </tocitem>
-       <tocitem target="gsw_adiabatic_lapse_rate_ice.html" image="HelpIcon.FUNCTION">
-         gsw_adiabatic_lapse_rate_ice              
-       </tocitem>
-       <tocitem target="gsw_pt0_from_t_ice.html" image="HelpIcon.FUNCTION">
-         gsw_pt0_from_t_ice                         
-       </tocitem>
-       <tocitem target="gsw_pt_from_t_ice.html" image="HelpIcon.FUNCTION">
-         gsw_pt_from_t_ice                         
-       </tocitem>
-       <tocitem target="gsw_t_from_pt0_ice.html" image="HelpIcon.FUNCTION">
-         gsw_t_from_pt0_ice                       
-       </tocitem>
-       <tocitem target="gsw_pot_enthalpy_from_pt_ice.html" image="HelpIcon.FUNCTION">
-         gsw_pot_enthalpy_from_pt_ice             
-       </tocitem>
-       <tocitem target="gsw_pt_from_pot_enthalpy_ice.html" image="HelpIcon.FUNCTION">
-         gsw_pt_from_pot_enthalpy_ice               
-       </tocitem>
-       <tocitem target="gsw_pot_enthalpy_from_pt_ice_poly.html" image="HelpIcon.FUNCTION">
-         gsw_pot_enthalpy_from_pt_ice_poly        
-       </tocitem>
-       <tocitem target="gsw_pt_from_pot_enthalpy_ice_poly.html" image="HelpIcon.FUNCTION">
-         gsw_pt_from_pot_enthalpy_ice_poly         
-       </tocitem>
-	</tocitem>
-	 
-
-    <tocitem target="gsw_contents.html#18">
-      density and enthalpy in terms of CT, based on the exact Gibbs function
-      <tocitem target="gsw_rho_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_rho_CT_exact<!-- in-situ density and potential density -->
-      </tocitem>
-      <tocitem target="gsw_alpha_CT_exact.html" image="HelpIcon.FUNCTION">
+	  <tocitem target="gsw_alpha_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_alpha_CT_exact<!-- thermal expansion coefficient with respect to CT -->
       </tocitem>
       <tocitem target="gsw_beta_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_beta_CT_exact<!-- saline contraction coefficientat constant CT -->
-      </tocitem>
-      <tocitem target="gsw_rho_alpha_beta_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_rho_alpha_beta_CT_exact<!-- in-situ density, thermal expansion &amp; saline contraction coefficient from CT -->
+        gsw_beta_CT_exact<!-- saline contraction coefficient at constant CT -->
       </tocitem>
 	  <tocitem target="gsw_alpha_on_beta_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_alpha_on_beta_CT_exact<!-- alpha divided by beta -->
       </tocitem>
+      <tocitem target="gsw_specvol_alpha_beta_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_alpha_beta_CT_exact<!-- specific volume, thermal expansion &amp; saline contraction coefficients -->
+      </tocitem>
+      <tocitem target="gsw_specvol_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_first_derivatives_CT_exact<!-- derivatives of specific volume -->
+      </tocitem>
+      <tocitem target="gsw_specvol_second_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_second_derivatives_CT_exact<!-- second derivatives of specific volume -->
+      </tocitem>
+      <tocitem target="gsw_specvol_first_derivatives_wrt_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_first_derivatives_wrt_enthalpy_CT_exact<!-- derivatives of specific volume with respect to enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_specvol_second_derivatives_wrt_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_second_derivatives_wrt_enthalpy_CT_exact<!-- second derivatives of specific volume  with respect to enthalpy-->
+      </tocitem>
+	  <tocitem target="gsw_specvol_anom_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_anom_CT_exact<!-- specific volume anomaly -->
+      </tocitem>      
+	  <tocitem target="gsw_specvol_anom_standard_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_anom_standard_CT_exact<!-- specific volume anomaly -->
+      </tocitem>
+      <tocitem target="gsw_rho_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_CT_exact<!-- in-situ density from CT, and potential density -->
+      </tocitem>
+      <tocitem target="gsw_rho_alpha_beta_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_alpha_beta_CT_exact<!-- in-situ density, thermal expansion &amp; saline contraction coefficients -->
+      </tocitem>
       <tocitem target="gsw_rho_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_rho_first_derivatives_CT_exact<!-- first derivatives of density -->
       </tocitem>
-      <tocitem target="gsw_specvol_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_CT_exact<!-- specific volume from CT -->
+      <tocitem target="gsw_rho_second_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_second_derivatives_CT_exact<!-- second derivatives of density -->
       </tocitem>
-      <tocitem target="gsw_specvol_anom_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_anom_CT_exact<!-- specific volume anomaly from CT -->
+      <tocitem target="gsw_rho_first_derivatives_wrt_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_first_derivatives_wrt_enthalpy_CT_exact<!-- derivatives of density with respect to enthalpy -->
+      </tocitem>
+      <tocitem target="gsw_rho_second_derivatives_wrt_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_second_derivatives_wrt_enthalpy_CT_exact<!-- second derivatives of density with respect to enthalpy-->
       </tocitem>
       <tocitem target="gsw_sigma0_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_sigma0_CT_exact<!-- sigma0 from CT with reference pressure of 0 dbar -->
@@ -608,41 +778,20 @@
       <tocitem target="gsw_sigma4_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_sigma4_CT_exact<!-- sigma4 from CT with reference pressure of 4000 dbar -->
       </tocitem>
-      <tocitem target="gsw_sound_speed_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_sound_speed_CT_exact<!-- sound speed -->
-      </tocitem>
-	  <tocitem target="gsw_kappa_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_kappa_CT_exact<!-- isentropic compressibility -->
-      </tocitem>
       <tocitem target="gsw_cabbeling_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_cabbeling_CT_exact<!-- cabbeling coefficient -->
       </tocitem>
       <tocitem target="gsw_thermobaric_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_thermobaric_CT_exact<!-- thermobaric coefficient -->
       </tocitem>
-	  <tocitem target="gsw_SA_from_rho_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_SA_from_rho_CT_exact<!-- Absolute Salinity from Density & CT -->
-      </tocitem>
-      <tocitem target="gsw_CT_from_rho_exact.html" image="HelpIcon.FUNCTION">
-        gsw_CT_from_rho_exact<!-- Conservative Temperature from density -->
-      </tocitem>
-      <tocitem target="gsw_CT_maxdensity_exact.html" image="HelpIcon.FUNCTION">
-        gsw_CT_maxdensity_exact<!-- Conservative Temperature of maximum density of seawater -->
-      </tocitem>
-      <tocitem target="gsw_internal_energy_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_internal_energy_CT_exact<!-- internal energy -->
-      </tocitem>
       <tocitem target="gsw_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_CT_exact<!-- enthalpy from CT -->
-      </tocitem>
-	  <tocitem target="gsw_CT_from_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_CT_from_enthalpy_CT_exact<!-- enthalpy -->
+        gsw_enthalpy_CT_exact<!-- enthalpy -->
       </tocitem>
       <tocitem target="gsw_enthalpy_diff_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_enthalpy_diff_CT_exact<!-- difference of enthalpy from CT between two pressures -->
+        gsw_enthalpy_diff_CT_exact<!-- difference of enthalpy between two pressures -->
       </tocitem>
       <tocitem target="gsw_dynamic_enthalpy_CT_exact.html" image="HelpIcon.FUNCTION">
-        gsw_dynamic_enthalpy_CT_exact<!-- dynamic enthalpy from CT -->
+        gsw_dynamic_enthalpy_CT_exact<!-- dynamic enthalpy -->
       </tocitem>
 	  <tocitem target="gsw_enthalpy_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy_first_derivatives_CT_exact<!-- first derivatives of enthalpy -->
@@ -650,9 +799,36 @@
       <tocitem target="gsw_enthalpy_second_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy_second_derivatives_CT_exact<!-- second derivatives of enthalpy -->
       </tocitem>
-    </tocitem>
+	  <tocitem target="gsw_sound_speed_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_sound_speed_CT_exact<!-- sound speed -->
+      </tocitem>
+	  <tocitem target="gsw_kappa_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_kappa_CT_exact<!-- isentropic compressibility -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_CT_exact<!-- internal energy -->
+      </tocitem>
+	  <tocitem target="gsw_internal_energy_first_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_first_derivatives_CT_exact<!-- first derivatives of internal energy -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy_second_derivatives_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_second_derivatives_CT_exact<!-- second derivatives of internal energy -->
+      </tocitem>
+	  <tocitem target="gsw_CT_from_enthalpy_exact.html" image="HelpIcon.FUNCTION">
+        gsw_CT_from_enthalpy_exact<!-- enthalpy -->
+      </tocitem>	  	  
+      <tocitem target="gsw_SA_from_rho_CT_exact.html" image="HelpIcon.FUNCTION">
+        gsw_SA_from_rho_CT_exact<!-- Absolute Salinity from density -->
+      </tocitem>
+      <tocitem target="gsw_CT_from_rho_exact.html" image="HelpIcon.FUNCTION">
+        gsw_CT_from_rho_exact<!-- Conservative Temperature from density -->
+      </tocitem>
+      <tocitem target="gsw_CT_maxdensity_exact.html" image="HelpIcon.FUNCTION">
+        gsw_CT_maxdensity_exact<!-- Conservative Temperature of maximum density of seawater -->
+      </tocitem>  
+	</tocitem>
 	
-	<tocitem target="gsw_contents.html#19">
+	<tocitem target="gsw_contents.html#21">
       laboratory functions, for use with densimeter measurements
       <tocitem target="gsw_deltaSA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_deltaSA_from_rho_t_exact<!-- Absolute Salinity Anomaly from density -->
@@ -665,18 +841,12 @@
       </tocitem>
     </tocitem>
 	
-    <tocitem target="gsw_contents.html#20">
+    <tocitem target="gsw_contents.html#22">
       basic thermodynamic properties in terms of in-situ t, based on the exact Gibbs function
-      <tocitem target="gsw_rho_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_rho_t_exact<!-- in-situ density -->
+      <tocitem target="gsw_specvol_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_t_exact<!-- specific volume -->
       </tocitem>
-      <tocitem target="gsw_pot_rho_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_pot_rho_t_exact<!-- potential density -->
-      </tocitem>
-      <tocitem target="gsw_sigma0_pt0_exact.html" image="HelpIcon.FUNCTION">
-        gsw_sigma0_pt0_exact<!-- sigma0 from pt0 with reference pressure of 0 dbar -->
-      </tocitem>
-      <tocitem target="gsw_alpha_wrt_CT_t_exact.html" image="HelpIcon.FUNCTION">
+	  <tocitem target="gsw_alpha_wrt_CT_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_alpha_wrt_CT_t_exact<!-- thermal expansion coefficient with respect to Conservative Temperature. -->
       </tocitem>
       <tocitem target="gsw_alpha_wrt_pt_t_exact.html" image="HelpIcon.FUNCTION">
@@ -694,32 +864,17 @@
       <tocitem target="gsw_beta_const_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_beta_const_t_exact<!-- saline contraction coefficient at constant in-situ temperature -->
       </tocitem>
-      <tocitem target="gsw_specvol_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_t_exact<!-- specific volume -->
+      <tocitem target="gsw_specvol_anom_standard_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_specvol_anom_standard_t_exact<!-- specific volume anomaly -->
       </tocitem>
-      <tocitem target="gsw_specvol_anom_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_specvol_anom_t_exact<!-- specific volume anomaly -->
+      <tocitem target="gsw_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_rho_t_exact<!-- in-situ density -->
       </tocitem>
-      <tocitem target="gsw_sound_speed_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_sound_speed_t_exact<!-- sound speed -->
+      <tocitem target="gsw_pot_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_pot_rho_t_exact<!-- potential density -->
       </tocitem>
-      <tocitem target="gsw_kappa_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_kappa_t_exact<!-- isentropic compressibility -->
-      </tocitem>
-      <tocitem target="gsw_kappa_const_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_kappa_const_t_exact<!-- isothermal compressibility -->
-      </tocitem>
-	  <tocitem target="gsw_SA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_SA_from_rho_t_exact<!-- Absolute Salinity from density -->
-      </tocitem>
-      <tocitem target="gsw_t_from_rho_exact.html" image="HelpIcon.FUNCTION">
-        gsw_t_from_rho_exact<!-- in-situ temperature from density -->
-      </tocitem>
-      <tocitem target="gsw_t_maxdensity_exact.html" image="HelpIcon.FUNCTION">
-        gsw_t_maxdensity_exact<!-- in-situ temperature of maximum density of seawater -->
-      </tocitem>
-      <tocitem target="gsw_internal_energy_t_exact.html" image="HelpIcon.FUNCTION">
-        gsw_internal_energy_t_exact<!-- internal energy -->
+      <tocitem target="gsw_sigma0_pt0_exact.html" image="HelpIcon.FUNCTION">
+        gsw_sigma0_pt0_exact<!-- sigma0 from pt0 with reference pressure of 0 dbar -->
       </tocitem>
       <tocitem target="gsw_enthalpy_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_enthalpy_t_exact<!-- enthalpy -->
@@ -733,7 +888,28 @@
       <tocitem target="gsw_enthalpy_first_derivatives_wrt_t_exact.html" image="HelpIcon.FUNCTION"> 
         gsw_enthalpy_first_derivatives_wrt_t_exact
       </tocitem>
-      <tocitem target="gsw_cp_t_exact.html" image="HelpIcon.FUNCTION">
+      <tocitem target="gsw_sound_speed_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_sound_speed_t_exact<!-- sound speed -->
+      </tocitem>
+      <tocitem target="gsw_kappa_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_kappa_t_exact<!-- isentropic compressibility -->
+      </tocitem>
+      <tocitem target="gsw_kappa_const_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_kappa_const_t_exact<!-- isothermal compressibility -->
+      </tocitem>
+      <tocitem target="gsw_internal_energy_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_internal_energy_t_exact<!-- internal energy -->
+      </tocitem>
+	  <tocitem target="gsw_SA_from_rho_t_exact.html" image="HelpIcon.FUNCTION">
+        gsw_SA_from_rho_t_exact<!-- Absolute Salinity from density -->
+      </tocitem>
+      <tocitem target="gsw_t_from_rho_exact.html" image="HelpIcon.FUNCTION">
+        gsw_t_from_rho_exact<!-- in-situ temperature from density -->
+      </tocitem>
+      <tocitem target="gsw_t_maxdensity_exact.html" image="HelpIcon.FUNCTION">
+        gsw_t_maxdensity_exact<!-- in-situ temperature of maximum density of seawater -->
+      </tocitem>
+       <tocitem target="gsw_cp_t_exact.html" image="HelpIcon.FUNCTION">
         gsw_cp_t_exact<!-- isobaric heat capacity -->
       </tocitem>
       <tocitem target="gsw_isochoric_heat_cap_t_exact.html" image="HelpIcon.FUNCTION">
@@ -765,50 +941,6 @@
       </tocitem>
     </tocitem>
 	
-	<tocitem target="gsw_contents.html#21">
-      planet Earth properties
-      <tocitem target="gsw_f.html" image="HelpIcon.FUNCTION">
-        gsw_f<!-- Coriolis parameter -->
-      </tocitem>
-      <tocitem target="gsw_grav.html" image="HelpIcon.FUNCTION">
-        gsw_grav<!-- gravitational acceleration -->
-      </tocitem>
-      <tocitem target="gsw_distance.html" image="HelpIcon.FUNCTION">
-        gsw_distance<!-- spherical earth distance between points in the ocean -->
-      </tocitem>
-    </tocitem>    
-	
-    <tocitem target="gsw_contents.html#22">
-      TEOS-10 constants
-      <tocitem target="gsw_T0.html" image="HelpIcon.FUNCTION">
-        gsw_T0<!-- Celcius zero point; 273.15 K -->
-      </tocitem>
-      <tocitem target="gsw_P0.html" image="HelpIcon.FUNCTION">
-        gsw_P0<!-- one standard atmosphere; 101 325 Pa -->
-      </tocitem>
-      <tocitem target="gsw_SS0.html" image="HelpIcon.FUNCTION">
-        gsw_SS0<!-- Standard Ocean Reference Salinity; 35.165 04 g/kg -->
-      </tocitem>
-      <tocitem target="gsw_uPS.html" image="HelpIcon.FUNCTION">
-        gsw_uPS<!-- unit conversion factor for salinities; (35.165 04/35) g/kg -->
-      </tocitem>
-      <tocitem target="gsw_cp0.html" image="HelpIcon.FUNCTION">
-        gsw_cp0<!-- the "specific heat" for use with CT; 3991.867 957 119 63 (J/kg)/K -->
-      </tocitem>
-      <tocitem target="gsw_C3515.html" image="HelpIcon.FUNCTION">
-        gsw_C3515<!-- conductivity of SSW at SP=35, t_68=15, p=0; 42.9140 mS/cm -->
-      </tocitem>
-      <tocitem target="gsw_SonCl.html" image="HelpIcon.FUNCTION">
-        gsw_SonCl<!-- ratio of SP to Chlorinity; 1.80655 (g/kg)^-1 -->
-      </tocitem>
-      <tocitem target="gsw_valence_factor.html" image="HelpIcon.FUNCTION">
-        gsw_valence_factor<!-- valence factor of sea salt; 1.2452898 -->
-      </tocitem>
-      <tocitem target="gsw_atomic_weight.html" image="HelpIcon.FUNCTION">
-        gsw_atomic_weight<!-- mole-weighted atomic weight of sea salt; 31.4038218... g/mol -->
-      </tocitem>
-    </tocitem>
- 
  </tocitem>
   <tocitem target="http://www.TEOS-10.org"
            image="$toolbox/matlab/icons/webicon.gif">
