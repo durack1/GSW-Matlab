@@ -349,6 +349,9 @@
 	  <tocitem target="gsw_geo_strf_steric_height.html" image="HelpIcon.FUNCTION">
         gsw_geo_strf_steric_height<!-- dynamic height anomaly divided by 9.7963 -->
       </tocitem>
+	  <tocitem target="gsw_geo_strf_PISH.html" image="HelpIcon.FUNCTION">
+        gsw_geo_strf_PISH<!-- Pressure integrated steric height -->
+      </tocitem>
 	  <tocitem target="gsw_travel_time.html" image="HelpIcon.FUNCTION">
         gsw_travel_time<!-- acoustic travel time -->
       </tocitem>      

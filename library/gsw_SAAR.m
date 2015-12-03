@@ -35,7 +35,7 @@
 %    hundred kilometres inland from the coast. 
 %
 % AUTHOR: 
-%  David Jackett                                       [ help@teos-10.org ]
+%  David Jackett                                       [ web mailto:help@teos-10.org ]
 %
 % MODIFIED:
 %  Paul Barker and Trevor McDougall 
@@ -53,6 +53,14 @@
 %   P.M. Barker, 2012: A global algorithm for estimating Absolute Salinity.
 %   Ocean Science, 8, 1123-1134.  
 %   http://www.ocean-sci.net/8/1123/2012/os-8-1123-2012.pdf 
+%
+%  See also gsw_SA_from_SP, gsw_deltaSA_atlas
+%
+%  Reference page in Help browser
+%       <a href="matlab:doc gsw_SAAR">doc gsw_SAAR</a>
+%  Note that this reference page includes the code contained in gsw_SAAR.
+%  We have opted to encode this programme as it is a global standard and 
+%  such we cannot allow anyone to change it.
 %
 %  The software is available from http://www.TEOS-10.org
 %

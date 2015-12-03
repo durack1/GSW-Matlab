@@ -160,7 +160,7 @@ end
 %  of specific volume with respet to pressure is perfomed with the pressure
 %  increment being no more than max_dp_i, with the default value being 1
 %  dbar.
-max_dp_i = 1;
+max_dp_i = 4;
 %--------------------------------------------------------------------------
 
 db2Pa = 1e4;
@@ -389,7 +389,7 @@ else
 % code.  Instead these "rough & ready" oceanographers would implement the
 % one line of code which linearly interpolates.  
                 [Intrp] = top_pad:length(p_i);
-                [SA_i(Intrp),CT_i(Intrp)] = gsw_rr68_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Intrp));
+%                [SA_i(Intrp),CT_i(Intrp)] = gsw_rr68_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Intrp));
                 if any(isnan(SA_i))
                     [Inan] = find(isnan(SA_i));
                     [SA_i(Inan), CT_i(Inan)] = gsw_linear_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Inan));

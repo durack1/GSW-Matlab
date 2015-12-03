@@ -76,6 +76,12 @@
 %   The composition of Standard Seawater and the definition of the
 %   Reference-Composition Salinity Scale, Deep-Sea Res. I, 55, 50-72.
 %
+%  Reference page in Help browser
+%       <a href="matlab:doc gsw_gibbs">doc gsw_gibbs</a>
+%  Note that this reference page includes the code contained in gsw_gibbs.
+%  We have opted to encode this programme as it is a global standard and 
+%  such we cannot allow anyone to change it.
+%
 %  The software is available from http://www.TEOS-10.org
 %
 %==========================================================================

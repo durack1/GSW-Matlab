@@ -118,18 +118,19 @@
 %  gsw_geo_strf_Montgomery           - Montgomery geostrophic streamfunction
 %  gsw_geo_strf_Cunningham           - Cunningham geostrophic streamfunction
 %  gsw_geo_strf_steric_height        - dynamic height anomaly divided by 9.7963 m s^-2
+%  gsw_geo_strf_PISH                 - pressure intergrated steric height
 %  gsw_travel_time                   - acoustic travel time
 %  gsw_geostrophic_velocity          - geostrophic velocity
 %
 % neutral versus isopycnal slopes and ratios
-%  gsw_isopycnal_slope_ratio       - ratio of the slopes of isopycnals on the SA-CT diagram 
-%                                    for p & p_ref
-%  gsw_isopycnal_vs_ntp_CT_ratio   - ratio of the gradient of Conservative Temperature
-%                                    in a potential density surface to that in the neutral 
-%                                    tangent plane
-%  gsw_ntp_pt_vs_CT_ratio          - ratio of gradients of potential temperature &
-%                                    Conservative Temperature in a neutral tangent plane
-%                                    (i.e. in a locally-referenced potential density surface)
+%  gsw_isopycnal_slope_ratio         - ratio of the slopes of isopycnals on the SA-CT diagram 
+%                                      for p & p_ref
+%  gsw_isopycnal_vs_ntp_CT_ratio     - ratio of the gradient of Conservative Temperature
+%                                      in a potential density surface to that in the neutral 
+%                                      tangent plane
+%  gsw_ntp_pt_vs_CT_ratio            - ratio of gradients of potential temperature &
+%                                      Conservative Temperature in a neutral tangent plane
+%                                      (i.e. in a locally-referenced potential density surface)
 %
 % derivatives of entropy, CT and pt 
 %  gsw_CT_first_derivatives          - first derivatives of Conservative Temperature
@@ -235,8 +236,6 @@
 %  gsw_Hesol_SP_pt         - helium solubility from SP and pt
 %  gsw_Krsol               - krypton solubility from SA and CT
 %  gsw_Krsol_SP_pt         - krypton solubility from SP and pt
-%  gsw_N2Osol              - nitrous oxide solubility from SA and CT
-%  gsw_N2Osol_SP_pt        - nitrous oxide solubility from SP and pt
 %  gsw_N2sol               - nitrogen solubility from SA and CT
 %  gsw_N2sol_SP_pt         - nitrogen solubility from SP and pt
 %  gsw_Nesol               - neon solubility from SA and CT

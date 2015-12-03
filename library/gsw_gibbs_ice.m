@@ -41,6 +41,12 @@
 %   UNESCO (English), 196 pp.  Available from http://www.TEOS-10.org.
 %    See appendix I.  
 %
+%  Reference page in Help browser
+%       <a href="matlab:doc gsw_gibbs_ice">doc gsw_gibbs_ice</a>
+%  Note that this reference page includes the code contained in 
+%  gsw_gibbs_ice.  We have opted to encode this programme as it is a global
+%  standard and such we cannot allow anyone to change it.
+%
 %  The software is available from http://www.TEOS-10.org
 %
 %==========================================================================

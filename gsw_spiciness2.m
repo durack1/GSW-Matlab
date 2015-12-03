@@ -46,8 +46,8 @@ function spiciness2 = gsw_spiciness2(SA,CT)
 %   temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
 %   pp. 730-741.
 %
-%  McDougall, T.J., and O.A. Krzysik, 2015: Spiciness. To be submitted to
-%   the Journal of Marine Research.  
+%  McDougall, T.J., and O.A. Krzysik, 2015: Spiciness. Journal of Marine 
+%   Research, 73, 141-152.
 %
 %  Roquet, F., G. Madec, T.J. McDougall and P.M. Barker, 2015: Accurate
 %   polynomial expressions for the density and specifc volume of seawater

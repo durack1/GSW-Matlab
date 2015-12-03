@@ -728,6 +728,13 @@ if ~isempty(gsw_cf.Igeo_strf_steric_height)
     gsw_cf.gsw_chks = 0;
 end
 
+gsw_cf.geo_strf_PISH = gsw_geo_strf_PISH(gsw_cv.SA_chck_cast,gsw_cv.CT_chck_cast,gsw_cv.p_chck_cast,gsw_cv.pr_05);
+[gsw_cf.Igeo_strf_PISH] = find(abs(gsw_cv.geo_strf_PISH - gsw_cf.geo_strf_PISH) >= gsw_cv.geo_strf_PISH_ca);
+if ~isempty(gsw_cf.Igeo_strf_PISH)
+    fprintf(2,'gsw_geo_strf_PISH:   Failed\n');
+    gsw_cf.gsw_chks = 0;
+end
+
 gsw_cf.travel_time = gsw_travel_time(gsw_cv.SA_chck_cast,gsw_cv.CT_chck_cast,gsw_cv.p_chck_cast,gsw_cv.lat_chck_cast(1));
 [gsw_cf.Itravel_time] = find(abs(gsw_cv.travel_time - gsw_cf.travel_time) >= gsw_cv.travel_time_ca);
 if ~isempty(gsw_cf.Itravel_time)
