@@ -1,2 +1,5 @@
 111115_TrevorMcDougall
 git-author-rewrite.sh
+inplace-upgrade.sh
+*.sh.swp
+*.sh~
