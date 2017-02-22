@@ -59,10 +59,20 @@ p.footer {
   color: gray;
 }
 
-  </style></head><body><div class="content"><h1>gsw_specvol_ice</h1>
-  <!--introduction--><pre><font size="5"><b>specific volume of ice</b></font></pre><!--/introduction-->
+  </style></head>
+  <body><div class="content">
+  <h1>gsw_specvol_ice</h1>
+  <!--introduction-->
+ <pre><font size="5"><b>specific volume of ice</b></font></pre><!--/introduction-->
   <font size="4"><h2>Contents</h2>
-  <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
+  <div><ul><li><a href="#1">USAGE:</a></li>
+<li><a href="#2">DESCRIPTION:</a></li>
+<li><a href="#3">INPUT:</a></li>
+<li><a href="#4">OUTPUT:</a></li>
+<li><a href="#5">EXAMPLE:</a></li>
+<li><a href="#6">AUTHOR:</a></li>
+<li><a href="#7">VERSION NUMBER:</a></li>
+<li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
 <pre>specvol_ice = gsw_specvol_ice(t,p)</pre>
 <h2>DESCRIPTION:<a name="2"></a></h2>
@@ -80,7 +90,7 @@ p  =  sea pressure                                             [ dbar ]
        ( i.e. absolute pressure - 10.1325 dbar )</pre>
 <pre>p may have dimensions 1x1 or Mx1 or 1xN or MxN, where t is MxN.</pre>
 <h2>OUTPUT:<a name="4"></a></h2>
-<pre>specvol_ice  =  specific volume of ice                        [ kg/m^3 ]</pre>
+<pre>specvol_ice  =  specific volume of ice                        [ m^3/kg ]</pre>
 <h2>EXAMPLE:<a name="5"></a></h2>
 <pre>t = [-10.7856; -13.4329; -12.8103; -12.2600;  -10.8863;  -8.4036;]
 p = [     10;      50;     125;     250;     600;    1000;]</pre>

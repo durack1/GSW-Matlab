@@ -1,6 +1,4 @@
-
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>gsw_Nsquared</title><style type="text/css">
@@ -59,30 +57,31 @@ p.footer {
   color: gray;
 }
 
-  </style></head><body><div class="content"><h1>gsw_Nsquared</h1>
-  <!--introduction-->
-  <pre><font size="5"><b>buoyancy (Brunt-Vaisala) frequency squared (N<sup>2</sup>) 
+  </style></head>
+<body><div class="content"><h1>gsw_Nsquared</h1>
+<!--introduction-->
+<pre><font size="5"><b>buoyancy (Brunt-Vaisala) frequency squared (N<sup>2</sup>) 
 (75-term equation)</b></font></pre><!--/introduction-->
-  <font size="4"><h2>Contents</h2>
-  <div><ul><li><a href="#1">USAGE:</a></li>
-  <li><a href="#2">DESCRIPTION:</a></li>
-  <li><a href="#3">INPUT:</a></li>
-  <li><a href="#4">OUTPUT:</a></li>
-  <li><a href="#5">EXAMPLE:</a></li>
-  <li><a href="#6">AUTHOR:</a></li>
-  <li><a href="#7">VERSION NUMBER:</a></li>
-  <li><a href="#8">REFERENCES:</a></li></ul></div>
-  <h2>USAGE:<a name="1"></a></h2>
-  <pre>[N2, p_mid] = gsw_Nsquared(SA,CT,p,{lat})</pre>
-  <h2>DESCRIPTION:<a name="2"></a></h2>
-  <pre>Calculates the buoyancy frequency squared (N<sup>2</sup>)(i.e. the Brunt-Vaisala
+<font size="4"><h2>Contents</h2>
+<div><ul><li><a href="#1">USAGE:</a></li>
+<li><a href="#2">DESCRIPTION:</a></li>
+<li><a href="#3">INPUT:</a></li>
+<li><a href="#4">OUTPUT:</a></li>
+<li><a href="#5">EXAMPLE:</a></li>
+<li><a href="#6">AUTHOR:</a></li>
+<li><a href="#7">VERSION NUMBER:</a></li>
+<li><a href="#8">REFERENCES:</a></li></ul></div>
+<h2>USAGE:<a name="1"></a></h2>
+<pre>[N2, p_mid] = gsw_Nsquared(SA,CT,p,{lat})</pre>
+<h2>DESCRIPTION:<a name="2"></a></h2>
+<pre>Calculates the buoyancy frequency squared (N<sup>2</sup>)(i.e. the Brunt-Vaisala
 frequency squared) at the mid pressure from the equation,</pre>
-<pre>                             ( beta x d(SA) - alpha x d(CT) )
-   N<sup>2</sup>  =  g<sup>2</sup> x rho_local x  ---------------------------------
-                                          dP</pre>
-<pre>Note. This routine uses rho from "gsw_rho", which is the computationally 
-  efficient 75-term expression for specific volume in terms of SA, CT and 
-  p (Roquet et al., 2015).
+<pre>                 ( beta x d(SA) - alpha x d(CT) )
+   N<sup>2</sup>  =  g<sup>2</sup> x   ---------------------------------
+                        specvol_local x dP</pre>
+<pre>Note. This routine uses rho from "gsw_specvol", which is the  
+  computationally efficient 75-term expression for specific volume in  
+  terms of SA, CT and p (Roquet et al., 2015).
 Note also that the pressure increment, dP, in the above formula is in
   Pa, so that it is 10<sup>4</sup> times the pressure increment dp in dbar.</pre>
 <pre>Note that the 75-term equation has been fitted in a restricted range of 
@@ -135,7 +134,7 @@ lat = 4;</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
 <pre>Trevor McDougall and Paul Barker.              [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.05 (16th February, 2015)</pre>
+<pre>3.05.6 (8th August, 2016)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>Griffies, S. M., 2004: Fundamentals of Ocean Climate Models. Princeton,
  NJ: Princeton University Press, 518 pp + xxxiv.</pre>
