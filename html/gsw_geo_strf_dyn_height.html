@@ -86,7 +86,7 @@ anomaly is the geostrophic streamfunction in an isobaric surface.  The
 reference values used for the specific volume anomaly are 
 SSO = 35.16504 g/kg and CT = 0 deg C.  This function calculates 
 specific volume anomaly using the computationally efficient 75-term
-expression for specific volume (Roquet et al., 2015). </pre>
+expression for specific volume (Roquet <em>et al.</em>, 2015). </pre>
 <pre>This function evaluates the pressure integral of specific volume using 
 SA and CT interpolated with respect to pressure using the method of 
 Reiniger and Ross (1968).  It uses a weighted mean of (i) values 
@@ -95,7 +95,7 @@ obtained from linear interpolation of the two nearest data points, and
 "curve fitting" method resembles the use of cubic splines. </pre>
 <pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
-described in McDougall et al. (2003).  The GSW library function 
+described in McDougall <em>et al.</em> (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
 some of one's data lies outside this "funnel". </pre>  
 <table width="500" border="0">
@@ -139,16 +139,16 @@ p =  [     10;      50;     125;     250;     600;    1000;]
 p_ref = 500</pre>
 <pre>geo_strf_dyn_height = gsw_geo_strf_dyn_height(SA,CT,p,p_ref)</pre>
 <pre>geo_strf_dyn_height =</pre>
-<pre>  12.591685524603520
-  10.232579492691912
-   6.487295712474179
-   3.200564075666534
-  -1.093343750292661
-  -4.700552560409960</pre>
+<pre>  12.558764379222421
+  10.185413606175217
+   6.432420958376745
+   3.087488660227876
+  -1.086916122981741
+  -4.480440178547068</pre>
 <h2>AUTHOR:<a name="6"></a></h2>
-<pre>Paul Barker, Jeff Dunn and Trevor McDougall   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
+<pre>Paul Barker and Trevor McDougall   [ <a href="mailto:help@teos-10.org">help@teos-10.org</a> ]</pre>
 <h2>VERSION NUMBER:<a name="7"></a></h2>
-<pre>3.05 (16th February, 2015)</pre>
+<pre>3.06 (23rd November, 2016)</pre>
 <h2>REFERENCES:<a name="8"></a></h2>
 <pre>IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of
  seawater - 2010: Calculation and use of thermodynamic properties.
@@ -157,11 +157,12 @@ p_ref = 500</pre>
   <a href="../pdf/geo_strf_dyn_height.pdf">See Eqn. (3.7.3) and section 3.27 of this TEOS-10 Manual</a>.</pre>
 <pre>McDougall, T.J., D.R. Jackett, D.G. Wright and R. Feistel, 2003: 
  Accurate and computationally efficient algorithms for potential 
- temperature and density of seawater.  J. Atmosph. Ocean. Tech., 20,
+ temperature and density of seawater.  <em>J. Atmosph. Ocean. Tech.</em>, <b>20</b>,
  pp. 730-741.</pre>
-<pre>Reiniger, R. F. and C. K. Ross, 1968: A method of interpolation with
- application to oceanographic data. Deep-Sea Res. 15, 185-193.</pre>
-  <pre>Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
- polynomial expressions for the density and specifc volume of seawater
- using the TEOS-10 standard. Ocean Modelling.</pre>
+<pre>Reiniger, R.F., and C.K. Ross, 1968: A method of interpolation with
+ application to oceanographic data. <em>Deep-Sea Res.</em>, <b>15</b>, pp. 185-193.</pre>
+<pre>Roquet, F., G. Madec, T.J. McDougall and P.M. Barker, 2015: Accurate
+ polynomial expressions for the density and specific volume of seawater 
+ using the TEOS-10 standard.  <em>Ocean Modelling</em>, <b>90</b>, pp. 29-43. 
+ <a href="http://dx.doi.org/10.1016/j.ocemod.2015.04.002">http://dx.doi.org/10.1016/j.ocemod.2015.04.002</a></pre>
 <pre>The software is available from <a href="http://www.teos-10.org" title="TEOS-10">http://www.TEOS-10.org</a></pre></font></div></body></html>
