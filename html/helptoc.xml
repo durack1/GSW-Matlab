@@ -315,12 +315,29 @@
 	
     <tocitem target="gsw_contents.html#7">
       vertical stability
-      <tocitem target="gsw_Nsquared.html" image="HelpIcon.FUNCTION">
-        gsw_Nsquared<!-- buoyancy (Brunt-Vaisala) frequency squared (N^2) -->
-      </tocitem>
       <tocitem target="gsw_Turner_Rsubrho.html" image="HelpIcon.FUNCTION">
         gsw_Turner_Rsubrho<!-- Turner angle &amp; Rsubrho -->
       </tocitem>
+      <tocitem target="gsw_Nsquared.html" image="HelpIcon.FUNCTION">
+        gsw_Nsquared<!-- buoyancy (Brunt-Vaisala) frequency squared (N^2) -->
+      </tocitem>
+      <tocitem target="gsw_Nsquared_min.html" image="HelpIcon.FUNCTION">
+        gsw_Nsquared_min<!-- minimum buoyancy (Brunt-Vaisala) frequency squared (N^2) -->
+      </tocitem>
+	  <tocitem target="gsw_stabilise_SA_const_t.html" image="HelpIcon.FUNCTION">
+        gsw_gsw_stabilise_SA_const_t<!-- stabilise -->
+      </tocitem>
+	  <tocitem target="gsw_stabilise_SA_CT.html" image="HelpIcon.FUNCTION">
+        gsw_gsw_stabilise_SA_CT<!-- stabilise -->
+      </tocitem>
+      <tocitem target="gsw_mlp.html" image="HelpIcon.FUNCTION">
+        gsw_mlp<!-- mixed-layer pressure -->
+      </tocitem>
+      <tocitem target="gsw_Nsquared_lowerlimit.html" image="HelpIcon.FUNCTION">
+        gsw_Nsquared_lowerlimit<!-- Nsquared_lowerlimit -->
+      </tocitem>
+
+
       <tocitem target="gsw_IPV_vs_fNsquared_ratio.html" image="HelpIcon.FUNCTION">
         gsw_IPV_vs_fNsquared_ratio<!-- ratio of the vertical gradient of potential density (with reference pressure, p_ref), to the vertical gradient of locally-referenced potential density -->
       </tocitem>

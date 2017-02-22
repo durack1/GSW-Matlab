@@ -1,5 +1,5 @@
 % GSW Oceanographic Toolbox 
-% Version 3.05 (R2012a) 8-May-2015
+% Version 3.05.5 (R2012a) 8-May-2015
 %
 % documentation set
 %  gsw_front_page              - front page to the GSW Oceanographic Toolbox
@@ -103,11 +103,16 @@
 %  gsw_CT_maxdensity                           - Conservative Temperature of maximum density of seawater
 %
 % vertical stability  
-%  gsw_Nsquared                    - buoyancy (Brunt-Vaisala) frequency squared (N^2)
-%  gsw_Turner_Rsubrho              - Turner angle & Rsubrho
-%  gsw_IPV_vs_fNsquared_ratio      - ratio of the vertical gradient of potential density
-%                                    (with reference pressure, p_ref), to the vertical 
-%                                    gradient of locally-referenced potential density
+%  gsw_Turner_Rsubrho                - Turner angle & Rsubrho
+%  gsw_Nsquared                      - buoyancy (Brunt-Vaisala) frequency squared (N^2)
+%  gsw_Nsquared                      - minimum buoyancy (Brunt-Vaisala) frequency squared (N^2)
+%  gsw_stabilise_SA_const_t	         - minimally adjust SA to produce a stable water column, keeping in-situ temperature constant
+%  gsw_stabilise_SA_CT	             - minimally adjusts SA & CT to produce a stable water column
+%  gsw_mlp	                         - mixed-layer pressure
+%  gsw_Nsquared_lowerlimit           - specified profile of minimum buoyancy frequency squared
+%  gsw_IPV_vs_fNsquared_ratio        - ratio of the vertical gradient of potential density
+%                                      (with reference pressure, p_ref), to the vertical 
+%                                      gradient of locally-referenced potential density
 %
 % geostrophic streamfunctions, acoustic travel time and geostrophic velocity
 %  gsw_geo_strf_dyn_height           - dynamic height anomaly
