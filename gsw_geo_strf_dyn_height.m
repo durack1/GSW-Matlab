@@ -59,7 +59,7 @@ function geo_strf_dyn_height = gsw_geo_strf_dyn_height(SA,CT,p,p_ref)
 % AUTHOR:  
 %  Paul Barker and Trevor McDougall                    [ help@teos-10.org ]
 %
-% VERSION NUMBER: 3.05 (27th January 2015)
+% VERSION NUMBER: 3.05 (30th June 2016)
 %
 % REFERENCES:
 %  IOC, SCOR and IAPSO, 2010: The international thermodynamic equation of 
@@ -76,9 +76,9 @@ function geo_strf_dyn_height = gsw_geo_strf_dyn_height(SA,CT,p,p_ref)
 %  Reiniger, R. F. and C. K. Ross, 1968: A method of interpolation with
 %   application to oceanographic data. Deep-Sea Res. 15, 185-193.
 % 
-%  Roquet, F., G. Madec, T.J. McDougall and P.M. Barker, 2015: Accurate
+%  Roquet, F., G. Madec, T.J. McDougall, P.M. Barker, 2015: Accurate
 %   polynomial expressions for the density and specifc volume of seawater
-%   using the TEOS-10 standard. Ocean Modelling.
+%   using the TEOS-10 standard. Ocean Modelling, 90, pp. 29-43.
 %
 %  The software is available from http://www.TEOS-10.org
 %
@@ -389,7 +389,7 @@ else
 % code.  Instead these "rough & ready" oceanographers would implement the
 % one line of code which linearly interpolates.  
                 [Intrp] = top_pad:length(p_i);
-%                [SA_i(Intrp),CT_i(Intrp)] = gsw_rr68_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Intrp));
+                [SA_i(Intrp),CT_i(Intrp)] = gsw_rr68_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Intrp));
                 if any(isnan(SA_i))
                     [Inan] = find(isnan(SA_i));
                     [SA_i(Inan), CT_i(Inan)] = gsw_linear_interp_SA_CT(SA(:,Iprofile),CT(:,Iprofile),p(:,Iprofile),p_i(Inan));

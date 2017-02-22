@@ -1,9 +1,9 @@
-
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <title>gsw_geo_strf_dyn_height</title><style type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>gsw_geo_strf_dyn_height</title>
+
+<style type="text/css">
 
 body {
   background-color: white;
@@ -59,18 +59,25 @@ p.footer {
   color: gray;
 }
 
-  </style></head><body><div class="content">
- <h1>gsw_geo_strf_dyn_height</h1>
- <!--introduction--><pre><font size="5"><b>dynamic height anomaly (75-term equation)</b></font></pre><!--/introduction-->
- <font size="4"><h2>Contents</h2>
- <div><ul><li><a href="#1">USAGE:</a></li><li><a href="#2">DESCRIPTION:</a></li><li><a href="#3">INPUT:</a></li><li><a href="#4">OUTPUT:</a></li><li><a href="#5">EXAMPLE:</a></li><li><a href="#6">AUTHOR:</a></li><li><a href="#7">VERSION NUMBER:</a></li><li><a href="#8">REFERENCES:</a></li></ul></div>
+  </style></head>
+<body><div class="content">
+<h1>gsw_geo_strf_dyn_height</h1>
+<!--introduction--><pre><font size="5"><b>dynamic height anomaly (75-term equation)</b></font></pre><!--/introduction-->
+<font size="4"><h2>Contents</h2>
+<div><ul><li><a href="#1">USAGE:</a></li>
+<li><a href="#2">DESCRIPTION:</a></li>
+<li><a href="#3">INPUT:</a></li>
+<li><a href="#4">OUTPUT:</a></li>
+<li><a href="#5">EXAMPLE:</a></li>
+<li><a href="#6">AUTHOR:</a></li>
+<li><a href="#7">VERSION NUMBER:</a></li>
+<li><a href="#8">REFERENCES:</a></li></ul></div>
 <h2>USAGE:<a name="1"></a></h2>
 <pre>geo_strf_dyn_height = gsw_geo_strf_dyn_height(SA,CT,p,p_ref)</pre>
 <h2>DESCRIPTION:<a name="2"></a></h2>
 <pre>Calculates dynamic height anomaly as the integral of specific volume
 anomaly from the pressure p of the "bottle" to the reference pressure
 p_ref.</pre>
-
 <pre>Hence, geo_strf_dyn_height is the dynamic height anomaly with respect
 to a given reference pressure.  This is the geostrophic streamfunction 
 for the difference between the horizontal velocity at the pressure 
@@ -80,21 +87,18 @@ reference values used for the specific volume anomaly are
 SSO = 35.16504 g/kg and CT = 0 deg C.  This function calculates 
 specific volume anomaly using the computationally efficient 75-term
 expression for specific volume (Roquet et al., 2015). </pre>
-
 <pre>This function evaluates the pressure integral of specific volume using 
 SA and CT interpolated with respect to pressure using the method of 
 Reiniger and Ross (1968).  It uses a weighted mean of (i) values 
 obtained from linear interpolation of the two nearest data points, and 
 (ii) a linear extrapolation of the pairs of data above and below.  This 
 "curve fitting" method resembles the use of cubic splines. </pre>
-
 <pre>Note that the 75-term equation has been fitted in a restricted range of 
 parameter space, and is most accurate inside the "oceanographic funnel" 
 described in McDougall et al. (2003).  The GSW library function 
 "gsw_infunnel(SA,CT,p)" is avaialble to be used if one wants to test if 
 some of one's data lies outside this "funnel". </pre>  
-
-  <table width="500" border="0">
+<table width="500" border="0">
   <tr>
     <td><a href="../pdf/geo_strf_dyn_height.pdf"> <img src="TEOS-10_front_cover.jpg" width="60" height="82" alt="TEOS-10" style ="display: block;  padding-right: 5px; padding-left: 5px; "></a></td>
     <td><pre><font size="4"><a href="../pdf/geo_strf_dyn_height.pdf">Click for a more detailed description of dynamic
